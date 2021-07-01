@@ -249,6 +249,602 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/01/bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/12/01/bootstrap/" itemprop="url">boostrap 笔记2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-01T14:48:00+08:00">
+                2020-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="bootstrap-–学会看源码"><a href="#bootstrap-–学会看源码" class="headerlink" title="bootstrap    –学会看源码"></a>bootstrap    –学会看源码</h1><ul>
+<li><p>视口·</p>
+<ul>
+<li>```<br>窗口自适应<meta name="viewport" content="width=device-width,initial-scale=1">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- bootstrap3</span><br><span class="line"></span><br><span class="line">  - 网格系统</span><br><span class="line"></span><br><span class="line">    - 固定宽度 container  /全屏宽度 container-fluid</span><br><span class="line"></span><br><span class="line">    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列</span><br><span class="line"></span><br><span class="line">    - 各种尺寸</span><br><span class="line">    </span><br><span class="line">      - ```</span><br><span class="line">        //bootstrap3</span><br><span class="line">        .col-xs 小于768px		</span><br><span class="line">        .col-sm 大于等于768px</span><br><span class="line">    .col-md  大于等于992px</span><br><span class="line">        .col-lg- 大于1200px</span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">        //bootstrap4</span><br><span class="line">        .col-  所有</span><br><span class="line">        .col-sm	&gt;=556</span><br><span class="line">        .col-md	&gt;=768</span><br><span class="line">        .col-lg	&gt;=992</span><br><span class="line">        .col-xl	&gt;=1200</span><br></pre></td></tr></table></figure>
+    </li>
+</ul>
+</li>
+<li><p>常用类</p>
+<ul>
+<li>row   主要作用：创建一个弹性盒子</li>
+<li>col-**-**   满足该类的定义尺寸时按照定义的来，不满足时会设置宽度100%，即弹性子元素会拉满屏幕</li>
+<li>offset-**-n  偏移n列，通过设置元素的margin-left来实现该功能</li>
+</ul>
+</li>
+<li><p>文字排版</p>
+<ul>
+<li><p>bootstrap4默认的font-size 为16px,line-height为1.5，所有的p元素 margin-top:0,margin-bottem:1em</p>
+</li>
+<li><p>h1~h6 大概就居中对齐的样子</p>
+</li>
+<li><p>display-n   n取(1-4)  定义更大更粗的字体</p>
+</li>
+<li><p>font 相关</p>
+<ul>
+<li>```<br>font-weight-bold 加粗<br>font-weight-normal 普通文本<br>font-weight-light  更细的文本<br>font-italic    斜体文本<br>lead 让段落更突出<br>small 更小的文本<br>text-left 左对齐<br>text-center 居中<br>text-right  右对齐<br>text-justify 设定文本对齐，段落中超出屏幕的部分文字自动换行  对标css中的text-align-justify  –两端文本对齐<br>text-nowrap  超出屏幕不换行    对标css white-space:nowrap<br>text-lowercase 转小写    对标css text-transform:lowercase<br>text-uppercase 转大写    对标css text-transform:uppercase<br>list-unstyled    移除默认的列表样式    css代码为padding-left:0;list-style:none<br>list-inline    :将所有列表项放置同一行   bootstrap3生效<br>list-inline-item    css代码为display:inline-block<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 颜色相关</span><br><span class="line"></span><br><span class="line">  - Bootstrap 4 提供了一些有代表意义的颜色类：**.text-muted**, **.text-primary**, **.text-success**, **.text-info**, **.text-warning**, **.text-danger**, **.text-secondary**, **.text-white**, **.text-dark** and **.text-light**:</span><br><span class="line"></span><br><span class="line">  - 提供背景颜色的类有: **.bg-primary**, **.bg-success**, **.bg-info**, **.bg-warning**, **.bg-danger**, **.bg-secondary**, **.bg-dark** 和 **.bg-light**。</span><br><span class="line"></span><br><span class="line">    注意背景颜色不会设置文本的颜色，在一些实例中你需要与 **.text-\*** 类一起使用。</span><br><span class="line"></span><br><span class="line">- 表格</span><br><span class="line"></span><br><span class="line">  - 基础表格样式	table</span><br><span class="line">  - 条纹表格 table-striped</span><br><span class="line">  - 带边框表格  table-bordered</span><br><span class="line">  - 鼠标悬停  table-hover</span><br><span class="line">  - 黑色背景  table-dark</span><br><span class="line">  - 黑色条纹表格     table-dark/table-striped</span><br><span class="line">  - 鼠标悬停+黑色背景  table-dark  table-hover</span><br><span class="line">  - 表格颜色</span><br><span class="line">    - table-primary</span><br><span class="line">    - table-success</span><br><span class="line">    - table-danger</span><br><span class="line">    - table-info</span><br><span class="line">    - table-warning</span><br><span class="line">    - table-active</span><br><span class="line">    - table-secondary</span><br><span class="line">    - table-light</span><br><span class="line">    - table-dark</span><br><span class="line">  - table-sm 较小的表格</span><br><span class="line">  - 响应式表格  table-responsive  在屏幕宽度小于992px时会创建水平滚动条</span><br><span class="line">    - 设置指定屏幕宽度下显示滚动条</span><br><span class="line">      - table-responsive-sm	小于576</span><br><span class="line">      - table-responsive-md   小于768</span><br><span class="line">      - table-responsive-lg       小于992</span><br><span class="line">      - table-responsive-xl      小于1200</span><br><span class="line"></span><br><span class="line">- 图像形状</span><br><span class="line"></span><br><span class="line">  - rounded  可以让图片显示圆角效果</span><br><span class="line"></span><br><span class="line">  - rounded-circle  设置椭圆形图片</span><br><span class="line"></span><br><span class="line">  - 缩略图   img-thumbnail  设置图片缩略图</span><br><span class="line"></span><br><span class="line">  - float-right  图片右对齐</span><br><span class="line"></span><br><span class="line">  - float-left  设置图片左对齐</span><br><span class="line"></span><br><span class="line">  - 响应式图片   </span><br><span class="line"></span><br><span class="line">    - img-fluid设置响应式图片  </span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      img-fluid 本质css</span><br><span class="line">      &#123;</span><br><span class="line">      	max-width:100%;</span><br><span class="line">      	height:auto;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Jumbotron</p>
+<ul>
+<li>jumbotron  创建一个大的灰色背景框  有圆角，里面可以放一些html标签，也可以是bootstrap的元素如果你想创建一个没有圆角的全屏幕，可以在jumbotron-fluid里添加container或container-fluid类来实现</li>
+</ul>
+</li>
+<li><p>提示框</p>
+<ul>
+<li><p>alert类</p>
+</li>
+<li><p>alert-主要颜色，可更改背景颜色</p>
+</li>
+<li><p>alert-link  链接</p>
+</li>
+<li><p>关闭提示框</p>
+<ul>
+<li>```<br>我们可以再提示框的div中添加.alert-dismissible 然后在关闭按钮链接的链接上加上close类和data-dismiss=’alert’属性来设置提示框的关闭操作<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">- 淡入淡出效果 添加fade show 类</span><br><span class="line">  </span><br><span class="line">- 按钮</span><br><span class="line">  </span><br><span class="line">  - 基本按钮 btn</span><br><span class="line">  </span><br><span class="line">  - btn-primary 主要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-secondary 次要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-success 成功</span><br><span class="line">  </span><br><span class="line">  - btn-info 信息</span><br><span class="line">  </span><br><span class="line">  - btn-warning 警告</span><br><span class="line">  </span><br><span class="line">  - btn-danger 危险</span><br><span class="line">  </span><br><span class="line">  - btn-dark 黑色</span><br><span class="line">  </span><br><span class="line">  - btn-light 浅色</span><br><span class="line">  </span><br><span class="line">  - btn-link 链接</span><br><span class="line">  </span><br><span class="line">  - 按钮类可用于a,button或input元素上</span><br><span class="line">  </span><br><span class="line">  - 按钮设置边框</span><br><span class="line">  </span><br><span class="line">    - ```</span><br><span class="line">        btn-outline-不同颜色</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不同大小的按钮</p>
+<ul>
+<li>btn-lg 大号按钮<ul>
+<li>btn-sm 小号按钮</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>块级按钮  .btn-block</p>
+</li>
+<li><p>激活和禁用的按钮  .active类可以设置按钮是可用的，disable 属性是设置禁用的</p>
+<ul>
+<li>注意：a标签需添加.disable类来设置禁用项</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>按钮组</p>
+<ul>
+<li>bootstrap4中允许我们将按钮放在同一行<ul>
+<li>可以在div元素上添加.btn-group 类来创建按钮组</li>
+<li>设置按钮组大小的类 btn-group-sm|lg</li>
+<li>垂直按钮组  btn-group-vertical</li>
+<li>按钮组的下拉菜单  略</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Badges  徽章主要用于突出新的或未读的的项  </p>
+<ul>
+<li>badge + 上带有指定意义的颜色类<ul>
+<li>药丸形状徽章  badge-pill</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>进度条</p>
+<ul>
+<li>父类  progress<ul>
+<li>子类 progress-bar   修改子元素的width百分比</li>
+<li>条纹进度条 progress-bar-striped</li>
+<li>动画进度条 progress-bar-animated</li>
+<li>混合色彩进度条<ul>
+<li>创建多个progress-bar,设置不同的背景颜色</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分页  pagination</p>
+<ul>
+<li><p>要创建一个基本的分页可以在ul元素上添加 .pagination类。然后在li元素上添加.page-item类</p>
+<ul>
+<li>分页显示大小  pagination-lg设置大字体  pagination-sm  设置小字体</li>
+</ul>
+</li>
+<li><p>列表组</p>
+<ul>
+<li>要创建列表组，可以在ul元素上添加.list-group类，在li元素上添加.list-group-item类</li>
+<li>禁用列表项 .disabled</li>
+<li>鼠标悬停的效果类  list-group-item-action</li>
+<li>颜色设置类  list-group-item-颜色</li>
+</ul>
+</li>
+<li><p>卡片(card)</p>
+<ul>
+<li>我们可以通过.card与.card-body类来创建一个简单的卡片</li>
+<li>.card-header  头部,.card-body 内容,.card-footer底部</li>
+<li>卡片可以通过bg-*类来改变颜色</li>
+<li>.card-title设置卡片的标题</li>
+<li>.card-link 给卡片内的链接来使用</li>
+<li>图片卡片<ul>
+<li>我们可以给img添加.card-img-top（图片在文字上面）或.card-img-bottom（图片在文字下面）</li>
+<li>如果图片要设置成背景，给文字容器添加.card-img-overlay类</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>下拉菜单</p>
+<ul>
+<li>下拉菜单依赖于poper.min.js</li>
+<li>.dropdown 创建一个下拉菜单 源码作用是创建一个相对定位</li>
+<li>.dropdown-menu 创建一个下拉菜单列表，用于放下拉菜单的选项</li>
+<li>实现下拉菜单效果需要加data-toggle=’dropdown’属性</li>
+<li>.dropdown-toggle 可以添加一个三角形图标</li>
+<li>.dropdown-item  放在dropdown-menu里，类似li元素的效果</li>
+<li>下拉菜单中的分割线  .dropdown-divider  创建一个水平的分割线</li>
+<li>.dropdown-header 下拉菜单中的标题</li>
+<li>可用项active  禁用项 disabled</li>
+<li>下拉菜单的右对齐  dropdown-menu-right</li>
+<li>设置下拉菜单不同的弹出方向  默认dropdown向下弹出</li>
+<li>dropright 向右弹出</li>
+<li>dropup 向上弹出</li>
+<li>dropleft 向左弹出</li>
+</ul>
+</li>
+<li><p>表单</p>
+<ul>
+<li>form-group类  表单组？</li>
+<li>form-control   变成块级元素，width:100%</li>
+<li>form-inline  创建弹性盒子 ,换行，flex-align:center;align-items:center;width:100%</li>
+<li>form-chexk-input</li>
+<li>form-check-label</li>
+<li>form-check-inline 类可以让选项显示在同一行上</li>
+<li>radio 单选框</li>
+<li>radio-inline  可以让选项显示在同一行</li>
+<li>form-group</li>
+<li>lable的for属性表示与某个表单元素绑定，值为表单元素的id</li>
+</ul>
+</li>
+<li><p>折叠</p>
+<ul>
+<li><p>折叠可以很容易的实现内容的显示与隐藏</p>
+</li>
+<li><p>collapse类用于指定一个折叠元素；点击按钮后会在隐藏于显示之间切换</p>
+</li>
+<li><p>控制内容的隐藏与显示，需要在a或button元素上添加data-toggle=’collapse’属性</p>
+</li>
+<li><p>data-target=’id’对应要显示隐藏内容的id</p>
+</li>
+<li><p>代码示例</p>
+<ul>
+<li>```<div class='container'>
+    <a href="" data-toggle='collapse' data-target='#demo'>折叠</a>
+    <div class='collapse' id="demo">
+        被折叠的内容
+    </div>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - data-parent属性来确保所有的折叠元素在指定的父元素下，这样就能是现在一个折叠选项显示时其他选项就隐藏</span><br><span class="line"></span><br><span class="line">- 导航nav</span><br><span class="line"></span><br><span class="line">  - 创建一个简单的导航，可以在ul元素上添加.nav类，再每个li选项上添加.nav-item类，在连接上添加.nav-link类</span><br><span class="line">  - 导航的对齐方式</span><br><span class="line">    - 居中显示 justify-content-center</span><br><span class="line">    - 导航右对齐 justify-content-right</span><br><span class="line">    - 垂直导航 flex-column</span><br><span class="line">  - 选项卡    在.nav类的基础上加上nav-tabs</span><br><span class="line">  - 胶囊导航  在nav的基础上加上nav-pills</span><br><span class="line">  - 导航等宽  .nav-justified类可以设置导航项齐行等宽显示</span><br><span class="line">  - 胶囊下拉菜单  添加下拉菜单到导航的某个选项上</span><br><span class="line">  - 选项卡下拉菜单 同上</span><br><span class="line">  - 动态选项卡</span><br><span class="line">    - 给选项加.data-toggle=&#x27;tab&#x27;</span><br><span class="line">    - 给个div,添加tab-content类，里面放的元素id跟上面的对应并添加tab-pane类</span><br><span class="line"></span><br><span class="line">- 导航栏</span><br><span class="line"></span><br><span class="line">  - 我们可以使用.navbar来创建一个标准的导航栏 后面紧跟.navbar-expand-xl|md|sm类来创建响应式导航栏(大屏幕铺开，小屏幕垂直堆叠)</span><br><span class="line">  - 导航栏的上的选项可以使用ul元素并添加class=&quot;navbar-nav“类，然后再li元素上添加nav-item类，a元素上使用.nav-link类</span><br><span class="line">  - .navbar-brand 高亮显示品牌</span><br><span class="line">  - 折叠导航栏 navbar-collapse类，navbar-toggler类</span><br><span class="line">  - 导航栏文本 navbar-text</span><br><span class="line">  - 固定导航栏 fixed-top/fixed-bottom 固定顶部/固定底部</span><br><span class="line">  </span><br><span class="line">- 模态框（modal）</span><br><span class="line"></span><br><span class="line">  - modal定义一个模态框</span><br><span class="line">  - modal-dialog定义弹出的框，内容都放在该容器下</span><br><span class="line">  - modal-header 模态框头部 / modal-title</span><br><span class="line">  - modal-body  模态框内容</span><br><span class="line">  - modal-footer 模态框底部</span><br><span class="line">  - modal-sm 小模态框</span><br><span class="line">  - modal-lg 大模态框</span><br><span class="line">  - </span><br><span class="line"></span><br><span class="line">- 提示框</span><br><span class="line"></span><br><span class="line">  - 通过向元素添加data-toggle=&#x27;tooltip&#x27;来创建提示框，title属性为提示款显示的内容</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    &lt;a href=&quot;#&quot; data-toggle=&#x27;tooltip&#x27; title=&quot;提示的文字&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>注意：提示框生效要调用tootip()方法</p>
+</li>
+<li><p>data-placement 设定显示的方向 top/bottom/left/right</p>
+</li>
+<li><p>提示的内容添加html标签 设置 data-html=’true</p>
+</li>
+</ul>
+</li>
+<li><p>弹出框</p>
+<ul>
+<li>向元素添加data-toggle=’popover’来创建弹出框，当点击的时候出现内容</li>
+<li>title属性为弹出框的标题，data-content为弹出框的文本内容</li>
+<li>注意：弹出框生效需要调用popover方法</li>
+<li>data-placement可以设置弹出框显示的方向 top/bottom/left/right</li>
+<li>设置再次点击弹出框消失的属性 data-trigger=’focus’</li>
+<li>鼠标移到元素上显示，一处小时 data-trigger=’hover’</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" itemprop="url">h5 和 CSS3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-27T22:53:00+08:00">
+                2020-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="HTML5的新语义标签"><a href="#HTML5的新语义标签" class="headerlink" title="HTML5的新语义标签"></a>HTML5的新语义标签</h2><h3 id="块级标签"><a href="#块级标签" class="headerlink" title="块级标签"></a>块级标签</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">header</span><br><span class="line">section</span><br><span class="line">footer</span><br><span class="line">aside</span><br><span class="line">nav</span><br><span class="line">main</span><br><span class="line">article</span><br><span class="line">figure</span><br></pre></td></tr></table></figure>
+
+<h3 id="为HTML添加新元素"><a href="#为HTML添加新元素" class="headerlink" title="为HTML添加新元素"></a>为HTML添加新元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">创建新元素 myHero</span><br><span class="line">&lt;style&gt;</span><br><span class="line">	myHero&#123;</span><br><span class="line">		定义新标签的样式</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="新的多媒体标签"><a href="#新的多媒体标签" class="headerlink" title="新的多媒体标签"></a>新的多媒体标签</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">audio  定义音频内容</span><br><span class="line">video  定义视频</span><br><span class="line">source 定义多媒体资源&lt;video</span><br><span class="line">embed  定义嵌入的内容，比如插件</span><br><span class="line">track  </span><br></pre></td></tr></table></figure>
+
+<h4 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h4><p>属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">autoplay	音频就绪后马上播放</span><br><span class="line">controls	显示控件</span><br><span class="line">loop		音频结束时重新开始播放</span><br><span class="line">muted		经营</span><br><span class="line">preload		音频加载方式</span><br><span class="line">src			</span><br></pre></td></tr></table></figure>
+
+<h3 id="新增表单元素"><a href="#新增表单元素" class="headerlink" title="新增表单元素"></a>新增表单元素</h3><h5 id="datalist-与input元素配合使用"><a href="#datalist-与input元素配合使用" class="headerlink" title="datalist 与input元素配合使用"></a>datalist 与input元素配合使用</h5><p>例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input list=&quot;list1&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;list1&quot;&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
+
+<p>keygen 密钥对生成器</p>
+<p>output 可以实时计算简单的数字？</p>
+<h5 id="details和summary配合使用"><a href="#details和summary配合使用" class="headerlink" title="details和summary配合使用"></a>details和summary配合使用</h5><p>summary定义标题</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">summary</span>&gt;</span>这是标题<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="figure-用来放图片的容器"><a href="#figure-用来放图片的容器" class="headerlink" title="figure 用来放图片的容器"></a>figure 用来放图片的容器</h5><h6 id="figcaption-定义图片的标题"><a href="#figcaption-定义图片的标题" class="headerlink" title="figcaption 定义图片的标题"></a>figcaption 定义图片的标题</h6><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><h3 id="选择器并行的写法"><a href="#选择器并行的写法" class="headerlink" title="选择器并行的写法"></a>选择器并行的写法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p.class&#123;</span><br><span class="line">	text-align:center;</span><br><span class="line">&#125;</span><br><span class="line">p标签并且有个类为class</span><br></pre></td></tr></table></figure>
+
+<h3 id="background"><a href="#background" class="headerlink" title="background"></a>background</h3><h4 id="background-color-背景颜色"><a href="#background-color-背景颜色" class="headerlink" title="background-color  背景颜色"></a>background-color  背景颜色</h4><h4 id="background-image-背景图片"><a href="#background-image-背景图片" class="headerlink" title="background-image    背景图片"></a>background-image    背景图片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:url(图片路径)</span><br></pre></td></tr></table></figure>
+
+<h4 id="background-repeat-背景平铺-repeat-x-repeat-y"><a href="#background-repeat-背景平铺-repeat-x-repeat-y" class="headerlink" title="background-repeat    背景平铺 repeat-x/repeat-y"></a>background-repeat    背景平铺 repeat-x/repeat-y</h4><h4 id="background-postion-设置图片位置"><a href="#background-postion-设置图片位置" class="headerlink" title="background-postion    设置图片位置"></a>background-postion    设置图片位置</h4><p>例 right top 右上角</p>
+<p>background-position:x y        x轴 y轴的值</p>
+<h4 id="background的简写"><a href="#background的简写" class="headerlink" title="background的简写"></a>background的简写</h4><p>background:color image repeat postion</p>
+<h3 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h3><p>color定义文字颜色</p>
+<p>对齐方式text-align属性</p>
+<p>属性值</p>
+<ul>
+<li>center</li>
+<li>right/left</li>
+<li>justify 每一行被展开为宽度相等，左右外边距是对齐</li>
+</ul>
+<h4 id="文本修饰符-text-decoration"><a href="#文本修饰符-text-decoration" class="headerlink" title="文本修饰符 text-decoration"></a>文本修饰符 text-decoration</h4><p>text-decoration属性</p>
+<p>值</p>
+<ul>
+<li>overline 上划线</li>
+<li>line-through 中划线</li>
+<li>underline 下划线</li>
+</ul>
+<h4 id="文本转换（大小写转换）"><a href="#文本转换（大小写转换）" class="headerlink" title="文本转换（大小写转换）"></a>文本转换（大小写转换）</h4><p>text-transform属性</p>
+<ul>
+<li>uppercase 转大写</li>
+<li>lowercase 转小写</li>
+<li>capitalize 首字母大写</li>
+</ul>
+<h4 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h4><p>text-indent:2em;</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
+<li>direction 文本方向 ltr(left to right) / rtl(right to left)</li>
+<li>line-height 行高</li>
+<li>text-shadow 文本阴影</li>
+<li>vertical-align 垂直对齐的方式</li>
+<li>white-space 空白怎么处理 nowrap 不换行</li>
+</ul>
+<h3 id="字体font"><a href="#字体font" class="headerlink" title="字体font"></a>字体font</h3><h4 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h4><p>指定文本的字体</p>
+<h4 id="font-size字体"><a href="#font-size字体" class="headerlink" title="font-size字体"></a>font-size字体</h4><p>设置字体大小</p>
+<h4 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a>font-style</h4><p>值：normal 正常/italic 斜体 / oblique 倾斜的字体样式 / inherit 继承父元素 </p>
+<h3 id="css-链接的样式-伪类？"><a href="#css-链接的样式-伪类？" class="headerlink" title="css 链接的样式 伪类？"></a>css 链接的样式 伪类？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a:link 未访问链接</span><br><span class="line">a:visited 已访问链接</span><br><span class="line">a:hover	链接移动到链接上</span><br><span class="line">a:active 鼠标点击时</span><br><span class="line">注意：a:hover必须在a:link 和 a:visited 之后，需要按严格顺序才能看到效果</span><br><span class="line">a:active必须在a:hover 之后</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表-ul"><a href="#无序列表-ul" class="headerlink" title="无序列表 ul"></a>无序列表 ul</h4><h4 id="有序列表-ol"><a href="#有序列表-ol" class="headerlink" title="有序列表 ol"></a>有序列表 ol</h4><h5 id="list-style属性"><a href="#list-style属性" class="headerlink" title="list-style属性"></a>list-style属性</h5><ul>
+<li>list-style-type: circle(圆点)/square(方形)</li>
+<li>list-style-image:url(图片地址)    自定义图标</li>
+<li>list-style-position:  inside 放在文本以内，outside 图标放置在文本外，inherit 继承父元素</li>
+</ul>
+<h3 id="边框border"><a href="#边框border" class="headerlink" title="边框border"></a>边框border</h3><ul>
+<li>border-style: </li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">none/</span><br><span class="line">dotted 点线边框 </span><br><span class="line">dashed 虚线边框 </span><br><span class="line">solid 实线边框 </span><br><span class="line">double 两个边框</span><br><span class="line">groove 定义3D沟槽边框</span><br><span class="line">ridge 定义3D脊边框</span><br><span class="line">inset 定义一个3D的嵌入边框</span><br><span class="line">outset 定义一个3D突出边框</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>border-width 边框宽度</p>
+</li>
+<li><p>border-color 边框颜色</p>
+<p>边框颜色必须配合border-style一起使用</p>
+<h4 id="边框-单独设置各边"><a href="#边框-单独设置各边" class="headerlink" title="边框-单独设置各边"></a>边框-单独设置各边</h4><ul>
+<li>border-top-style</li>
+<li>border-right-style</li>
+<li>border-bottom-style</li>
+<li>border-left-style</li>
+<li>简写 border-style:上右下左</li>
+</ul>
+</li>
+</ul>
+<h4 id="边框简写"><a href="#边框简写" class="headerlink" title="边框简写"></a>边框简写</h4><ul>
+<li>border:width style color</li>
+</ul>
+<h3 id="轮廓-outline"><a href="#轮廓-outline" class="headerlink" title="轮廓-outline"></a>轮廓-outline</h3><ul>
+<li><p> style width</p>
+</li>
+<li><p>outline-color 设置颜色</p>
+</li>
+<li><p>outline-style 设置轮廓样式</p>
+</li>
+<li><p>outline-width 设置轮廓的宽度</p>
+</li>
+</ul>
+<h3 id="margin-外边距"><a href="#margin-外边距" class="headerlink" title="margin 外边距"></a>margin 外边距</h3><h3 id="padding-内边距"><a href="#padding-内边距" class="headerlink" title="padding 内边距"></a>padding 内边距</h3><h3 id="css-尺寸"><a href="#css-尺寸" class="headerlink" title="css 尺寸"></a>css 尺寸</h3><ul>
+<li>height 元素的高度</li>
+<li>line-height 设置行高</li>
+<li>max-height 设置元素的最大高度</li>
+<li>max-width 设置元素的宽度的最大宽度</li>
+<li>min-height 设置元素的最小高度</li>
+<li>min-width 设置元素的最小宽度</li>
+<li>width 设置元素的宽度</li>
+</ul>
+<p>max和min 就是用来限制js来修改样式而设置的临界值？</p>
+<h3 id="css显示"><a href="#css显示" class="headerlink" title="css显示"></a>css显示</h3><ul>
+<li>display :none    表示隐藏该元素 隐藏后不占用空间</li>
+<li>visibility:hidden; 表示隐藏该元素 隐藏后占用空间</li>
+</ul>
+<h3 id="css-定位"><a href="#css-定位" class="headerlink" title="css 定位"></a>css 定位</h3><h4 id="position"><a href="#position" class="headerlink" title="position"></a>position</h4><p>值</p>
+<ul>
+<li>static  html 的默认值，即没有定位，遵循正常的文档流对象</li>
+<li>fixed   元素的位置相对于浏览器窗口是固定位置，即使窗口滚动的它也不会移动<ul>
+<li>fixed定位是使元素的位置与文档流无关，因此不占据空间。</li>
+<li>fixed定位的元素和其他元素重叠</li>
+</ul>
+</li>
+<li>relative 定位  相对定位元素的定位是相对于其正常位置<ul>
+<li>移动相对定位元素，但他原本占据的空间不会改变</li>
+<li>相对定位元素经常被用来作为绝对定位元素的容器块</li>
+</ul>
+</li>
+<li>absolute 定位 绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对与<html><ul>
+<li>absolute定位使元素的位置与文档流无关，因此不占据空间</li>
+<li>absolute定位的元素与其他元素重叠</li>
+</ul>
+</li>
+<li>sticky定位 粘性定位  基于用户的滚动位置来定位<ul>
+<li>粘性定位的元素依赖于用户的滚动，在relative与fixed定位之间切换 </li>
+<li>它的行为就像relative,当页面滚动超出目标区域使。它的表现就像fixed 他会固定在目标位置</li>
+</ul>
+</li>
+<li>重叠的元素  z-index修改显示优先？</li>
+<li>相关<ul>
+<li>bottom</li>
+<li>clip  拥有绝对定位的元素可添加该属性</li>
+<li>cursor 显示光标移动到该元素所显示指定的类型<ul>
+<li>default 一个箭头</li>
+<li>auto 默认</li>
+<li>crosshair 十字线</li>
+<li>pointer 一只手</li>
+<li>move  指示某对象可移动（一个表示可移动的图标）</li>
+<li>wait 加载中</li>
+<li>text 文本</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="css-overflow"><a href="#css-overflow" class="headerlink" title="css overflow"></a>css overflow</h3><p>值</p>
+<ul>
+<li>overflow:visible 默认值，内容不会被修剪，呈现在元素框外</li>
+<li>overflow:hidden 内容会被修剪，并且其余内容不可见</li>
+<li>overflow:scroll  内容会被修剪，并且显示滚动条</li>
+<li>overflow:auto 如果内容被修剪，则显示滚动条</li>
+<li>overflow:inherit  继承父类</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/18/css3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1574,360 +2170,6 @@ class Person{<br>public:<br>  Person(){  }<br>  //Person(): 变量名(值){<br> 
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/01/5.%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E9%87%8C%E7%9A%84%E5%86%85%E5%AE%B9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ASDW51 web learning">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/01/5.%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E9%87%8C%E7%9A%84%E5%86%85%E5%AE%B9/" itemprop="url">JQuery 元素内容</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-01T12:10:00+08:00">
-                2020-08-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-获取value"><a href="#1-获取value" class="headerlink" title="1.获取value"></a>1.获取value</h2><p>调用JQuery对象的val方法</p>
-<h2 id="2-获取文字（不包含标签名）"><a href="#2-获取文字（不包含标签名）" class="headerlink" title="2.获取文字（不包含标签名）"></a>2.获取文字（不包含标签名）</h2><p>调用JQuery对象的text方法</p>
-<h2 id="3-获取文字（包含标签名）"><a href="#3-获取文字（包含标签名）" class="headerlink" title="3.获取文字（包含标签名）"></a>3.获取文字（包含标签名）</h2><p>调用JQuery对象的html方法</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/29/1jQuery%E9%80%89%E6%8B%A9%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ASDW51 web learning">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/29/1jQuery%E9%80%89%E6%8B%A9%E5%99%A8/" itemprop="url">JQuery 选择器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-29T12:10:00+08:00">
-                2020-07-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="一、选择器"><a href="#一、选择器" class="headerlink" title="一、选择器"></a>一、选择器</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">基本：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;#id&quot;): 根据给定的ID匹配一个元素。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;dom元素名&quot;)：根据给定的元素名匹配所有元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;.Class类名&quot;): 根据给定的类匹配元素。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、$(&quot;*&quot;) ：匹配所有元素。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5、$(&quot;dom元素.class类名&quot;)：选择所有class属性为指定类名的dom元素。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6、$(&quot;.stripe tr&quot;): 获取class属性为stripe的table元素下的所有行</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">层级：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;ancestor descendant&quot;):在给定的祖先元素下匹配所有的后代元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;parent &gt; child&quot;):在给定的父元素下匹配所有的子元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;prev + next&quot;):匹配所有紧接在 prev 元素后的 next 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、$(&quot;prev ~ siblings&quot;):匹配 prev 元素之后的所有 siblings(同级) 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">简单:</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;tr:first&quot;) 匹配找到的第一个元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;tr:last&quot;) 匹配找到的最后一个元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;input:not(:checked)&quot;) 去除所有与给定选择器匹配的元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、$(&quot;tr:even&quot;) 匹配所有索引值为偶数的元素，从 0 开始计数</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5、$(&quot;tr:odd&quot;) 匹配所有索引值为奇数的元素，从 0 开始计数</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6、$(&quot;tr:eq(1)&quot;) 匹配一个给定索引值的元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7、$(&quot;tr:gt(0)&quot;) 匹配所有大于给定索引值的元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8、$(&quot;tr:lt(2)&quot;) 匹配所有小于给定索引值的元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">内容：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;div:contains(&#x27;John&#x27;)&quot;) 匹配包含给定文本的元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;div:has(p)&quot;) 匹配所有包含 p 元素的 div 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;td:empty&quot;) 查找所有不包含子元素或者文本的空元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可见性：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;tr:visible&quot;) 查找所有可见的 tr 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;tr:hidden&quot;) 匹配所有的不可见元素，input 元素的 type 属性为 &quot;hidden&quot;` `的话也会被匹配到</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">属性：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;div[id]&quot;) 查找所有含有 id 属性的 div 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;input[name=&#x27;newsletter&#x27;]&quot;) 查找所有 name 属性是 newsletter 的 input 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;input[name!=&#x27;newsletter&#x27;]&quot;) 查找所有 name 属性不是 newsletter 的 input 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、$(&quot;input[name^=&#x27;news&#x27;]&quot;) 查找所有 name 以 &#x27;news&#x27;` `开始的 input 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5、$(&quot;input[name$=&#x27;letter&#x27;]&quot;) 查找所有 name 以 &#x27;letter&#x27;` `结尾的 input 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6、$(&quot;input[name*=&#x27;man&#x27;]&quot;) 查找所有 name 包含 &#x27;man&#x27;` `的 input 元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7、$(&quot;input[id][name$=&#x27;man&#x27;]&quot;) 找到所有含有 id 属性，并且它的 name 属性是以 man 结尾的</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">子元素：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、nth-child(even)/:nth-child(odd)/:nth-child(3n)/:nth-child(2)/:nth-child(3n+1)/:nth-child(3n+2) 匹配其父元素下的第N个子或奇偶元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;ul li:first-child&quot;) 在每个 ul 中查找第一个 li</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;ul li:last-child&quot;)  在每个 ul 中查找最后一个 li</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、$(&quot;ul li:only-child&quot;)  在 ul 中查找是唯一子元素的 li</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表单：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;:input&quot;) 查找所有的input元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;text&quot;)  匹配所有的单行文本框</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;:password&quot;) 匹配所有密码框</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4、$(&quot;radio&quot;)  匹配所有单选按钮</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5、$(&quot;checkbox&quot;) 匹配所有复选框</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6、$(&quot;submit&quot;)  匹配所有提交按钮</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7、$(&quot;image&quot;)  匹配所有图像域</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">8、$(&quot;button&quot;)  匹配所有按钮</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9、$(&quot;file&quot;)   匹配所有文件域</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10、$(&quot;hidden&quot;) 匹配所有不可见元素，或者type为hidden的元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表单对象属性：</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、$(&quot;input:checked&quot;) 匹配所有选中的被选中元素(复选框、单选框等，不包括select中的option)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2、$(&quot;input:enabled&quot;) 匹配所有可用元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3、$(&quot;input:disabled&quot;) 匹配所有不可用元素</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">04、$(&quot;select option:selected&quot;) 匹配所有选中的option元素</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1989,7 +2231,7 @@ class Person{<br>public:<br>  Person(){  }<br>  //Person(): 变量名(值){<br> 
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

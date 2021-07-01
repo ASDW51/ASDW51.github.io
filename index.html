@@ -1609,6 +1609,915 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/11/%E5%90%8E%E7%9B%BE%E4%BA%BAjs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/11/%E5%90%8E%E7%9B%BE%E4%BA%BAjs/" itemprop="url">JavaScript 总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-11T14:48:00+08:00">
+                2021-06-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="B站视频链接"><a href="#B站视频链接" class="headerlink" title="B站视频链接"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1NJ411W7wh">B站视频链接</a></h1><h2 id="一、变量声明"><a href="#一、变量声明" class="headerlink" title="一、变量声明"></a>一、变量声明</h2><h3 id="var、let、const"><a href="#var、let、const" class="headerlink" title="var、let、const"></a>var、let、const</h3><p>var 可重复声明，可二次赋值，无作用域概念</p>
+<p>let 不可重复声明，可二次赋值，有作用域概念</p>
+<p>const 不可重复声明，不可二次赋值，有作用域概念</p>
+<h3 id="undefined-和-null"><a href="#undefined-和-null" class="headerlink" title="undefined 和 null"></a>undefined 和 null</h3><p>普通数据类型可用undefined, 引用数据类型可用null 两者无本质区别</p>
+<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><p>变量提升在用var声明变量的时候会有表现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">console.log(num) ;  //undefined</span><br><span class="line">var num = 10;</span><br><span class="line"></span><br><span class="line"> ||  等同于</span><br><span class="line"> ∨</span><br><span class="line"> var num;</span><br><span class="line"> console.log(num)  </span><br><span class="line"> num = 10;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、运算符"><a href="#二、运算符" class="headerlink" title="二、运算符"></a>二、运算符</h2><p>前置加和后置加的区别</p>
+<p>短路与和短路或  ||  &amp;&amp;</p>
+<p>赋值运算符</p>
+<p>比较运算符</p>
+<p>严格比较运算符</p>
+<h2 id="三、条件控制语句"><a href="#三、条件控制语句" class="headerlink" title="三、条件控制语句"></a>三、条件控制语句</h2><h3 id="if…else……"><a href="#if…else……" class="headerlink" title="if…else……"></a>if…else……</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(真)&#123;</span><br><span class="line">	会执行在这里的语句，仅有一条语句时可省略大括号（不推荐省略）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">布尔表达式？true的时候返回这个:false的时候返回这个</span><br></pre></td></tr></table></figure>
+
+<h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">switch(variable)&#123;</span><br><span class="line">	case 1:</span><br><span class="line">		break;</span><br><span class="line">	case 2:</span><br><span class="line">		break;</span><br><span class="line">		……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let num =1;</span><br><span class="line">while(true)&#123;</span><br><span class="line">	if(num&gt;10)&#123;</span><br><span class="line">		break;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="do……while"><a href="#do……while" class="headerlink" title="do……while"></a>do……while</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">do……while ==&gt; 至少执行一次代码块</span><br><span class="line">do&#123;</span><br><span class="line">	至少执行一次</span><br><span class="line">&#125;while(true)</span><br></pre></td></tr></table></figure>
+
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(let i =0; i&lt;10; i++)&#123;</span><br><span class="line">	console.log(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="for……in"><a href="#for……in" class="headerlink" title="for……in"></a>for……in</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(a in arr)&#123;</span><br><span class="line">	此时a是arr的下标</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="for……of"><a href="#for……of" class="headerlink" title="for……of"></a>for……of</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(a of arr)&#123;</span><br><span class="line">	此时a是arr的值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="四、String对象"><a href="#四、String对象" class="headerlink" title="四、String对象"></a>四、String对象</h2><h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="built_in">String</span>(<span class="string">&quot;构造函数&quot;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(str)  <span class="comment">//构造函数</span></span><br><span class="line">等同于</span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;构造函数&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">字符串模板的特点：可以在字符串中使用定义好的变量，无需字符串拼接</span><br><span class="line">let str1 = &quot;str1&quot;;</span><br><span class="line">let str2 = &quot;str2&quot;;</span><br><span class="line">let str3 = &quot;我的str:&quot; + str1 + str2</span><br><span class="line">let str4 = `我的str:$&#123;str1&#125;$&#123;str2&#125;`;</span><br><span class="line">console.log(&quot;str3&quot;,str3); 	//str3 我的str:str1str2</span><br><span class="line">console.log(&quot;str4&quot;,str4);	//str4 我的str:str1str2</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h3><h4 id="1-slice-start-end-支持负数索引"><a href="#1-slice-start-end-支持负数索引" class="headerlink" title="1.slice(start, end) (支持负数索引)"></a>1.slice(start, end) (支持负数索引)</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">slice(start, end) //两个参数 以字符串中的下标论，从0开始，包括start,不包括end,end默认到末尾</span><br><span class="line">let str = &quot;12345&quot;;</span><br><span class="line">//  下标    01234</span><br><span class="line">//截取2到4</span><br><span class="line">console.log(str.slice(1,4))  // 234</span><br><span class="line">console.log(str)    //12345 slice 不改变原数组</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-substr-start-length-支持负数索引"><a href="#2-substr-start-length-支持负数索引" class="headerlink" title="2.substr(start, length) (支持负数索引)"></a>2.substr(start, length) (支持负数索引)</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">substr(start, length)	从start开始抽取指定length个的字符</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>start</em></td>
+<td align="left">必需。要抽取的子串的起始下标。必须是数值。如果是负数，那么该参数声明从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推。</td>
+</tr>
+<tr>
+<td align="left"><em>length</em></td>
+<td align="left">可选。子串中的字符数。必须是数值。如果省略了该参数，那么返回从 stringObject 的开始位置到结尾的字串。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">let substr = &quot;12345&quot;</span><br><span class="line">//截取2到4</span><br><span class="line">console.log(substr.substr(1,3)) //234</span><br><span class="line">console.log(substr) //12345 substr 不改变原数组</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-substring-from-to-不支持负数索引"><a href="#3-substring-from-to-不支持负数索引" class="headerlink" title="3.substring(from, to) (不支持负数索引)"></a>3.substring(from, to) (不支持负数索引)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">substring() 方法用于提取字符串中介于两个指定下标之间的字符。</span><br><span class="line">substring() 方法返回的子串包括 开始 处的字符，但不包括 结束 处的字符。</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> substring = <span class="string">&quot;12345&quot;</span>;</span><br><span class="line"><span class="comment">//截取2到4</span></span><br><span class="line"><span class="built_in">console</span>.log(substring.substring(<span class="number">1</span>,<span class="number">4</span>));  <span class="comment">//</span></span><br><span class="line"><span class="built_in">console</span>.log(substring)  <span class="comment">//12345 substring 不改变原数组</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串查找方法"><a href="#字符串查找方法" class="headerlink" title="字符串查找方法"></a>字符串查找方法</h3><ul>
+<li>indexOf(str)  从左到右查找str，成功返回下标，失败返回-1</li>
+<li>lastIndexOf(str)  从有到左查找str，成功返回下标，失败返回-1</li>
+<li>includes(str)  是否包含str ，返回值boolean</li>
+<li>switchWith(str)  是否以str 开头 返回值boolean</li>
+<li>trim() 去掉两边空白</li>
+<li>toLocalLowerCase()  转小写</li>
+<li>toLocalUpperCase() 转大写</li>
+<li>valueOf() 返回字符串对象的原始值</li>
+<li>toString()  返回一个字符串</li>
+<li>split(str)  根据str 把字符串切割成数组</li>
+<li>replace()  字符串替换</li>
+<li>repeat(n) 字符串重复n次</li>
+</ul>
+<h2 id="五、Math对象"><a href="#五、Math对象" class="headerlink" title="五、Math对象"></a>五、Math对象</h2><h3 id="最大值"><a href="#最大值" class="headerlink" title="最大值"></a>最大值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.max(num1,num2,num3)</span><br></pre></td></tr></table></figure>
+
+<h3 id="最小值"><a href="#最小值" class="headerlink" title="最小值"></a>最小值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.min(num1,num2,num3)</span><br></pre></td></tr></table></figure>
+
+<h3 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.random()  返回0~1之间的一个书</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
+<li>ceil(x) 向上取整</li>
+<li>floor(x)  向下取整</li>
+<li>pow(x,y) 返回x的y次幂</li>
+<li>round(x)  四舍五入、</li>
+</ul>
+<h2 id="六、Date对象"><a href="#六、Date对象" class="headerlink" title="六、Date对象"></a>六、Date对象</h2><p>Date的时间支持1970年至今</p>
+<h3 id="声明方式"><a href="#声明方式" class="headerlink" title="声明方式"></a>声明方式</h3><ul>
+<li><em>let</em> date =new Date();</li>
+<li><em>let</em> date =new Date(milliseconds); 给一个毫秒数</li>
+<li><em>let</em> date =new Date(2010,2,2,19,20,30);  年月日时分秒</li>
+<li>……</li>
+</ul>
+<h3 id="Date常用方法"><a href="#Date常用方法" class="headerlink" title="Date常用方法"></a>Date常用方法</h3><ul>
+<li>getDay()  返回一周中的某一天（0-6）</li>
+<li>getFullYear()  返回四位数的年份</li>
+<li>getMonth()  返回月份（0-11） 月份从0开始到11</li>
+<li>getDate() 返回一个月中的某一天（1-31）</li>
+<li>getHour()   返回小时  （0-23）从0开始</li>
+<li>getMinutes() 返回分钟（0-59） 0开始</li>
+<li>getSenconds()  返回秒数（0–59）</li>
+<li>getTime()  返回1970至今毫秒数</li>
+<li></li>
+<li>toLocaleDateString()</li>
+</ul>
+<h2 id="七、数组"><a href="#七、数组" class="headerlink" title="七、数组"></a>七、数组</h2><h3 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h3><ul>
+<li>arr = new Array(5)  5个空间的arr</li>
+<li>arr = new Array.of(5)  一个空间并且为5的数组</li>
+<li>arr = []  空数组</li>
+</ul>
+<h3 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let [a,b] = [1,2]</span><br><span class="line">console.log(a)  //1</span><br><span class="line">console.log(b)	//2</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组的增删改查"><a href="#数组的增删改查" class="headerlink" title="数组的增删改查"></a>数组的增删改查</h3><p>增</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1,2,3]</span><br><span class="line">arr[arr.length]=4</span><br><span class="line">arr.push(4,5,6……)</span><br></pre></td></tr></table></figure>
+
+<p>删</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arr.pop()  删除末尾的一个元素  </span><br><span class="line">arr.shift()  删除数组的第一个元素</span><br><span class="line"></span><br><span class="line">以上两个返回值都是被删除的元素</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">再次赋值即可</span><br></pre></td></tr></table></figure>
+
+<p>查</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1,2,3]</span><br><span class="line">arr.includes()  boolean 返回值</span><br><span class="line">arr.indexOf()</span><br><span class="line">arr.lastIndexOf()</span><br><span class="line">类似String查找……</span><br><span class="line"></span><br><span class="line">find()</span><br><span class="line">findIndex()</span><br><span class="line">引用类型适用</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>遍历的时候拿到的item 是普通数据类型还是引用数据类型呢？关键点</p>
+</li>
+<li><p>fill()    数组填充</p>
+</li>
+<li><p>sort()</p>
+<ul>
+<li>```<br>let arr = [2,1,3,5,67,99,3,4,34,43];<pre><code>console.table(arr.sort(function(a,b)&#123;
+    //a-b 从小到大 升序排序
+    //b-a 从大到小  降序排序
+    return a-b;
+&#125;))
+</code></pre>
+sort 原理<br>function sort(arr,callback){<pre><code>    //冒泡排序
+    for(let i =0; i&lt; arr.length; i++)&#123;
+        for(let j=0; j&lt;arr.length; j++)&#123;
+            if(callback(arr[i], arr[j]) &lt; 0)&#123;
+                let temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">- forEach() 数组循环</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">      let arr = [1,2,3,4,5]</span><br><span class="line">        arr.forEach(function(value, key, arr)&#123;</span><br><span class="line">            // value 值</span><br><span class="line">            // key 下标</span><br><span class="line">            // arr 原数组</span><br><span class="line">            console.log(arr)</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>every()</p>
+<ul>
+<li>```<br>let status = arr.every(function(value, key, arr){<pre><code>    console.log(value)
+    //每一次循环都要返回真才会继续循环
+    return true
+&#125;)
+//全真才会返回真， 一假就假
+console.log(status)
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- some()</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    类似every 刚好反过来，遇到false会继续遍历</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>filter()</p>
+<ul>
+<li>```<br>filter(function(value, key, arr)=&gt;{<pre><code>//最终会返回一个新数组
+返回true 会push 当前元素进去
+返回false 不会push当前元素进去
+</code></pre>
+}) <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- map()</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    map(function(value, key, arr)&#123;</span><br><span class="line">    	//这里返回什么，新数组对应位置就为什么</span><br><span class="line">    	return &quot;&quot;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>reduce()</p>
+<ul>
+<li>```<br>reduce(function(pre, value, key, arr){<pre><code>//pre 如果有第二个参数则为第二个参数，如果没有则为数组的第一个参数
+//pre 也为上一个循环的返回值
+</code></pre>
+})<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">## 八、新增数据类型</span><br><span class="line"></span><br><span class="line">### 1.symbol</span><br><span class="line"></span><br><span class="line">symbol 本质上是类似于唯一字符串，可用作对象的唯一属性名</span><br><span class="line"></span><br><span class="line">#### 唯一性</span><br><span class="line"></span><br><span class="line">即使是同一个描述生成的symbol 对象也不相等</span><br><span class="line"></span><br><span class="line">#### 隐藏性</span><br><span class="line"></span><br><span class="line">for……in，object.keys() 不能访问到</span><br><span class="line"></span><br><span class="line">Object.getOwnPropertySymbols()   才可以获取到值ymbol  只能遍历symbol 类型的key</span><br><span class="line"></span><br><span class="line">Reflect.ownKeys() 可以遍历到所有的</span><br><span class="line"></span><br><span class="line">#### 需要可复用</span><br><span class="line"></span><br><span class="line">虽然这样保证了Symbol的唯一性，但我们不排除希望能够多次使用同一个symbol值的情况。</span><br><span class="line">为此，官方提供了全局注册并登记的方法：Symbol.for()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+let name1 = Symbol.for(‘name’); //检测到未创建后新建<br>let name2 = Symbol.for(‘name’); //检测到已创建后返回<br>console.log(name1 === name2); // true<br>123<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">通过这种方法就可以通过参数值获取到全局的symbol对象了，反之，能不能通过symbol对象获取到参数值呢？</span><br><span class="line">是可以的 ，通过Symbol.keyFor()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+let name1 = Symbol.for(‘name’);<br>let name2 = Symbol.for(‘name’);<br>console.log(Symbol.keyFor(name1));  // ‘name’<br>console.log(Symbol.keyFor(name2)); // ‘name’<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.Set</span><br><span class="line"></span><br><span class="line">set 的特点 不可重复性，强引用, 区分类型（number 和·string）</span><br><span class="line"></span><br><span class="line">#### set的定义</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+let set = new Set();<br>console.log(set)  //[]<br>let set = new Set(“1232”);<br>console.log(set)  //[“1”,”2”,”3”]<br>let set = new Set([1,2,3,1]);<br>console.log(set)  //[1,2,3]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### set 增加数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set.add(data)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### set删除数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set.delete(data)    删除成功返回true,反之返回false<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### set查找</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set.has(data)    删除成功返回true,反之返回false<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### set 清空数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set.clear()<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### set遍历</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set.values()<br>set.keys()<br>set.entries()<br>forEach<br>for…in<br>……<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Set与数组互转</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set-&gt;arr    […set]<br>arr-&gt;set     new Set(arr)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### size</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+set.size() 返回set的大小<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 3.WeakSet()</span><br><span class="line"></span><br><span class="line">特点：不可重复，只能存放引用类型的数组，弱引用</span><br><span class="line"></span><br><span class="line">delete()</span><br><span class="line"></span><br><span class="line">has()</span><br><span class="line"></span><br><span class="line">其他set的方法没了，size都没有</span><br><span class="line"></span><br><span class="line">### 4.Map</span><br><span class="line"></span><br><span class="line">特点：类似对象，都是以键值对的方式储存数据。区别是对象只能以字符串作为键名，而Map不局限于字符串，数字、对象等都可以作为键名</span><br><span class="line"></span><br><span class="line">#### Map的定义</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+let map = new Map()<br>//传入二维数组<br>let map = new Map([[“key1”,”value1”],[“key2”,”value2”]]);</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Map添加数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>map.set(key, value)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Map删除数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>map.delete(key)    删除成功返回true<br>map.clear()  全删除，无返回值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Map查找数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>map.has(key)    查找成功返回true</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Map转数组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>[…map]   得到二位数组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Map的一些方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>map.keys()<br>map.values()<br>map.entries()<br>map可以用for…of遍历<br>也可以转为数组在遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 5.WeakMap</span><br><span class="line"></span><br><span class="line">特点：类似Map 类型， 但键名只能使用对象，且是弱引用</span><br><span class="line"></span><br><span class="line">仅有delete、has、set方法</span><br><span class="line"></span><br><span class="line">## 九、函数</span><br><span class="line"></span><br><span class="line">### 函数的定义方式</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">//构造函数</span><br><span class="line">let fun1 = new Function(&quot;a&quot;,&quot;console.log(a)&quot;)</span><br><span class="line">//函数表达式</span><br><span class="line">let fun2 = function(a)&#123;</span><br><span class="line">console.log(a)</span><br><span class="line">&#125;</span><br><span class="line">function fun3(a)&#123;</span><br><span class="line">console.log(a)</span><br><span class="line">&#125;</span><br><span class="line">fun1(4) //4</span><br><span class="line">fun2(4) //4</span><br><span class="line">fun3(4) //4</span><br></pre></td></tr></table></figure>
+
+<h3 id="全局函数的特点"><a href="#全局函数的特点" class="headerlink" title="全局函数的特点"></a>全局函数的特点</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">全局定义的函数默认是添加在window对象上的方法</span><br></pre></td></tr></table></figure>
+
+<h3 id="匿名函数与函数提升"><a href="#匿名函数与函数提升" class="headerlink" title="匿名函数与函数提升"></a>匿名函数与函数提升</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">匿名函数特点：不用命名，难以复用</span><br><span class="line">函数提升:下面例子不会报错</span><br><span class="line">fun1()</span><br><span class="line">function fun1()&#123;</span><br><span class="line">console.log(&quot;aaa&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="立即执行函数解决作用域冲突（命名冲突）"><a href="#立即执行函数解决作用域冲突（命名冲突）" class="headerlink" title="立即执行函数解决作用域冲突（命名冲突）"></a>立即执行函数解决作用域冲突（命名冲突）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">立即执行函数</span><br><span class="line">(function()&#123;</span><br><span class="line">	console.log(&quot;aa&quot;)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+<p>用法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"><span class="built_in">window</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = &#123;</span><br><span class="line">        <span class="function"><span class="title">a1</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;a1&quot;</span>)</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="function"><span class="title">a2</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&quot;a2&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">window</span>.a = a</span><br><span class="line">&#125;)(<span class="built_in">window</span>)</span><br><span class="line"><span class="built_in">window</span>.a.a1()</span><br><span class="line"><span class="built_in">window</span>.a.a2()</span><br></pre></td></tr></table></figure>
+
+<h3 id="形参与实参"><a href="#形参与实参" class="headerlink" title="形参与实参"></a>形参与实参</h3><p>略</p>
+<h3 id="arguments和用…语法接收参数"><a href="#arguments和用…语法接收参数" class="headerlink" title="arguments和用…语法接收参数"></a>arguments和用…语法接收参数</h3><p>传入的参数会被arguments接到，类似是一个数组</p>
+<p>现在用…args可以达到同样的效果，不同的是arguments会接到所有的参数，不管你定义了几个参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let fun1=function(a)&#123;</span><br><span class="line">        console.log(a)  // 1</span><br><span class="line">        console.log(arguments)  //1 2 3</span><br><span class="line">    &#125;</span><br><span class="line">    let fun2 = function(a, ...args)&#123;</span><br><span class="line">        console.log(a)  //1</span><br><span class="line">        console.log(args)      //2 3</span><br><span class="line">    &#125;</span><br><span class="line">    fun1(1,2,3)</span><br><span class="line">    fun2(1,2,3)</span><br></pre></td></tr></table></figure>
+
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><ol>
+<li>常在匿名函数里使用</li>
+<li>语法 ()=&gt;{}</li>
+<li>圆括号里写参数，仅有一个参数时圆括号可省略，没有参数时要写上圆括号 a=&gt;{}</li>
+<li>代码块中仅有一条语句时且是return 的 ,  {}省略  a=&gt;a+1</li>
+</ol>
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>一个函数的参数是一个函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> callback = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&quot;这是个函数，他将作为一个参数传递给另一个函数&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//a是形参，接收任意数据类型，当传进一个函数体时会发生什么呢？</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//可以调用传进来得函数体？</span></span><br><span class="line">	a()   <span class="comment">//控制台有打印吗？</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//回调函数  在一个适当的时机调用另外一个函数</span></span><br><span class="line">	<span class="keyword">if</span>(真)&#123;</span><br><span class="line">		a()   <span class="comment">//条件为真才调用</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">b(callback)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="函数中的this和方法中的this-指向"><a href="#函数中的this和方法中的this-指向" class="headerlink" title="函数中的this和方法中的this 指向"></a>函数中的this和方法中的this 指向</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="built_in">this</span>)   <span class="comment">//指向window对象</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">let</span> obj = &#123;</span><br><span class="line">       <span class="function"><span class="title">fun1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="built_in">console</span>.log(<span class="built_in">this</span>) <span class="comment">//指向obj</span></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">let</span> obj2 = &#123;</span><br><span class="line">       <span class="function"><span class="title">fun1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">               <span class="built_in">console</span>.log(<span class="built_in">this</span>)   <span class="comment">//这是方法中的函数，指向window对象</span></span><br><span class="line">           &#125;,<span class="number">1000</span>)</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   fun1()</span><br><span class="line">   obj1.fun1()</span><br><span class="line">   obj2.fun1()</span><br></pre></td></tr></table></figure>
+
+<p>总结：普通函数中的this指向window对象，对象中的方法指向当前对象，对象的方法中的函数指向window对象</p>
+<p>注意：DOM对象添加事件监听其实也是添加DOM对象的方法，此时this指向DOM对象</p>
+<h3 id="箭头函数的this指向"><a href="#箭头函数的this指向" class="headerlink" title="箭头函数的this指向"></a>箭头函数的this指向</h3><p>在箭头函数中使用的this会到父级作用域中寻找this,此时this指向跟父级作用域的this指向相同，DOM对象中的事件监听按此理也是寻找父级作用域的this</p>
+<h3 id="this使用总结"><a href="#this使用总结" class="headerlink" title="this使用总结"></a>this使用总结</h3><p>普通回调函数用箭头函数， DOM事件用普通函数</p>
+<h3 id="用call、apply、bind来调用函数"><a href="#用call、apply、bind来调用函数" class="headerlink" title="用call、apply、bind来调用函数"></a>用call、apply、bind来调用函数</h3><ul>
+<li>这三个方法的作用都是用来改变函数的this指向</li>
+<li>Function.call(Object, params)    此时 Function 的this指向Object  ,params 格式为  1，2，3</li>
+<li>Function.apply(Object,  params)  此时 Function 的this指向Object ,  params 是一个数组传参</li>
+<li>上面两个方法都是立即执行</li>
+<li>Function.bind(Object, params)   与call类似，区别是不会立即调用函数,适用于改变事件监听中回调函数的this指向</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/26/DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/05/26/DOM/" itemprop="url">DOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-26T20:33:00+08:00">
+                2021-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><h3 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h3><ul>
+<li><p>属性</p>
+<ul>
+<li><p>defaultView</p>
+</li>
+<li><p>doctype</p>
+</li>
+<li><p>documentElement  指向html节点</p>
+</li>
+<li><p>document.body</p>
+</li>
+<li><p>document.head</p>
+</li>
+<li><p>document.scrollingElement</p>
+</li>
+<li><p>document.activeElement</p>
+</li>
+<li><p>fullscreenElement</p>
+</li>
+<li><p>返回HTMLCollection实例</p>
+<ul>
+<li>document.links</li>
+<li>document.forms</li>
+<li>document.images</li>
+<li>document.embeds</li>
+<li>document.plugins</li>
+<li>scripts</li>
+</ul>
+</li>
+<li><p>document.styleSheets</p>
+</li>
+<li><p>document.documentURI</p>
+</li>
+<li><p>document.documentURL</p>
+</li>
+<li><p>document.domain</p>
+</li>
+<li><p>document.location</p>
+</li>
+<li><p>document.lastModiified</p>
+</li>
+<li><p>document.title</p>
+</li>
+<li><p>document.characterSet</p>
+</li>
+<li><p>document.referrer</p>
+</li>
+<li><p>document.dir</p>
+</li>
+</ul>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>选择器</p>
+<ul>
+<li><p>返回NodeList对象</p>
+<ul>
+<li>document.querySelector()</li>
+<li>document.querySelectorAll()</li>
+<li>document.getElementsByName()</li>
+</ul>
+</li>
+<li><p>返回HTMLCollection 实例</p>
+<ul>
+<li>document.getElementsByTagName()</li>
+<li>document.getElementsByClassName()</li>
+</ul>
+</li>
+<li><p>document.getElementById() 返回的是个节点</p>
+</li>
+</ul>
+</li>
+<li><p>节点生成</p>
+<ul>
+<li>document.createElement()  生成元素节点</li>
+<li>document.createTextNode() 生成文本节点</li>
+<li>document.createComment() 生成注释节点</li>
+<li>document.createDocumentFragment() 生成空的文档对象</li>
+</ul>
+</li>
+<li><p>属性相关</p>
+<ul>
+<li>document.createAttribute() 生成一个新的属性节点。值通过value属性设置</li>
+</ul>
+</li>
+<li><p>事件相关</p>
+<ul>
+<li>document.createEvent()  生成事件对象</li>
+<li>document.addEventListener()  添加监听器</li>
+<li>document.removeEventListener()  移除监听器</li>
+</ul>
+</li>
+<li><p>子节点遍历器</p>
+<ul>
+<li><p>document.createNodeIterator() 子节点遍历器</p>
+<ul>
+<li>nextNode()</li>
+<li>previousNode()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="DocumentType"><a href="#DocumentType" class="headerlink" title="DocumentType"></a>DocumentType</h3><h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h3><ul>
+<li><p>属性</p>
+<ul>
+<li><p>Element.id</p>
+</li>
+<li><p>Element.tagName</p>
+</li>
+<li><p>Element.dir</p>
+</li>
+<li><p>Element.accessKey</p>
+</li>
+<li><p>Element.draggable</p>
+</li>
+<li><p>Element.lang</p>
+</li>
+<li><p>Element.tabIndex</p>
+</li>
+<li><p>Element.title</p>
+</li>
+<li><p>元素状态相关</p>
+<ul>
+<li>Element.hidden</li>
+<li>Element.contentEditable 元素是否可编辑</li>
+<li>Element.isContentEditable</li>
+</ul>
+</li>
+<li><p>Element.attributes</p>
+</li>
+<li><p>元素类的操作</p>
+<ul>
+<li><p>className 返回字符串</p>
+</li>
+<li><p>classList 返回类数组对象</p>
+<ul>
+<li>add() 增加一个类</li>
+<li>remove() 删除一个类</li>
+<li>contains() 是否包含某个类</li>
+<li>toggle() 类切换</li>
+<li>item() 返回指定索引的类</li>
+<li>toSting() 转成字符串形式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Element.dataset  自定义属性</p>
+</li>
+<li><p>Element.innerHTML</p>
+</li>
+<li><p>Element.outerHTML  可用于替换整个元素</p>
+</li>
+<li><p>元素大小</p>
+<ul>
+<li><p>返回元素大小，只包括padding</p>
+<ul>
+<li>Element.clientHeight</li>
+<li>Element.clientWidth</li>
+</ul>
+</li>
+<li><p>返回边框大小</p>
+<ul>
+<li>Element.clientLeft</li>
+<li>Element.clientTop</li>
+</ul>
+</li>
+<li><p>返回元素占的总大小(不包括margin,border)</p>
+<ul>
+<li>Element.scrollHeight</li>
+<li>Element.scrollWidth</li>
+</ul>
+</li>
+<li><p>滚动的像素</p>
+<ul>
+<li>Element.scrollLeft 返回元素向右滚动的像素</li>
+<li>Element.scrollTop 返回元素向下滚动的像素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>元素离窗口的距离</p>
+<ul>
+<li><p>返回元素在该元素的总大小</p>
+<ul>
+<li>Element.offsetHeight</li>
+<li>Element.offsetWidth</li>
+</ul>
+</li>
+<li><p>返回距离父元素的偏移量</p>
+<ul>
+<li>Element.offsetLeft</li>
+<li>Element.offsetTop</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Element.offsetParent</p>
+<ul>
+<li>返回最近的父元素且position不等于static</li>
+</ul>
+</li>
+<li><p>Element.style  行内样式</p>
+</li>
+<li><p>Element.children</p>
+<ul>
+<li>返回HTMLCollection 实例</li>
+</ul>
+</li>
+<li><p>Element.childElementCount</p>
+</li>
+<li><p>Element.firstElementChild</p>
+</li>
+<li><p>Element.lastElementChild</p>
+</li>
+<li><p>Element.nextElementSibling</p>
+</li>
+<li><p>Element.previousElementSibling</p>
+</li>
+</ul>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>属性相关</p>
+<ul>
+<li>getAttribute() 获取某个属性的值</li>
+<li>getAttributeNames() 返回当前元素的所有属性名 </li>
+<li>setAttribute() 写入属性值</li>
+<li>hasAttribute() 某个属性是否存在</li>
+<li>hasAttributes() 当前属性是否有属性</li>
+<li>removeAttribute() 删除属性</li>
+</ul>
+</li>
+<li><p>选择器</p>
+<ul>
+<li><p>Element.querySelector() css选择器</p>
+</li>
+<li><p>Element.querySelectorAll()  返回NodeList实例</p>
+</li>
+<li><p>返回HTMLCollection 实例</p>
+<ul>
+<li>Element.getElementsByClassName() </li>
+<li>Element.getElementsByTagName()</li>
+</ul>
+</li>
+<li><p>Element.closest()</p>
+<ul>
+<li>接受css选择器，返回距离选中元素最近的父元素</li>
+</ul>
+</li>
+<li><p>Element.matches() 返回一个布尔值，表示当前元素是否匹配给定的css选择器</p>
+</li>
+</ul>
+</li>
+<li><p>Element.scrollIntoView() 滚动当前元素进入浏览器可视区域</p>
+</li>
+<li><p>Element.getBoundingClientRect() 返回一个对象</p>
+<ul>
+<li>x</li>
+<li>y</li>
+<li>height</li>
+<li>width</li>
+<li>left</li>
+<li>right</li>
+<li>top</li>
+<li>bottom</li>
+</ul>
+</li>
+<li><p>Element.getClientReacts()</p>
+</li>
+<li><p>Element.insertAdjacentElement()</p>
+</li>
+<li><p>Element.insertAdjacentHtml()</p>
+</li>
+<li><p>Element.insertAdjacentText()</p>
+</li>
+<li><p>Element.remove()</p>
+</li>
+<li><p>Element.focus()</p>
+</li>
+<li><p>Element.blur()</p>
+</li>
+<li><p>Element.click()</p>
+</li>
+</ul>
+</li>
+<li><p>Element.attributes</p>
+<ul>
+<li><p>返回类似数组的动态对象，可通过索引或属性名索引</p>
+</li>
+<li><p>属性节点对象</p>
+<ul>
+<li><p>name</p>
+<ul>
+<li>属性名，等同于nodeName</li>
+</ul>
+</li>
+<li><p>value</p>
+<ul>
+<li>属性值。等同于nodeValue</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性保留字</p>
+<ul>
+<li><p>for</p>
+<ul>
+<li>htmlFor</li>
+</ul>
+</li>
+<li><p>ckass</p>
+<ul>
+<li>className</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性操作的标准方法</p>
+<ul>
+<li>getAttribute(key) 返回属性值</li>
+<li>Elemnet.getAttributeNames() 返回一个数组，成员是当前索引属性的名字</li>
+<li>Element.setAttribute() 设置属性</li>
+<li>Element.hasAttribute()  返回一个布尔值。表示是否有该属性</li>
+<li>Element.hasAttributes()移除指定属性</li>
+<li>data- 自定义属性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Attr"><a href="#Attr" class="headerlink" title="Attr"></a>Attr</h3><h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><h3 id="DocumentFragment"><a href="#DocumentFragment" class="headerlink" title="DocumentFragment"></a>DocumentFragment</h3><h3 id="子主题-8"><a href="#子主题-8" class="headerlink" title="子主题 8"></a>子主题 8</h3><h3 id="子主题-9"><a href="#子主题-9" class="headerlink" title="子主题 9"></a>子主题 9</h3><h2 id="多个节点的接口"><a href="#多个节点的接口" class="headerlink" title="多个节点的接口"></a>多个节点的接口</h2><h3 id="NodeList"><a href="#NodeList" class="headerlink" title="NodeList"></a>NodeList</h3><ul>
+<li><p>length</p>
+</li>
+<li><p>forEach()</p>
+</li>
+<li><p>item(i) 取第i个节点</p>
+</li>
+<li><p>遍历</p>
+<ul>
+<li>keys() 遍历键名</li>
+<li>values() 遍历值</li>
+<li>entries()  遍历键值</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTMLCollection"><a href="#HTMLCollection" class="headerlink" title="HTMLCollection"></a>HTMLCollection</h3><ul>
+<li>length</li>
+<li>item(i) 取第i个节点</li>
+<li>namedItem() 根据id或name属性取节点</li>
+</ul>
+<h2 id="属性的操作"><a href="#属性的操作" class="headerlink" title="属性的操作"></a>属性的操作</h2><h3 id="元素对象独有的属性，其他类型的返回null"><a href="#元素对象独有的属性，其他类型的返回null" class="headerlink" title="元素对象独有的属性，其他类型的返回null"></a>元素对象独有的属性，其他类型的返回null</h3><h3 id="可以通过序号引用，也可以通过属性名引用"><a href="#可以通过序号引用，也可以通过属性名引用" class="headerlink" title="可以通过序号引用，也可以通过属性名引用"></a>可以通过序号引用，也可以通过属性名引用</h3><h3 id="element-attributes"><a href="#element-attributes" class="headerlink" title="element.attributes"></a>element.attributes</h3><h3 id="每个属性都有name-value属性，对应键值对"><a href="#每个属性都有name-value属性，对应键值对" class="headerlink" title="每个属性都有name,value属性，对应键值对"></a>每个属性都有name,value属性，对应键值对</h3><h3 id="html元素的标准属性，会自动成为节点对象的属性"><a href="#html元素的标准属性，会自动成为节点对象的属性" class="headerlink" title="html元素的标准属性，会自动成为节点对象的属性"></a>html元素的标准属性，会自动成为节点对象的属性</h3><ul>
+<li>id</li>
+<li>href</li>
+<li>src</li>
+<li>action</li>
+<li>method</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>getAttribute</p>
+<ul>
+<li>obj.getAttribute(name) 返回指定属性</li>
+</ul>
+</li>
+<li><p>getAttributeNames</p>
+<ul>
+<li>返回所有属性的名字</li>
+</ul>
+</li>
+<li><p>setAttribute</p>
+<ul>
+<li>设置属性</li>
+</ul>
+</li>
+<li><p>hasAttributes</p>
+<ul>
+<li>是否有某个属性</li>
+</ul>
+</li>
+<li><p>removeAttribute</p>
+<ul>
+<li>移除某个属性，没有返回值</li>
+</ul>
+</li>
+</ul>
+<h3 id="dataset属性"><a href="#dataset属性" class="headerlink" title="dataset属性"></a>dataset属性</h3><h2 id="Node接口"><a href="#Node接口" class="headerlink" title="Node接口"></a>Node接口</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>nodeType</li>
+<li>nodeName</li>
+<li>nodeValue</li>
+<li>textContent</li>
+<li>baseUrl</li>
+<li>ownerDocument</li>
+<li>nextSibling</li>
+<li>previousSibling</li>
+<li>parentNode</li>
+<li>parentElement</li>
+<li>firstChild</li>
+<li>lastChild</li>
+<li>childNodes</li>
+<li>isConnected</li>
+</ul>
+<h3 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>appendChild</li>
+<li>hasChildNodes</li>
+<li>cloneNode</li>
+<li>insertBefore</li>
+<li>removeChildl</li>
+<li>replaceChild</li>
+<li>compareDocumentPosition</li>
+<li>isEqualNode</li>
+<li>isSameNode</li>
+<li>normalize</li>
+<li>getRootNode</li>
+</ul>
+<h2 id="父子节点接口"><a href="#父子节点接口" class="headerlink" title="父子节点接口"></a>父子节点接口</h2><h3 id="ParentNode"><a href="#ParentNode" class="headerlink" title="ParentNode"></a>ParentNode</h3><ul>
+<li>children  返回HTMLCollection实例</li>
+<li>firstElementChild</li>
+<li>lastElementChild</li>
+<li>childElementCount</li>
+<li>append() 可追加多个</li>
+<li>prepend()</li>
+</ul>
+<h3 id="ChildNode"><a href="#ChildNode" class="headerlink" title="ChildNode"></a>ChildNode</h3><ul>
+<li>remove()</li>
+<li>before()</li>
+<li>after()</li>
+<li>replaceWith()</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/14/Git%E6%9B%B4%E6%96%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%E5%88%B0%E6%9C%AC%E5%9C%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2522,602 +3431,6 @@ drop view viewname
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/01/bootstrap/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ASDW51 web learning">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/12/01/bootstrap/" itemprop="url">boostrap 笔记2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-01T14:48:00+08:00">
-                2020-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="bootstrap-–学会看源码"><a href="#bootstrap-–学会看源码" class="headerlink" title="bootstrap    –学会看源码"></a>bootstrap    –学会看源码</h1><ul>
-<li><p>视口·</p>
-<ul>
-<li>```<br>窗口自适应<meta name="viewport" content="width=device-width,initial-scale=1">
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- bootstrap3</span><br><span class="line"></span><br><span class="line">  - 网格系统</span><br><span class="line"></span><br><span class="line">    - 固定宽度 container  /全屏宽度 container-fluid</span><br><span class="line"></span><br><span class="line">    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列</span><br><span class="line"></span><br><span class="line">    - 各种尺寸</span><br><span class="line">    </span><br><span class="line">      - ```</span><br><span class="line">        //bootstrap3</span><br><span class="line">        .col-xs 小于768px		</span><br><span class="line">        .col-sm 大于等于768px</span><br><span class="line">    .col-md  大于等于992px</span><br><span class="line">        .col-lg- 大于1200px</span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">        //bootstrap4</span><br><span class="line">        .col-  所有</span><br><span class="line">        .col-sm	&gt;=556</span><br><span class="line">        .col-md	&gt;=768</span><br><span class="line">        .col-lg	&gt;=992</span><br><span class="line">        .col-xl	&gt;=1200</span><br></pre></td></tr></table></figure>
-    </li>
-</ul>
-</li>
-<li><p>常用类</p>
-<ul>
-<li>row   主要作用：创建一个弹性盒子</li>
-<li>col-**-**   满足该类的定义尺寸时按照定义的来，不满足时会设置宽度100%，即弹性子元素会拉满屏幕</li>
-<li>offset-**-n  偏移n列，通过设置元素的margin-left来实现该功能</li>
-</ul>
-</li>
-<li><p>文字排版</p>
-<ul>
-<li><p>bootstrap4默认的font-size 为16px,line-height为1.5，所有的p元素 margin-top:0,margin-bottem:1em</p>
-</li>
-<li><p>h1~h6 大概就居中对齐的样子</p>
-</li>
-<li><p>display-n   n取(1-4)  定义更大更粗的字体</p>
-</li>
-<li><p>font 相关</p>
-<ul>
-<li>```<br>font-weight-bold 加粗<br>font-weight-normal 普通文本<br>font-weight-light  更细的文本<br>font-italic    斜体文本<br>lead 让段落更突出<br>small 更小的文本<br>text-left 左对齐<br>text-center 居中<br>text-right  右对齐<br>text-justify 设定文本对齐，段落中超出屏幕的部分文字自动换行  对标css中的text-align-justify  –两端文本对齐<br>text-nowrap  超出屏幕不换行    对标css white-space:nowrap<br>text-lowercase 转小写    对标css text-transform:lowercase<br>text-uppercase 转大写    对标css text-transform:uppercase<br>list-unstyled    移除默认的列表样式    css代码为padding-left:0;list-style:none<br>list-inline    :将所有列表项放置同一行   bootstrap3生效<br>list-inline-item    css代码为display:inline-block<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 颜色相关</span><br><span class="line"></span><br><span class="line">  - Bootstrap 4 提供了一些有代表意义的颜色类：**.text-muted**, **.text-primary**, **.text-success**, **.text-info**, **.text-warning**, **.text-danger**, **.text-secondary**, **.text-white**, **.text-dark** and **.text-light**:</span><br><span class="line"></span><br><span class="line">  - 提供背景颜色的类有: **.bg-primary**, **.bg-success**, **.bg-info**, **.bg-warning**, **.bg-danger**, **.bg-secondary**, **.bg-dark** 和 **.bg-light**。</span><br><span class="line"></span><br><span class="line">    注意背景颜色不会设置文本的颜色，在一些实例中你需要与 **.text-\*** 类一起使用。</span><br><span class="line"></span><br><span class="line">- 表格</span><br><span class="line"></span><br><span class="line">  - 基础表格样式	table</span><br><span class="line">  - 条纹表格 table-striped</span><br><span class="line">  - 带边框表格  table-bordered</span><br><span class="line">  - 鼠标悬停  table-hover</span><br><span class="line">  - 黑色背景  table-dark</span><br><span class="line">  - 黑色条纹表格     table-dark/table-striped</span><br><span class="line">  - 鼠标悬停+黑色背景  table-dark  table-hover</span><br><span class="line">  - 表格颜色</span><br><span class="line">    - table-primary</span><br><span class="line">    - table-success</span><br><span class="line">    - table-danger</span><br><span class="line">    - table-info</span><br><span class="line">    - table-warning</span><br><span class="line">    - table-active</span><br><span class="line">    - table-secondary</span><br><span class="line">    - table-light</span><br><span class="line">    - table-dark</span><br><span class="line">  - table-sm 较小的表格</span><br><span class="line">  - 响应式表格  table-responsive  在屏幕宽度小于992px时会创建水平滚动条</span><br><span class="line">    - 设置指定屏幕宽度下显示滚动条</span><br><span class="line">      - table-responsive-sm	小于576</span><br><span class="line">      - table-responsive-md   小于768</span><br><span class="line">      - table-responsive-lg       小于992</span><br><span class="line">      - table-responsive-xl      小于1200</span><br><span class="line"></span><br><span class="line">- 图像形状</span><br><span class="line"></span><br><span class="line">  - rounded  可以让图片显示圆角效果</span><br><span class="line"></span><br><span class="line">  - rounded-circle  设置椭圆形图片</span><br><span class="line"></span><br><span class="line">  - 缩略图   img-thumbnail  设置图片缩略图</span><br><span class="line"></span><br><span class="line">  - float-right  图片右对齐</span><br><span class="line"></span><br><span class="line">  - float-left  设置图片左对齐</span><br><span class="line"></span><br><span class="line">  - 响应式图片   </span><br><span class="line"></span><br><span class="line">    - img-fluid设置响应式图片  </span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      img-fluid 本质css</span><br><span class="line">      &#123;</span><br><span class="line">      	max-width:100%;</span><br><span class="line">      	height:auto;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Jumbotron</p>
-<ul>
-<li>jumbotron  创建一个大的灰色背景框  有圆角，里面可以放一些html标签，也可以是bootstrap的元素如果你想创建一个没有圆角的全屏幕，可以在jumbotron-fluid里添加container或container-fluid类来实现</li>
-</ul>
-</li>
-<li><p>提示框</p>
-<ul>
-<li><p>alert类</p>
-</li>
-<li><p>alert-主要颜色，可更改背景颜色</p>
-</li>
-<li><p>alert-link  链接</p>
-</li>
-<li><p>关闭提示框</p>
-<ul>
-<li>```<br>我们可以再提示框的div中添加.alert-dismissible 然后在关闭按钮链接的链接上加上close类和data-dismiss=’alert’属性来设置提示框的关闭操作<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">- 淡入淡出效果 添加fade show 类</span><br><span class="line">  </span><br><span class="line">- 按钮</span><br><span class="line">  </span><br><span class="line">  - 基本按钮 btn</span><br><span class="line">  </span><br><span class="line">  - btn-primary 主要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-secondary 次要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-success 成功</span><br><span class="line">  </span><br><span class="line">  - btn-info 信息</span><br><span class="line">  </span><br><span class="line">  - btn-warning 警告</span><br><span class="line">  </span><br><span class="line">  - btn-danger 危险</span><br><span class="line">  </span><br><span class="line">  - btn-dark 黑色</span><br><span class="line">  </span><br><span class="line">  - btn-light 浅色</span><br><span class="line">  </span><br><span class="line">  - btn-link 链接</span><br><span class="line">  </span><br><span class="line">  - 按钮类可用于a,button或input元素上</span><br><span class="line">  </span><br><span class="line">  - 按钮设置边框</span><br><span class="line">  </span><br><span class="line">    - ```</span><br><span class="line">        btn-outline-不同颜色</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>不同大小的按钮</p>
-<ul>
-<li>btn-lg 大号按钮<ul>
-<li>btn-sm 小号按钮</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>块级按钮  .btn-block</p>
-</li>
-<li><p>激活和禁用的按钮  .active类可以设置按钮是可用的，disable 属性是设置禁用的</p>
-<ul>
-<li>注意：a标签需添加.disable类来设置禁用项</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>按钮组</p>
-<ul>
-<li>bootstrap4中允许我们将按钮放在同一行<ul>
-<li>可以在div元素上添加.btn-group 类来创建按钮组</li>
-<li>设置按钮组大小的类 btn-group-sm|lg</li>
-<li>垂直按钮组  btn-group-vertical</li>
-<li>按钮组的下拉菜单  略</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Badges  徽章主要用于突出新的或未读的的项  </p>
-<ul>
-<li>badge + 上带有指定意义的颜色类<ul>
-<li>药丸形状徽章  badge-pill</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>进度条</p>
-<ul>
-<li>父类  progress<ul>
-<li>子类 progress-bar   修改子元素的width百分比</li>
-<li>条纹进度条 progress-bar-striped</li>
-<li>动画进度条 progress-bar-animated</li>
-<li>混合色彩进度条<ul>
-<li>创建多个progress-bar,设置不同的背景颜色</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分页  pagination</p>
-<ul>
-<li><p>要创建一个基本的分页可以在ul元素上添加 .pagination类。然后在li元素上添加.page-item类</p>
-<ul>
-<li>分页显示大小  pagination-lg设置大字体  pagination-sm  设置小字体</li>
-</ul>
-</li>
-<li><p>列表组</p>
-<ul>
-<li>要创建列表组，可以在ul元素上添加.list-group类，在li元素上添加.list-group-item类</li>
-<li>禁用列表项 .disabled</li>
-<li>鼠标悬停的效果类  list-group-item-action</li>
-<li>颜色设置类  list-group-item-颜色</li>
-</ul>
-</li>
-<li><p>卡片(card)</p>
-<ul>
-<li>我们可以通过.card与.card-body类来创建一个简单的卡片</li>
-<li>.card-header  头部,.card-body 内容,.card-footer底部</li>
-<li>卡片可以通过bg-*类来改变颜色</li>
-<li>.card-title设置卡片的标题</li>
-<li>.card-link 给卡片内的链接来使用</li>
-<li>图片卡片<ul>
-<li>我们可以给img添加.card-img-top（图片在文字上面）或.card-img-bottom（图片在文字下面）</li>
-<li>如果图片要设置成背景，给文字容器添加.card-img-overlay类</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>下拉菜单</p>
-<ul>
-<li>下拉菜单依赖于poper.min.js</li>
-<li>.dropdown 创建一个下拉菜单 源码作用是创建一个相对定位</li>
-<li>.dropdown-menu 创建一个下拉菜单列表，用于放下拉菜单的选项</li>
-<li>实现下拉菜单效果需要加data-toggle=’dropdown’属性</li>
-<li>.dropdown-toggle 可以添加一个三角形图标</li>
-<li>.dropdown-item  放在dropdown-menu里，类似li元素的效果</li>
-<li>下拉菜单中的分割线  .dropdown-divider  创建一个水平的分割线</li>
-<li>.dropdown-header 下拉菜单中的标题</li>
-<li>可用项active  禁用项 disabled</li>
-<li>下拉菜单的右对齐  dropdown-menu-right</li>
-<li>设置下拉菜单不同的弹出方向  默认dropdown向下弹出</li>
-<li>dropright 向右弹出</li>
-<li>dropup 向上弹出</li>
-<li>dropleft 向左弹出</li>
-</ul>
-</li>
-<li><p>表单</p>
-<ul>
-<li>form-group类  表单组？</li>
-<li>form-control   变成块级元素，width:100%</li>
-<li>form-inline  创建弹性盒子 ,换行，flex-align:center;align-items:center;width:100%</li>
-<li>form-chexk-input</li>
-<li>form-check-label</li>
-<li>form-check-inline 类可以让选项显示在同一行上</li>
-<li>radio 单选框</li>
-<li>radio-inline  可以让选项显示在同一行</li>
-<li>form-group</li>
-<li>lable的for属性表示与某个表单元素绑定，值为表单元素的id</li>
-</ul>
-</li>
-<li><p>折叠</p>
-<ul>
-<li><p>折叠可以很容易的实现内容的显示与隐藏</p>
-</li>
-<li><p>collapse类用于指定一个折叠元素；点击按钮后会在隐藏于显示之间切换</p>
-</li>
-<li><p>控制内容的隐藏与显示，需要在a或button元素上添加data-toggle=’collapse’属性</p>
-</li>
-<li><p>data-target=’id’对应要显示隐藏内容的id</p>
-</li>
-<li><p>代码示例</p>
-<ul>
-<li>```<div class='container'>
-    <a href="" data-toggle='collapse' data-target='#demo'>折叠</a>
-    <div class='collapse' id="demo">
-        被折叠的内容
-    </div>
-</div>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - data-parent属性来确保所有的折叠元素在指定的父元素下，这样就能是现在一个折叠选项显示时其他选项就隐藏</span><br><span class="line"></span><br><span class="line">- 导航nav</span><br><span class="line"></span><br><span class="line">  - 创建一个简单的导航，可以在ul元素上添加.nav类，再每个li选项上添加.nav-item类，在连接上添加.nav-link类</span><br><span class="line">  - 导航的对齐方式</span><br><span class="line">    - 居中显示 justify-content-center</span><br><span class="line">    - 导航右对齐 justify-content-right</span><br><span class="line">    - 垂直导航 flex-column</span><br><span class="line">  - 选项卡    在.nav类的基础上加上nav-tabs</span><br><span class="line">  - 胶囊导航  在nav的基础上加上nav-pills</span><br><span class="line">  - 导航等宽  .nav-justified类可以设置导航项齐行等宽显示</span><br><span class="line">  - 胶囊下拉菜单  添加下拉菜单到导航的某个选项上</span><br><span class="line">  - 选项卡下拉菜单 同上</span><br><span class="line">  - 动态选项卡</span><br><span class="line">    - 给选项加.data-toggle=&#x27;tab&#x27;</span><br><span class="line">    - 给个div,添加tab-content类，里面放的元素id跟上面的对应并添加tab-pane类</span><br><span class="line"></span><br><span class="line">- 导航栏</span><br><span class="line"></span><br><span class="line">  - 我们可以使用.navbar来创建一个标准的导航栏 后面紧跟.navbar-expand-xl|md|sm类来创建响应式导航栏(大屏幕铺开，小屏幕垂直堆叠)</span><br><span class="line">  - 导航栏的上的选项可以使用ul元素并添加class=&quot;navbar-nav“类，然后再li元素上添加nav-item类，a元素上使用.nav-link类</span><br><span class="line">  - .navbar-brand 高亮显示品牌</span><br><span class="line">  - 折叠导航栏 navbar-collapse类，navbar-toggler类</span><br><span class="line">  - 导航栏文本 navbar-text</span><br><span class="line">  - 固定导航栏 fixed-top/fixed-bottom 固定顶部/固定底部</span><br><span class="line">  </span><br><span class="line">- 模态框（modal）</span><br><span class="line"></span><br><span class="line">  - modal定义一个模态框</span><br><span class="line">  - modal-dialog定义弹出的框，内容都放在该容器下</span><br><span class="line">  - modal-header 模态框头部 / modal-title</span><br><span class="line">  - modal-body  模态框内容</span><br><span class="line">  - modal-footer 模态框底部</span><br><span class="line">  - modal-sm 小模态框</span><br><span class="line">  - modal-lg 大模态框</span><br><span class="line">  - </span><br><span class="line"></span><br><span class="line">- 提示框</span><br><span class="line"></span><br><span class="line">  - 通过向元素添加data-toggle=&#x27;tooltip&#x27;来创建提示框，title属性为提示款显示的内容</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    &lt;a href=&quot;#&quot; data-toggle=&#x27;tooltip&#x27; title=&quot;提示的文字&quot;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>注意：提示框生效要调用tootip()方法</p>
-</li>
-<li><p>data-placement 设定显示的方向 top/bottom/left/right</p>
-</li>
-<li><p>提示的内容添加html标签 设置 data-html=’true</p>
-</li>
-</ul>
-</li>
-<li><p>弹出框</p>
-<ul>
-<li>向元素添加data-toggle=’popover’来创建弹出框，当点击的时候出现内容</li>
-<li>title属性为弹出框的标题，data-content为弹出框的文本内容</li>
-<li>注意：弹出框生效需要调用popover方法</li>
-<li>data-placement可以设置弹出框显示的方向 top/bottom/left/right</li>
-<li>设置再次点击弹出框消失的属性 data-trigger=’focus’</li>
-<li>鼠标移到元素上显示，一处小时 data-trigger=’hover’</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ASDW51 web learning">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" itemprop="url">h5 和 CSS3</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-27T22:53:00+08:00">
-                2020-11-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="HTML5的新语义标签"><a href="#HTML5的新语义标签" class="headerlink" title="HTML5的新语义标签"></a>HTML5的新语义标签</h2><h3 id="块级标签"><a href="#块级标签" class="headerlink" title="块级标签"></a>块级标签</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">header</span><br><span class="line">section</span><br><span class="line">footer</span><br><span class="line">aside</span><br><span class="line">nav</span><br><span class="line">main</span><br><span class="line">article</span><br><span class="line">figure</span><br></pre></td></tr></table></figure>
-
-<h3 id="为HTML添加新元素"><a href="#为HTML添加新元素" class="headerlink" title="为HTML添加新元素"></a>为HTML添加新元素</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">创建新元素 myHero</span><br><span class="line">&lt;style&gt;</span><br><span class="line">	myHero&#123;</span><br><span class="line">		定义新标签的样式</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="新的多媒体标签"><a href="#新的多媒体标签" class="headerlink" title="新的多媒体标签"></a>新的多媒体标签</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">audio  定义音频内容</span><br><span class="line">video  定义视频</span><br><span class="line">source 定义多媒体资源&lt;video</span><br><span class="line">embed  定义嵌入的内容，比如插件</span><br><span class="line">track  </span><br></pre></td></tr></table></figure>
-
-<h4 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h4><p>属性</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">autoplay	音频就绪后马上播放</span><br><span class="line">controls	显示控件</span><br><span class="line">loop		音频结束时重新开始播放</span><br><span class="line">muted		经营</span><br><span class="line">preload		音频加载方式</span><br><span class="line">src			</span><br></pre></td></tr></table></figure>
-
-<h3 id="新增表单元素"><a href="#新增表单元素" class="headerlink" title="新增表单元素"></a>新增表单元素</h3><h5 id="datalist-与input元素配合使用"><a href="#datalist-与input元素配合使用" class="headerlink" title="datalist 与input元素配合使用"></a>datalist 与input元素配合使用</h5><p>例子</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input list=&quot;list1&quot; /&gt;</span><br><span class="line">&lt;datalist id=&quot;list1&quot;&gt;</span><br><span class="line">	</span><br><span class="line">&lt;/datalist&gt;</span><br></pre></td></tr></table></figure>
-
-<p>keygen 密钥对生成器</p>
-<p>output 可以实时计算简单的数字？</p>
-<h5 id="details和summary配合使用"><a href="#details和summary配合使用" class="headerlink" title="details和summary配合使用"></a>details和summary配合使用</h5><p>summary定义标题</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">summary</span>&gt;</span>这是标题<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="figure-用来放图片的容器"><a href="#figure-用来放图片的容器" class="headerlink" title="figure 用来放图片的容器"></a>figure 用来放图片的容器</h5><h6 id="figcaption-定义图片的标题"><a href="#figcaption-定义图片的标题" class="headerlink" title="figcaption 定义图片的标题"></a>figcaption 定义图片的标题</h6><h2 id="css"><a href="#css" class="headerlink" title="css"></a>css</h2><h3 id="选择器并行的写法"><a href="#选择器并行的写法" class="headerlink" title="选择器并行的写法"></a>选择器并行的写法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p.class&#123;</span><br><span class="line">	text-align:center;</span><br><span class="line">&#125;</span><br><span class="line">p标签并且有个类为class</span><br></pre></td></tr></table></figure>
-
-<h3 id="background"><a href="#background" class="headerlink" title="background"></a>background</h3><h4 id="background-color-背景颜色"><a href="#background-color-背景颜色" class="headerlink" title="background-color  背景颜色"></a>background-color  背景颜色</h4><h4 id="background-image-背景图片"><a href="#background-image-背景图片" class="headerlink" title="background-image    背景图片"></a>background-image    背景图片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-image:url(图片路径)</span><br></pre></td></tr></table></figure>
-
-<h4 id="background-repeat-背景平铺-repeat-x-repeat-y"><a href="#background-repeat-背景平铺-repeat-x-repeat-y" class="headerlink" title="background-repeat    背景平铺 repeat-x/repeat-y"></a>background-repeat    背景平铺 repeat-x/repeat-y</h4><h4 id="background-postion-设置图片位置"><a href="#background-postion-设置图片位置" class="headerlink" title="background-postion    设置图片位置"></a>background-postion    设置图片位置</h4><p>例 right top 右上角</p>
-<p>background-position:x y        x轴 y轴的值</p>
-<h4 id="background的简写"><a href="#background的简写" class="headerlink" title="background的简写"></a>background的简写</h4><p>background:color image repeat postion</p>
-<h3 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h3><p>color定义文字颜色</p>
-<p>对齐方式text-align属性</p>
-<p>属性值</p>
-<ul>
-<li>center</li>
-<li>right/left</li>
-<li>justify 每一行被展开为宽度相等，左右外边距是对齐</li>
-</ul>
-<h4 id="文本修饰符-text-decoration"><a href="#文本修饰符-text-decoration" class="headerlink" title="文本修饰符 text-decoration"></a>文本修饰符 text-decoration</h4><p>text-decoration属性</p>
-<p>值</p>
-<ul>
-<li>overline 上划线</li>
-<li>line-through 中划线</li>
-<li>underline 下划线</li>
-</ul>
-<h4 id="文本转换（大小写转换）"><a href="#文本转换（大小写转换）" class="headerlink" title="文本转换（大小写转换）"></a>文本转换（大小写转换）</h4><p>text-transform属性</p>
-<ul>
-<li>uppercase 转大写</li>
-<li>lowercase 转小写</li>
-<li>capitalize 首字母大写</li>
-</ul>
-<h4 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h4><p>text-indent:2em;</p>
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
-<li>direction 文本方向 ltr(left to right) / rtl(right to left)</li>
-<li>line-height 行高</li>
-<li>text-shadow 文本阴影</li>
-<li>vertical-align 垂直对齐的方式</li>
-<li>white-space 空白怎么处理 nowrap 不换行</li>
-</ul>
-<h3 id="字体font"><a href="#字体font" class="headerlink" title="字体font"></a>字体font</h3><h4 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h4><p>指定文本的字体</p>
-<h4 id="font-size字体"><a href="#font-size字体" class="headerlink" title="font-size字体"></a>font-size字体</h4><p>设置字体大小</p>
-<h4 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a>font-style</h4><p>值：normal 正常/italic 斜体 / oblique 倾斜的字体样式 / inherit 继承父元素 </p>
-<h3 id="css-链接的样式-伪类？"><a href="#css-链接的样式-伪类？" class="headerlink" title="css 链接的样式 伪类？"></a>css 链接的样式 伪类？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a:link 未访问链接</span><br><span class="line">a:visited 已访问链接</span><br><span class="line">a:hover	链接移动到链接上</span><br><span class="line">a:active 鼠标点击时</span><br><span class="line">注意：a:hover必须在a:link 和 a:visited 之后，需要按严格顺序才能看到效果</span><br><span class="line">a:active必须在a:hover 之后</span><br></pre></td></tr></table></figure>
-
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><h4 id="无序列表-ul"><a href="#无序列表-ul" class="headerlink" title="无序列表 ul"></a>无序列表 ul</h4><h4 id="有序列表-ol"><a href="#有序列表-ol" class="headerlink" title="有序列表 ol"></a>有序列表 ol</h4><h5 id="list-style属性"><a href="#list-style属性" class="headerlink" title="list-style属性"></a>list-style属性</h5><ul>
-<li>list-style-type: circle(圆点)/square(方形)</li>
-<li>list-style-image:url(图片地址)    自定义图标</li>
-<li>list-style-position:  inside 放在文本以内，outside 图标放置在文本外，inherit 继承父元素</li>
-</ul>
-<h3 id="边框border"><a href="#边框border" class="headerlink" title="边框border"></a>边框border</h3><ul>
-<li>border-style: </li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">none/</span><br><span class="line">dotted 点线边框 </span><br><span class="line">dashed 虚线边框 </span><br><span class="line">solid 实线边框 </span><br><span class="line">double 两个边框</span><br><span class="line">groove 定义3D沟槽边框</span><br><span class="line">ridge 定义3D脊边框</span><br><span class="line">inset 定义一个3D的嵌入边框</span><br><span class="line">outset 定义一个3D突出边框</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>border-width 边框宽度</p>
-</li>
-<li><p>border-color 边框颜色</p>
-<p>边框颜色必须配合border-style一起使用</p>
-<h4 id="边框-单独设置各边"><a href="#边框-单独设置各边" class="headerlink" title="边框-单独设置各边"></a>边框-单独设置各边</h4><ul>
-<li>border-top-style</li>
-<li>border-right-style</li>
-<li>border-bottom-style</li>
-<li>border-left-style</li>
-<li>简写 border-style:上右下左</li>
-</ul>
-</li>
-</ul>
-<h4 id="边框简写"><a href="#边框简写" class="headerlink" title="边框简写"></a>边框简写</h4><ul>
-<li>border:width style color</li>
-</ul>
-<h3 id="轮廓-outline"><a href="#轮廓-outline" class="headerlink" title="轮廓-outline"></a>轮廓-outline</h3><ul>
-<li><p> style width</p>
-</li>
-<li><p>outline-color 设置颜色</p>
-</li>
-<li><p>outline-style 设置轮廓样式</p>
-</li>
-<li><p>outline-width 设置轮廓的宽度</p>
-</li>
-</ul>
-<h3 id="margin-外边距"><a href="#margin-外边距" class="headerlink" title="margin 外边距"></a>margin 外边距</h3><h3 id="padding-内边距"><a href="#padding-内边距" class="headerlink" title="padding 内边距"></a>padding 内边距</h3><h3 id="css-尺寸"><a href="#css-尺寸" class="headerlink" title="css 尺寸"></a>css 尺寸</h3><ul>
-<li>height 元素的高度</li>
-<li>line-height 设置行高</li>
-<li>max-height 设置元素的最大高度</li>
-<li>max-width 设置元素的宽度的最大宽度</li>
-<li>min-height 设置元素的最小高度</li>
-<li>min-width 设置元素的最小宽度</li>
-<li>width 设置元素的宽度</li>
-</ul>
-<p>max和min 就是用来限制js来修改样式而设置的临界值？</p>
-<h3 id="css显示"><a href="#css显示" class="headerlink" title="css显示"></a>css显示</h3><ul>
-<li>display :none    表示隐藏该元素 隐藏后不占用空间</li>
-<li>visibility:hidden; 表示隐藏该元素 隐藏后占用空间</li>
-</ul>
-<h3 id="css-定位"><a href="#css-定位" class="headerlink" title="css 定位"></a>css 定位</h3><h4 id="position"><a href="#position" class="headerlink" title="position"></a>position</h4><p>值</p>
-<ul>
-<li>static  html 的默认值，即没有定位，遵循正常的文档流对象</li>
-<li>fixed   元素的位置相对于浏览器窗口是固定位置，即使窗口滚动的它也不会移动<ul>
-<li>fixed定位是使元素的位置与文档流无关，因此不占据空间。</li>
-<li>fixed定位的元素和其他元素重叠</li>
-</ul>
-</li>
-<li>relative 定位  相对定位元素的定位是相对于其正常位置<ul>
-<li>移动相对定位元素，但他原本占据的空间不会改变</li>
-<li>相对定位元素经常被用来作为绝对定位元素的容器块</li>
-</ul>
-</li>
-<li>absolute 定位 绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对与<html><ul>
-<li>absolute定位使元素的位置与文档流无关，因此不占据空间</li>
-<li>absolute定位的元素与其他元素重叠</li>
-</ul>
-</li>
-<li>sticky定位 粘性定位  基于用户的滚动位置来定位<ul>
-<li>粘性定位的元素依赖于用户的滚动，在relative与fixed定位之间切换 </li>
-<li>它的行为就像relative,当页面滚动超出目标区域使。它的表现就像fixed 他会固定在目标位置</li>
-</ul>
-</li>
-<li>重叠的元素  z-index修改显示优先？</li>
-<li>相关<ul>
-<li>bottom</li>
-<li>clip  拥有绝对定位的元素可添加该属性</li>
-<li>cursor 显示光标移动到该元素所显示指定的类型<ul>
-<li>default 一个箭头</li>
-<li>auto 默认</li>
-<li>crosshair 十字线</li>
-<li>pointer 一只手</li>
-<li>move  指示某对象可移动（一个表示可移动的图标）</li>
-<li>wait 加载中</li>
-<li>text 文本</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="css-overflow"><a href="#css-overflow" class="headerlink" title="css overflow"></a>css overflow</h3><p>值</p>
-<ul>
-<li>overflow:visible 默认值，内容不会被修剪，呈现在元素框外</li>
-<li>overflow:hidden 内容会被修剪，并且其余内容不可见</li>
-<li>overflow:scroll  内容会被修剪，并且显示滚动条</li>
-<li>overflow:auto 如果内容被修剪，则显示滚动条</li>
-<li>overflow:inherit  继承父类</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -3179,7 +3492,7 @@ drop view viewname
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
