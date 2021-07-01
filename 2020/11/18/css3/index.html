@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSS3," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="定义自定义字体@font-face{ ​    font-family:自定义字体名; ​    src:url() } 使用自定义字体font-family:字体名字 css3 多列浏览器前缀 -webkit-  &#x2F;* Chrome,Safari, Opear*&#x2F; -moz-   &#x2F;Firefox&#x2F;  column-count 属性指定了需要分割的列数 column-gap  属性指定了列与列之">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css3 总结">
+<meta property="og:url" content="http://example.com/2020/11/18/css3/index.html">
+<meta property="og:site_name" content="ASDW51 web learning">
+<meta property="og:description" content="定义自定义字体@font-face{ ​    font-family:自定义字体名; ​    src:url() } 使用自定义字体font-family:字体名字 css3 多列浏览器前缀 -webkit-  &#x2F;* Chrome,Safari, Opear*&#x2F; -moz-   &#x2F;Firefox&#x2F;  column-count 属性指定了需要分割的列数 column-gap  属性指定了列与列之">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-11-18T06:48:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T07:05:40.875Z">
+<meta property="article:author" content="ASDW51">
+<meta property="article:tag" content="CSS3">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/11/18/css3/"/>
+
+
+
+
+
+  <title>css3 总结 | ASDW51 web learning</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ASDW51 web learning</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/18/css3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css3 总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-18T14:48:00+08:00">
+                2020-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="定义自定义字体"><a href="#定义自定义字体" class="headerlink" title="定义自定义字体"></a>定义自定义字体</h3><p>@font-face{</p>
+<p>​    font-family:自定义字体名;</p>
+<p>​    src:url()</p>
+<p>}</p>
+<h3 id="使用自定义字体"><a href="#使用自定义字体" class="headerlink" title="使用自定义字体"></a>使用自定义字体</h3><p>font-family:字体名字</p>
+<h3 id="css3-多列"><a href="#css3-多列" class="headerlink" title="css3 多列"></a>css3 多列</h3><p>浏览器前缀</p>
+<p>-webkit-  /* Chrome,Safari, Opear*/</p>
+<p>-moz-   /<em>Firefox</em>/</p>
+<ul>
+<li>column-count 属性指定了需要分割的列数</li>
+<li>column-gap  属性指定了列与列之间的间隙 单位px</li>
+<li>column-rule-style  属性指定了列与列间的边框样式</li>
+<li>column-rule-width 指定了边框厚度</li>
+<li>column-rule-color 指定了边框颜色</li>
+<li>column-rule:边框厚度、样式、颜色</li>
+<li>column-span 指定元素跨越多少列   all表示跨越所有列</li>
+<li>column-width 指定列的宽度</li>
+</ul>
+<h2 id="弹性盒子"><a href="#弹性盒子" class="headerlink" title="弹性盒子"></a>弹性盒子</h2><p>弹性盒子由弹性容器（flex container）和 弹性子元素（flex item）组成</p>
+<p>弹性盒子通过设置display属性的值flex 或 inline-flex 将其定义为弹性容器</p>
+<p>弹性容器内包含了一个或多个弹性子元素</p>
+<p>注意：弹性容器外及弹性元素内是正常渲染的。弹性盒子只定义了弹性子元素如何在弹性容器内布局</p>
+<p>弹性子元素通常在弹性盒子内一行显示。默认情况下每个容器只有一行</p>
+<h3 id="弹性盒子属性"><a href="#弹性盒子属性" class="headerlink" title="弹性盒子属性"></a>弹性盒子属性</h3><h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h4><p>flex-direction 属性指定了弹性子元素在父元素中的位置</p>
+<ul>
+<li>row 横向从左到右排列（左对齐） 默认的排列方式</li>
+<li>row-reverse : 反转横向排列（右对齐，从后往前排。最后一项在最前面)</li>
+<li>column 纵向排列</li>
+<li>column-reverse 反转纵向排列，从后往前排，最后一项排在最上面</li>
+</ul>
+<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h4><p>内容对齐（justify-content)属性应用在弹性容器上，把弹性项沿着弹性容器的主轴线对齐</p>
+<ul>
+<li>flex-start 弹性项目向行头紧挨着填充。这个是默认值，第一个弹性项的main-start外边距边线被放置在该行的main-start 边线，而后续弹性项依次平齐摆放</li>
+<li>flex-end 弹性项目向行尾紧挨填充。第一个弹性项的main-end外边距边线被放置在该行的main-end线</li>
+<li>center 弹性项目居中紧挨着填充。（如果剩余的自由空间是负的，则弹性项目将在两个方向上同时溢出）</li>
+<li>space-between 弹性项目平均分布在该行，如果剩余空间为负或只有一个弹性项，则该值等同于flex-start.否则，第一个弹性项的外边距和行的min-start边线对齐</li>
+<li>space-around 弹性项目平均分布在该行上，两边留有一半的间隔空间</li>
+</ul>
+<h4 id="align-items-设置或检索弹性盒子元素在纵轴方向上的对齐方式"><a href="#align-items-设置或检索弹性盒子元素在纵轴方向上的对齐方式" class="headerlink" title="align-items 设置或检索弹性盒子元素在纵轴方向上的对齐方式"></a>align-items 设置或检索弹性盒子元素在纵轴方向上的对齐方式</h4><p>align-items</p>
+<ul>
+<li>flex-start  纵轴起始点</li>
+<li>flex-end   纵轴结束边界</li>
+<li>center    纵轴上居中放置，如果该行的尺寸小于弹性盒子的尺寸，则会向两个方向溢出相同的长度</li>
+<li>baseline</li>
+<li>stretch</li>
+</ul>
+<h4 id="flex-wrap-用于指定弹性盒子的子元素换行方式"><a href="#flex-wrap-用于指定弹性盒子的子元素换行方式" class="headerlink" title="flex-wrap 用于指定弹性盒子的子元素换行方式"></a>flex-wrap 用于指定弹性盒子的子元素换行方式</h4><ul>
+<li><p>nowrap  默认，弹性容器为单行，该情况下弹性子项可能会溢出容器</p>
+</li>
+<li><p>wrap  弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行</p>
+</li>
+<li><p>wrap-reverse 反转wrap排列</p>
+</li>
+</ul>
+<h4 id="align-content-属性"><a href="#align-content-属性" class="headerlink" title="align-content 属性"></a>align-content 属性</h4><p>align-content 属性用于修改flex-wrap 属性的行为。类似于align-items,但它不是设置弹性子元素的对齐，而是设置各个行的对齐</p>
+<p>align-content:</p>
+<ul>
+<li>stretch 默认。各行将会伸展以占用剩余的空间</li>
+<li>flex-start 各行向弹性盒容器的起始位置堆叠</li>
+<li>flex-end 各行向弹性盒容器的结束位置堆叠</li>
+<li>center 各行向弹性盒容器中间位置堆叠</li>
+<li>space-between 各行弹性盒容器中平均分布</li>
+<li>space-around 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半</li>
+</ul>
+<h3 id="弹性子元素属性"><a href="#弹性子元素属性" class="headerlink" title="弹性子元素属性"></a>弹性子元素属性</h3><h4 id="排序-order"><a href="#排序-order" class="headerlink" title="排序 order"></a>排序 order</h4><p>order：数字  </p>
+<p>用数值来定义排序顺序，数值小的排在前面，可以为负值</p>
+<p>在弹性子元素里面使用</p>
+<h4 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h4><p>margin:auto</p>
+<h5 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h5><ul>
+<li>auto 如果align-self的值为auto,则其计算值为元素的父元素的align-items值，如果没有父元素。则计算值为stretch</li>
+<li>flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。</li>
+<li>flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。</li>
+<li>center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。</li>
+<li>baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与’flex-start’等效。其它情况下，该值将参与基线对齐。</li>
+<li>stretch：如果指定侧轴大小的属性值为’auto’，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照’min/max-width/height’属性的限制。</li>
+</ul>
+<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><p><code>flex</code> 属性用于指定弹性子元素如何分配空间。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex: auto | initial | none | inherit |  [ flex-grow ] || [ flex-shrink ] || [ flex-basis ]</span><br></pre></td></tr></table></figure>
+
+<p>各个值解析:</p>
+<ul>
+<li>auto: 计算值为 1 1 auto</li>
+<li>initial: 计算值为 0 1 auto</li>
+<li>none：计算值为 0 0 auto</li>
+<li>inherit：从父元素继承</li>
+<li>[ flex-grow ]：定义弹性盒子元素的扩展比率。</li>
+<li>[ flex-shrink ]：定义弹性盒子元素的收缩比率。</li>
+<li>[ flex-basis ]：定义弹性盒子元素的默认基准值。</li>
+</ul>
+<p>以下实例中，第一个弹性子元素占用了 2/4 的空间，其他两个各占 1/4 的空间:</p>
+<p>flex-direction</p>
+<p>justify-content  flex-start\flex-end\center\space-between\space-around</p>
+<p>align-items    flex-start\flex-end\center\baseline</p>
+<p>flex-wrap wrap \ nowrap</p>
+<p>弹性子元素的属性</p>
+<p>align-self  自身纵轴的对齐方式</p>
+<h2 id="css3-多媒体查询"><a href="#css3-多媒体查询" class="headerlink" title="css3 多媒体查询"></a>css3 多媒体查询</h2><h2 id="多媒体查询语法"><a href="#多媒体查询语法" class="headerlink" title="多媒体查询语法"></a>多媒体查询语法</h2><p>多媒体查询由多种媒体组成，可以包含一个或多个表达式，表达式根据条件是否成立返回 true 或 false。</p>
+<p>@media not|only mediatype and (expressions) {    CSS 代码…; }</p>
+<p>mediatype  媒体类型</p>
+<p>expressions 表达式</p>
+<p>如果指定的多媒体类型匹配设备类型则查询结果返回 true，文档会在匹配的设备上显示指定样式效果。</p>
+<p>除非你使用了 not 或 only 操作符，否则所有的样式会适应在所有设备上显示效果。</p>
+<ul>
+<li><strong>not:</strong> not是用来排除掉某些特定的设备的，比如 @media not print（非打印设备）。</li>
+<li><strong>only:</strong> 用来定某种特别的媒体类型。对于支持Media Queries的移动设备来说，如果存在only关键字，移动设备的Web浏览器会忽略only关键字并直接根据后面的表达式应用样式文件。对于不支持Media Queries的设备但能够读取Media Type类型的Web浏览器，遇到only关键字时会忽略这个样式文件。</li>
+<li><strong>all:</strong> 所有设备，这个应该经常看到。</li>
+</ul>
+<p>你也可以在不同的媒体上使用不同的样式文件：</p>
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+
+<hr>
+<h2 id="CSS3-多媒体类型"><a href="#CSS3-多媒体类型" class="headerlink" title="CSS3 多媒体类型"></a>CSS3 多媒体类型</h2><table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">all</td>
+<td align="left">用于所有多媒体类型设备</td>
+</tr>
+<tr>
+<td align="left">print</td>
+<td align="left">用于打印机</td>
+</tr>
+<tr>
+<td align="left">screen</td>
+<td align="left">用于电脑屏幕，平板，智能手机等。</td>
+</tr>
+<tr>
+<td align="left">speech</td>
+<td align="left">用于屏幕阅读器</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="多媒体查询简单实例"><a href="#多媒体查询简单实例" class="headerlink" title="多媒体查询简单实例"></a>多媒体查询简单实例</h2><p>使用多媒体查询可以在指定的设备上使用对应的样式替代原有的样式。</p>
+<p>以下实例中在屏幕可视窗口尺寸小于 480 像素的设备上修改背景颜色:</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>@media screen and (max-width: 480px) {    body {        background-color: lightgreen;    } }</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=trycss3_media_queries1">尝试一下 »</a></p>
+<p>以下实例在屏幕可视窗口尺寸大于 480 像素时将菜单浮动到页面左侧：</p>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p>@media screen and (min-width: 480px) {    #leftsidebar {width: 200px; float: left;}    #main {margin-left:216px;} }</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=trycss3_media_queries2">尝试一下 »</a></p>
+<p>以下实例在屏幕可视窗口尺寸小于 600 像素时将 div 元素隐藏：</p>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p>@media screen and (max-width: 600px) {  div.example {    display: none;  } }</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/try/try.php?filename=trycss3_media_queries3">尝试一下 »</a></p>
+<hr>
+<h2 id="CSS3-media-参考"><a href="#CSS3-media-参考" class="headerlink" title="CSS3 @media 参考"></a>CSS3 @media 参考</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/10/26/%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84git%E4%BB%93%E5%BA%93/" rel="next" title="git 搭建">
+                <i class="fa fa-chevron-left"></i> git 搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" rel="prev" title="h5 和 CSS3">
+                h5 和 CSS3 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93"><span class="nav-number">1.</span> <span class="nav-text">定义自定义字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">使用自定义字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-%E5%A4%9A%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">css3 多列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90"><span class="nav-number"></span> <span class="nav-text">弹性盒子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E5%B1%9E%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">弹性盒子属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-direction"><span class="nav-number">1.1.</span> <span class="nav-text">flex-direction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#justify-content"><span class="nav-number">1.2.</span> <span class="nav-text">justify-content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-items-%E8%AE%BE%E7%BD%AE%E6%88%96%E6%A3%80%E7%B4%A2%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E5%85%83%E7%B4%A0%E5%9C%A8%E7%BA%B5%E8%BD%B4%E6%96%B9%E5%90%91%E4%B8%8A%E7%9A%84%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">align-items 设置或检索弹性盒子元素在纵轴方向上的对齐方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flex-wrap-%E7%94%A8%E4%BA%8E%E6%8C%87%E5%AE%9A%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E7%9A%84%E5%AD%90%E5%85%83%E7%B4%A0%E6%8D%A2%E8%A1%8C%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">flex-wrap 用于指定弹性盒子的子元素换行方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#align-content-%E5%B1%9E%E6%80%A7"><span class="nav-number">1.5.</span> <span class="nav-text">align-content 属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%B9%E6%80%A7%E5%AD%90%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">弹性子元素属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F-order"><span class="nav-number">2.1.</span> <span class="nav-text">排序 order</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E9%BD%90"><span class="nav-number">2.2.</span> <span class="nav-text">对齐</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#align-self"><span class="nav-number">2.2.1.</span> <span class="nav-text">align-self</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex"><span class="nav-number">3.</span> <span class="nav-text">flex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css3-%E5%A4%9A%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2"><span class="nav-number"></span> <span class="nav-text">css3 多媒体查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95"><span class="nav-number"></span> <span class="nav-text">多媒体查询语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-%E5%A4%9A%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B"><span class="nav-number"></span> <span class="nav-text">CSS3 多媒体类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B"><span class="nav-number"></span> <span class="nav-text">多媒体查询简单实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="nav-number">2.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="nav-number">3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3-media-%E5%8F%82%E8%80%83"><span class="nav-number"></span> <span class="nav-text">CSS3 @media 参考</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ASDW51</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

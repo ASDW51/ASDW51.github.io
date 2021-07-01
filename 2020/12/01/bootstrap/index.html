@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Boostrap," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="bootstrap    –学会看源码 视口·  &#96;&#96;&#96;窗口自适应 12345678910111213141516171819202122232425- bootstrap3  - 网格系统    - 固定宽度 container  &#x2F;全屏宽度 container-fluid    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列    - 各种尺寸          - &#96;&#96;&#96;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="boostrap 笔记2">
+<meta property="og:url" content="http://example.com/2020/12/01/bootstrap/index.html">
+<meta property="og:site_name" content="ASDW51 web learning">
+<meta property="og:description" content="bootstrap    –学会看源码 视口·  &#96;&#96;&#96;窗口自适应 12345678910111213141516171819202122232425- bootstrap3  - 网格系统    - 固定宽度 container  &#x2F;全屏宽度 container-fluid    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列    - 各种尺寸          - &#96;&#96;&#96;">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-12-01T06:48:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T07:01:44.836Z">
+<meta property="article:author" content="ASDW51">
+<meta property="article:tag" content="Boostrap">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/12/01/bootstrap/"/>
+
+
+
+
+
+  <title>boostrap 笔记2 | ASDW51 web learning</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ASDW51 web learning</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/01/bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">boostrap 笔记2</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-01T14:48:00+08:00">
+                2020-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="bootstrap-–学会看源码"><a href="#bootstrap-–学会看源码" class="headerlink" title="bootstrap    –学会看源码"></a>bootstrap    –学会看源码</h1><ul>
+<li><p>视口·</p>
+<ul>
+<li>```<br>窗口自适应<meta name="viewport" content="width=device-width,initial-scale=1">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- bootstrap3</span><br><span class="line"></span><br><span class="line">  - 网格系统</span><br><span class="line"></span><br><span class="line">    - 固定宽度 container  /全屏宽度 container-fluid</span><br><span class="line"></span><br><span class="line">    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列</span><br><span class="line"></span><br><span class="line">    - 各种尺寸</span><br><span class="line">    </span><br><span class="line">      - ```</span><br><span class="line">        //bootstrap3</span><br><span class="line">        .col-xs 小于768px		</span><br><span class="line">        .col-sm 大于等于768px</span><br><span class="line">    .col-md  大于等于992px</span><br><span class="line">        .col-lg- 大于1200px</span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">        //bootstrap4</span><br><span class="line">        .col-  所有</span><br><span class="line">        .col-sm	&gt;=556</span><br><span class="line">        .col-md	&gt;=768</span><br><span class="line">        .col-lg	&gt;=992</span><br><span class="line">        .col-xl	&gt;=1200</span><br></pre></td></tr></table></figure>
+    </li>
+</ul>
+</li>
+<li><p>常用类</p>
+<ul>
+<li>row   主要作用：创建一个弹性盒子</li>
+<li>col-**-**   满足该类的定义尺寸时按照定义的来，不满足时会设置宽度100%，即弹性子元素会拉满屏幕</li>
+<li>offset-**-n  偏移n列，通过设置元素的margin-left来实现该功能</li>
+</ul>
+</li>
+<li><p>文字排版</p>
+<ul>
+<li><p>bootstrap4默认的font-size 为16px,line-height为1.5，所有的p元素 margin-top:0,margin-bottem:1em</p>
+</li>
+<li><p>h1~h6 大概就居中对齐的样子</p>
+</li>
+<li><p>display-n   n取(1-4)  定义更大更粗的字体</p>
+</li>
+<li><p>font 相关</p>
+<ul>
+<li>```<br>font-weight-bold 加粗<br>font-weight-normal 普通文本<br>font-weight-light  更细的文本<br>font-italic    斜体文本<br>lead 让段落更突出<br>small 更小的文本<br>text-left 左对齐<br>text-center 居中<br>text-right  右对齐<br>text-justify 设定文本对齐，段落中超出屏幕的部分文字自动换行  对标css中的text-align-justify  –两端文本对齐<br>text-nowrap  超出屏幕不换行    对标css white-space:nowrap<br>text-lowercase 转小写    对标css text-transform:lowercase<br>text-uppercase 转大写    对标css text-transform:uppercase<br>list-unstyled    移除默认的列表样式    css代码为padding-left:0;list-style:none<br>list-inline    :将所有列表项放置同一行   bootstrap3生效<br>list-inline-item    css代码为display:inline-block<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 颜色相关</span><br><span class="line"></span><br><span class="line">  - Bootstrap 4 提供了一些有代表意义的颜色类：**.text-muted**, **.text-primary**, **.text-success**, **.text-info**, **.text-warning**, **.text-danger**, **.text-secondary**, **.text-white**, **.text-dark** and **.text-light**:</span><br><span class="line"></span><br><span class="line">  - 提供背景颜色的类有: **.bg-primary**, **.bg-success**, **.bg-info**, **.bg-warning**, **.bg-danger**, **.bg-secondary**, **.bg-dark** 和 **.bg-light**。</span><br><span class="line"></span><br><span class="line">    注意背景颜色不会设置文本的颜色，在一些实例中你需要与 **.text-\*** 类一起使用。</span><br><span class="line"></span><br><span class="line">- 表格</span><br><span class="line"></span><br><span class="line">  - 基础表格样式	table</span><br><span class="line">  - 条纹表格 table-striped</span><br><span class="line">  - 带边框表格  table-bordered</span><br><span class="line">  - 鼠标悬停  table-hover</span><br><span class="line">  - 黑色背景  table-dark</span><br><span class="line">  - 黑色条纹表格     table-dark/table-striped</span><br><span class="line">  - 鼠标悬停+黑色背景  table-dark  table-hover</span><br><span class="line">  - 表格颜色</span><br><span class="line">    - table-primary</span><br><span class="line">    - table-success</span><br><span class="line">    - table-danger</span><br><span class="line">    - table-info</span><br><span class="line">    - table-warning</span><br><span class="line">    - table-active</span><br><span class="line">    - table-secondary</span><br><span class="line">    - table-light</span><br><span class="line">    - table-dark</span><br><span class="line">  - table-sm 较小的表格</span><br><span class="line">  - 响应式表格  table-responsive  在屏幕宽度小于992px时会创建水平滚动条</span><br><span class="line">    - 设置指定屏幕宽度下显示滚动条</span><br><span class="line">      - table-responsive-sm	小于576</span><br><span class="line">      - table-responsive-md   小于768</span><br><span class="line">      - table-responsive-lg       小于992</span><br><span class="line">      - table-responsive-xl      小于1200</span><br><span class="line"></span><br><span class="line">- 图像形状</span><br><span class="line"></span><br><span class="line">  - rounded  可以让图片显示圆角效果</span><br><span class="line"></span><br><span class="line">  - rounded-circle  设置椭圆形图片</span><br><span class="line"></span><br><span class="line">  - 缩略图   img-thumbnail  设置图片缩略图</span><br><span class="line"></span><br><span class="line">  - float-right  图片右对齐</span><br><span class="line"></span><br><span class="line">  - float-left  设置图片左对齐</span><br><span class="line"></span><br><span class="line">  - 响应式图片   </span><br><span class="line"></span><br><span class="line">    - img-fluid设置响应式图片  </span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      img-fluid 本质css</span><br><span class="line">      &#123;</span><br><span class="line">      	max-width:100%;</span><br><span class="line">      	height:auto;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Jumbotron</p>
+<ul>
+<li>jumbotron  创建一个大的灰色背景框  有圆角，里面可以放一些html标签，也可以是bootstrap的元素如果你想创建一个没有圆角的全屏幕，可以在jumbotron-fluid里添加container或container-fluid类来实现</li>
+</ul>
+</li>
+<li><p>提示框</p>
+<ul>
+<li><p>alert类</p>
+</li>
+<li><p>alert-主要颜色，可更改背景颜色</p>
+</li>
+<li><p>alert-link  链接</p>
+</li>
+<li><p>关闭提示框</p>
+<ul>
+<li>```<br>我们可以再提示框的div中添加.alert-dismissible 然后在关闭按钮链接的链接上加上close类和data-dismiss=’alert’属性来设置提示框的关闭操作<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">- 淡入淡出效果 添加fade show 类</span><br><span class="line">  </span><br><span class="line">- 按钮</span><br><span class="line">  </span><br><span class="line">  - 基本按钮 btn</span><br><span class="line">  </span><br><span class="line">  - btn-primary 主要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-secondary 次要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-success 成功</span><br><span class="line">  </span><br><span class="line">  - btn-info 信息</span><br><span class="line">  </span><br><span class="line">  - btn-warning 警告</span><br><span class="line">  </span><br><span class="line">  - btn-danger 危险</span><br><span class="line">  </span><br><span class="line">  - btn-dark 黑色</span><br><span class="line">  </span><br><span class="line">  - btn-light 浅色</span><br><span class="line">  </span><br><span class="line">  - btn-link 链接</span><br><span class="line">  </span><br><span class="line">  - 按钮类可用于a,button或input元素上</span><br><span class="line">  </span><br><span class="line">  - 按钮设置边框</span><br><span class="line">  </span><br><span class="line">    - ```</span><br><span class="line">        btn-outline-不同颜色</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>不同大小的按钮</p>
+<ul>
+<li>btn-lg 大号按钮<ul>
+<li>btn-sm 小号按钮</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>块级按钮  .btn-block</p>
+</li>
+<li><p>激活和禁用的按钮  .active类可以设置按钮是可用的，disable 属性是设置禁用的</p>
+<ul>
+<li>注意：a标签需添加.disable类来设置禁用项</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>按钮组</p>
+<ul>
+<li>bootstrap4中允许我们将按钮放在同一行<ul>
+<li>可以在div元素上添加.btn-group 类来创建按钮组</li>
+<li>设置按钮组大小的类 btn-group-sm|lg</li>
+<li>垂直按钮组  btn-group-vertical</li>
+<li>按钮组的下拉菜单  略</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Badges  徽章主要用于突出新的或未读的的项  </p>
+<ul>
+<li>badge + 上带有指定意义的颜色类<ul>
+<li>药丸形状徽章  badge-pill</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>进度条</p>
+<ul>
+<li>父类  progress<ul>
+<li>子类 progress-bar   修改子元素的width百分比</li>
+<li>条纹进度条 progress-bar-striped</li>
+<li>动画进度条 progress-bar-animated</li>
+<li>混合色彩进度条<ul>
+<li>创建多个progress-bar,设置不同的背景颜色</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分页  pagination</p>
+<ul>
+<li><p>要创建一个基本的分页可以在ul元素上添加 .pagination类。然后在li元素上添加.page-item类</p>
+<ul>
+<li>分页显示大小  pagination-lg设置大字体  pagination-sm  设置小字体</li>
+</ul>
+</li>
+<li><p>列表组</p>
+<ul>
+<li>要创建列表组，可以在ul元素上添加.list-group类，在li元素上添加.list-group-item类</li>
+<li>禁用列表项 .disabled</li>
+<li>鼠标悬停的效果类  list-group-item-action</li>
+<li>颜色设置类  list-group-item-颜色</li>
+</ul>
+</li>
+<li><p>卡片(card)</p>
+<ul>
+<li>我们可以通过.card与.card-body类来创建一个简单的卡片</li>
+<li>.card-header  头部,.card-body 内容,.card-footer底部</li>
+<li>卡片可以通过bg-*类来改变颜色</li>
+<li>.card-title设置卡片的标题</li>
+<li>.card-link 给卡片内的链接来使用</li>
+<li>图片卡片<ul>
+<li>我们可以给img添加.card-img-top（图片在文字上面）或.card-img-bottom（图片在文字下面）</li>
+<li>如果图片要设置成背景，给文字容器添加.card-img-overlay类</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>下拉菜单</p>
+<ul>
+<li>下拉菜单依赖于poper.min.js</li>
+<li>.dropdown 创建一个下拉菜单 源码作用是创建一个相对定位</li>
+<li>.dropdown-menu 创建一个下拉菜单列表，用于放下拉菜单的选项</li>
+<li>实现下拉菜单效果需要加data-toggle=’dropdown’属性</li>
+<li>.dropdown-toggle 可以添加一个三角形图标</li>
+<li>.dropdown-item  放在dropdown-menu里，类似li元素的效果</li>
+<li>下拉菜单中的分割线  .dropdown-divider  创建一个水平的分割线</li>
+<li>.dropdown-header 下拉菜单中的标题</li>
+<li>可用项active  禁用项 disabled</li>
+<li>下拉菜单的右对齐  dropdown-menu-right</li>
+<li>设置下拉菜单不同的弹出方向  默认dropdown向下弹出</li>
+<li>dropright 向右弹出</li>
+<li>dropup 向上弹出</li>
+<li>dropleft 向左弹出</li>
+</ul>
+</li>
+<li><p>表单</p>
+<ul>
+<li>form-group类  表单组？</li>
+<li>form-control   变成块级元素，width:100%</li>
+<li>form-inline  创建弹性盒子 ,换行，flex-align:center;align-items:center;width:100%</li>
+<li>form-chexk-input</li>
+<li>form-check-label</li>
+<li>form-check-inline 类可以让选项显示在同一行上</li>
+<li>radio 单选框</li>
+<li>radio-inline  可以让选项显示在同一行</li>
+<li>form-group</li>
+<li>lable的for属性表示与某个表单元素绑定，值为表单元素的id</li>
+</ul>
+</li>
+<li><p>折叠</p>
+<ul>
+<li><p>折叠可以很容易的实现内容的显示与隐藏</p>
+</li>
+<li><p>collapse类用于指定一个折叠元素；点击按钮后会在隐藏于显示之间切换</p>
+</li>
+<li><p>控制内容的隐藏与显示，需要在a或button元素上添加data-toggle=’collapse’属性</p>
+</li>
+<li><p>data-target=’id’对应要显示隐藏内容的id</p>
+</li>
+<li><p>代码示例</p>
+<ul>
+<li>```<div class='container'>
+    <a href="" data-toggle='collapse' data-target='#demo'>折叠</a>
+    <div class='collapse' id="demo">
+        被折叠的内容
+    </div>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - data-parent属性来确保所有的折叠元素在指定的父元素下，这样就能是现在一个折叠选项显示时其他选项就隐藏</span><br><span class="line"></span><br><span class="line">- 导航nav</span><br><span class="line"></span><br><span class="line">  - 创建一个简单的导航，可以在ul元素上添加.nav类，再每个li选项上添加.nav-item类，在连接上添加.nav-link类</span><br><span class="line">  - 导航的对齐方式</span><br><span class="line">    - 居中显示 justify-content-center</span><br><span class="line">    - 导航右对齐 justify-content-right</span><br><span class="line">    - 垂直导航 flex-column</span><br><span class="line">  - 选项卡    在.nav类的基础上加上nav-tabs</span><br><span class="line">  - 胶囊导航  在nav的基础上加上nav-pills</span><br><span class="line">  - 导航等宽  .nav-justified类可以设置导航项齐行等宽显示</span><br><span class="line">  - 胶囊下拉菜单  添加下拉菜单到导航的某个选项上</span><br><span class="line">  - 选项卡下拉菜单 同上</span><br><span class="line">  - 动态选项卡</span><br><span class="line">    - 给选项加.data-toggle=&#x27;tab&#x27;</span><br><span class="line">    - 给个div,添加tab-content类，里面放的元素id跟上面的对应并添加tab-pane类</span><br><span class="line"></span><br><span class="line">- 导航栏</span><br><span class="line"></span><br><span class="line">  - 我们可以使用.navbar来创建一个标准的导航栏 后面紧跟.navbar-expand-xl|md|sm类来创建响应式导航栏(大屏幕铺开，小屏幕垂直堆叠)</span><br><span class="line">  - 导航栏的上的选项可以使用ul元素并添加class=&quot;navbar-nav“类，然后再li元素上添加nav-item类，a元素上使用.nav-link类</span><br><span class="line">  - .navbar-brand 高亮显示品牌</span><br><span class="line">  - 折叠导航栏 navbar-collapse类，navbar-toggler类</span><br><span class="line">  - 导航栏文本 navbar-text</span><br><span class="line">  - 固定导航栏 fixed-top/fixed-bottom 固定顶部/固定底部</span><br><span class="line">  </span><br><span class="line">- 模态框（modal）</span><br><span class="line"></span><br><span class="line">  - modal定义一个模态框</span><br><span class="line">  - modal-dialog定义弹出的框，内容都放在该容器下</span><br><span class="line">  - modal-header 模态框头部 / modal-title</span><br><span class="line">  - modal-body  模态框内容</span><br><span class="line">  - modal-footer 模态框底部</span><br><span class="line">  - modal-sm 小模态框</span><br><span class="line">  - modal-lg 大模态框</span><br><span class="line">  - </span><br><span class="line"></span><br><span class="line">- 提示框</span><br><span class="line"></span><br><span class="line">  - 通过向元素添加data-toggle=&#x27;tooltip&#x27;来创建提示框，title属性为提示款显示的内容</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    &lt;a href=&quot;#&quot; data-toggle=&#x27;tooltip&#x27; title=&quot;提示的文字&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>注意：提示框生效要调用tootip()方法</p>
+</li>
+<li><p>data-placement 设定显示的方向 top/bottom/left/right</p>
+</li>
+<li><p>提示的内容添加html标签 设置 data-html=’true</p>
+</li>
+</ul>
+</li>
+<li><p>弹出框</p>
+<ul>
+<li>向元素添加data-toggle=’popover’来创建弹出框，当点击的时候出现内容</li>
+<li>title属性为弹出框的标题，data-content为弹出框的文本内容</li>
+<li>注意：弹出框生效需要调用popover方法</li>
+<li>data-placement可以设置弹出框显示的方向 top/bottom/left/right</li>
+<li>设置再次点击弹出框消失的属性 data-trigger=’focus’</li>
+<li>鼠标移到元素上显示，一处小时 data-trigger=’hover’</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Boostrap/" rel="tag"># Boostrap</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" rel="next" title="h5 和 CSS3">
+                <i class="fa fa-chevron-left"></i> h5 和 CSS3
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/03/11/vue/" rel="prev" title="Vue 笔记">
+                Vue 笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bootstrap-%E2%80%93%E5%AD%A6%E4%BC%9A%E7%9C%8B%E6%BA%90%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">bootstrap    –学会看源码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ASDW51</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

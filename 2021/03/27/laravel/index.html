@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="PHP,Laravel," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、路由基本形式123Route::get(path,function()&amp;#123;	return &quot;&quot;&amp;#125;)  路由调用类中的方法12Route::get(path, [class,&quot;methodName&quot;])Route::get(path, &quot;controllerName@methodName&quot;)  响应多个http请求的路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel">
+<meta property="og:url" content="http://example.com/2021/03/27/laravel/index.html">
+<meta property="og:site_name" content="ASDW51 web learning">
+<meta property="og:description" content="一、路由基本形式123Route::get(path,function()&amp;#123;	return &quot;&quot;&amp;#125;)  路由调用类中的方法12Route::get(path, [class,&quot;methodName&quot;])Route::get(path, &quot;controllerName@methodName&quot;)  响应多个http请求的路">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-03-27T15:42:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T07:37:34.335Z">
+<meta property="article:author" content="ASDW51">
+<meta property="article:tag" content="PHP">
+<meta property="article:tag" content="Laravel">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/03/27/laravel/"/>
+
+
+
+
+
+  <title>Laravel | ASDW51 web learning</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ASDW51 web learning</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/27/laravel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Laravel</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-27T23:42:00+08:00">
+                2021-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、路由"><a href="#一、路由" class="headerlink" title="一、路由"></a>一、路由</h2><h3 id="基本形式"><a href="#基本形式" class="headerlink" title="基本形式"></a>基本形式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Route::get(path,function()&#123;</span><br><span class="line">	return &quot;&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="路由调用类中的方法"><a href="#路由调用类中的方法" class="headerlink" title="路由调用类中的方法"></a>路由调用类中的方法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Route::get(path, [class,&quot;methodName&quot;])</span><br><span class="line">Route::get(path, &quot;controllerName@methodName&quot;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="响应多个http请求的路由"><a href="#响应多个http请求的路由" class="headerlink" title="响应多个http请求的路由"></a>响应多个http请求的路由</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Route::match([&quot;get&quot;,&quot;post&quot;],callback)</span><br></pre></td></tr></table></figure>
+
+<h3 id="csrf保护"><a href="#csrf保护" class="headerlink" title="csrf保护"></a>csrf保护</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">POST,PUT,PATCH,DElETE</span><br><span class="line">@csrf</span><br></pre></td></tr></table></figure>
+
+<h3 id="路由重定向"><a href="#路由重定向" class="headerlink" title="路由重定向"></a>路由重定向</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ROute::redirect(here,there)</span><br></pre></td></tr></table></figure>
+
+<h3 id="视图路由"><a href="#视图路由" class="headerlink" title="视图路由"></a>视图路由</h3><p>Route::view(path,view_name)</p>
+<h3 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h3><h4 id="必填参数"><a href="#必填参数" class="headerlink" title="必填参数"></a>必填参数</h4><p>参数写在{ } 中表示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Route::get(&#x27;/user/&#123;id&#125;&#x27;,function($id)&#123;</span><br><span class="line">	return $id;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a>可选参数</h4><p>可选参数加个问号（？）并且回调中的参数需添加默认值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Route::get(&quot;/user/&#123;name?&#125;&quot;,function($name=null)&#123;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="正则约束路由匹配"><a href="#正则约束路由匹配" class="headerlink" title="正则约束路由匹配"></a>正则约束路由匹配</h4><p>在路由实例上添加where方法约束</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Route::get(&#x27;/user/id&#x27;,function($id)&#123;&#125;)-&gt;where(&quot;id&quot;,&quot;[0-9]+&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>系统添加的常用正则</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">whereNumber()</span><br><span class="line">whereAlpha()</span><br><span class="line">whereAlphaNumeric()</span><br><span class="line">whereUuid()</span><br></pre></td></tr></table></figure>
+
+<h5 id="正则的全局约束"><a href="#正则的全局约束" class="headerlink" title="正则的全局约束"></a>正则的全局约束</h5><p>在Providers中的路由服务类中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Route::pattern(&#x27;id&#x27;,&#x27;[0-9]+&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p>middleware</p>
+<p>中间件</p>
+<h2 id="二、请求"><a href="#二、请求" class="headerlink" title="二、请求"></a>二、请求</h2><p>http\Reqiest类</p>
+<ul>
+<li><p>path方法返回路径信息因此接收到的目标是  <a target="_blank" rel="noopener" href="http://domain.com/foo/bar">http://domain.com/foo/bar</a>  则path方法会返回 foo/bar</p>
+</li>
+<li><p>is 方法验证请求的路径是否与给定的模式匹配</p>
+</li>
+<li><p>获取请求的url</p>
+<ul>
+<li>```<br>url() 返回不带查询条件的url 而fullUrl 方法返回带查询条件的url<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- method 方法回会请求方式，isMethod 可以验证是否与目标请求方式匹配</span><br><span class="line"></span><br><span class="line">- all 方法获取全部的请求参数 array类型</span><br><span class="line"></span><br><span class="line">- 获取其中一个输入数据  $request-&gt;input(key, defaultValue)</span><br><span class="line"></span><br><span class="line">- only()    $request-&gt;only([&quot;username&quot;, &quot;password&quot;]);</span><br><span class="line"></span><br><span class="line">- except()   $request-&gt;except([&quot;username&quot;, &quot;password&quot;])</span><br><span class="line"></span><br><span class="line">- has 判断是否有某个值  $request-&gt;has(key)</span><br><span class="line"></span><br><span class="line">-  flash() 方法吧$request中的参数存到session中</span><br><span class="line"></span><br><span class="line">- old辅助函数在blade模板中可以获取上一次的输入值</span><br><span class="line"></span><br><span class="line">- ### cookie</span><br><span class="line"></span><br><span class="line">- 获取cookie</span><br><span class="line"></span><br><span class="line">  - 获取请求来的cookie  $request-&gt;cookie(&quot;name&quot;)  或者Cookie::get(&quot;name&quot;)</span><br><span class="line"></span><br><span class="line">- 返回cookie</span><br><span class="line"></span><br><span class="line">  - 将cookie附加到响应中 retrun response()-&gt;cookie(key, value, time)</span><br><span class="line"></span><br><span class="line">- 删除cookie</span><br><span class="line"></span><br><span class="line">  - Cookie::queue(Cookie::forget(&#x27;name&#x27;))</span><br><span class="line">  - $cookie = Cookie::forget(&#x27;name&#x27;)   return response()-&gt;cookie($cookie)</span><br><span class="line"></span><br><span class="line">### 获取上传的文件</span><br><span class="line"></span><br><span class="line">- file方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+$request-&gt;file(“fileName”)   该方法返回一个UploadedFile  类的实例，该类继承了php SplFileInfo 类的同时也提供各种与文件交互的方法<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- hasFile 方法判断有没有该文件上传</span><br><span class="line">- isValid() 方法验证上传到文件是否有效</span><br><span class="line"></span><br><span class="line">## 三、视图</span><br><span class="line"></span><br><span class="line">视图共享数据</span><br><span class="line"></span><br><span class="line">在 AppServiceProvider boot方法中添加 View::share(&quot;key&quot;,&quot;value&quot;)</span><br><span class="line"></span><br><span class="line">## 四、生成url</span><br><span class="line"></span><br><span class="line">url辅助函数</span><br><span class="line"></span><br><span class="line">url-&gt;current()  当前url</span><br><span class="line"></span><br><span class="line">url-&gt;full()   获取当前url 包括querystring</span><br><span class="line"></span><br><span class="line">url-&gt;previous()  获取上一个url</span><br><span class="line"></span><br><span class="line">## 五、session</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+1。通过Request 注入的实例访问<br>$request-&gt;session()-&gt;get(“key”,default);<br>$request-&gt;session()-&gt;get(“key”,function(){<pre><code>return 当key不存在时返回这个参数
+</code></pre>
+});</li>
+</ul>
+</li>
+</ul>
+<p>2.通过辅助函数session()<br>    当传入一个普通字符时是获取session<br>    session(“key”,defaultValue)<br>    当传入一个键值对数组时是存储session<br>    session([“name”=&gt;”xiaoming”])<br>3.获取所有Session数据<br>    $request-&gt;session-&gt;all()<br>4.判断session中是否存在某个值，可以用has方法，如果该值存在且不为null，那么has方法会返回true<br>    $request-&gt;session()-&gt;has(“key”)<br>    如果把为null的值也算作存在的话，可以使用exists方法<br>    $request-&gt;session()-&gt;exists(“key”)</p>
+<p>5.存储数据<br>    $request-&gt;session()-&gt;put(key, value);<br>    session([key=&gt;value])<br>push方法可以添加一个新的值到数组内</p>
+<p>6.检索&amp;删除数据<br>    $request-&gt;session()-&gt;pull(“key”, “default”)</p>
+<p>7.删除数据<br>    删除指定数据<br>    $request-&gt;session()-&gt;forget(key);<br>    删除所有数据<br>    $request-&gt;session()-&gt;flush()</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 六、表单验证</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>1.Request实例的validate 方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 七、Model</span><br><span class="line"></span><br><span class="line">常用属性</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>1.更Model默认的表名<br>protected $table = 表名<br>2.更改绑定的创建时间和更改时间字段<br>protected CREATED_AT = 字段名<br>protected UPDATED_AT = 字段名<br>3.用模型的create方法插入属性时需要设置哪个字段允许插入<br>protected fillable = []  允许插入的字段<br>protected guarded = []  不允许插入的字段<br>4.关闭时间戳接管<br>public $timestamps = false;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">常用方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>1.find()<br>根据给定的id查询相关的字段<br>2.批量更新数据<br>Model::update(data[]) 更新成功会返回受影响的记录条数<br>3.批量插入数据<br>Model::create(data[])  插入成功回返回一个对象，失败返回null<br>4.删除数据，通过主键id删除数据<br>Model::find(id)  获取对象实例，通过调用实例的delete方法删除对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 八、门面DB类</span><br><span class="line"></span><br><span class="line">常用方法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>1.;get()  获取数据    获取符合条件的所有数据    返回值是一个collection 集合对象，可以foreach循环遍历用 isEmpty() 方法判断是否为空，为空返回true<br>DB::table(name)-&gt;all()<br>2.where()   添加查询条件<br>3.first()  获取第一条数据  返回的是一个 stdClass 对象  为空时等于null</p>
+<p>增加<br>4.DB::table()-&gt;insert()   插入成功返回true</p>
+<pre><code>
+</code></pre>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Laravel/" rel="tag"># Laravel</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/03/23/mysql/" rel="next" title="mysql笔记">
+                <i class="fa fa-chevron-left"></i> mysql笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/04/14/Git%E6%9B%B4%E6%96%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E4%BB%A3%E7%A0%81%E5%88%B0%E6%9C%AC%E5%9C%B0/" rel="prev" title="git 更新代码">
+                git 更新代码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%B7%AF%E7%94%B1"><span class="nav-number">1.</span> <span class="nav-text">一、路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">基本形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E8%B0%83%E7%94%A8%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">路由调用类中的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%A4%9A%E4%B8%AAhttp%E8%AF%B7%E6%B1%82%E7%9A%84%E8%B7%AF%E7%94%B1"><span class="nav-number">1.3.</span> <span class="nav-text">响应多个http请求的路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#csrf%E4%BF%9D%E6%8A%A4"><span class="nav-number">1.4.</span> <span class="nav-text">csrf保护</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-number">1.5.</span> <span class="nav-text">路由重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E5%9B%BE%E8%B7%AF%E7%94%B1"><span class="nav-number">1.6.</span> <span class="nav-text">视图路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0"><span class="nav-number">1.7.</span> <span class="nav-text">路由参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%85%E5%A1%AB%E5%8F%82%E6%95%B0"><span class="nav-number">1.7.1.</span> <span class="nav-text">必填参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E9%80%89%E5%8F%82%E6%95%B0"><span class="nav-number">1.7.2.</span> <span class="nav-text">可选参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E7%BA%A6%E6%9D%9F%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D"><span class="nav-number">1.7.3.</span> <span class="nav-text">正则约束路由匹配</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E7%9A%84%E5%85%A8%E5%B1%80%E7%BA%A6%E6%9D%9F"><span class="nav-number">1.7.3.1.</span> <span class="nav-text">正则的全局约束</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.8.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%AF%B7%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">二、请求</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ASDW51</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

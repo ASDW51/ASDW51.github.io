@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="DOM节点Document 属性  defaultView  doctype  documentElement  指向html节点  document.body  document.head  document.scrollingElement  document.activeElement  fullscreenElement  返回HTMLCollection实例  document.link">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM">
+<meta property="og:url" content="http://example.com/2020/05/26/DOM/index.html">
+<meta property="og:site_name" content="ASDW51 web learning">
+<meta property="og:description" content="DOM节点Document 属性  defaultView  doctype  documentElement  指向html节点  document.body  document.head  document.scrollingElement  document.activeElement  fullscreenElement  返回HTMLCollection实例  document.link">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-05-26T12:33:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T07:29:20.371Z">
+<meta property="article:author" content="ASDW51">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/05/26/DOM/"/>
+
+
+
+
+
+  <title>DOM | ASDW51 web learning</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ASDW51 web learning</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/05/26/DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51 web learning">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">DOM</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-26T20:33:00+08:00">
+                2020-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h2><h3 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h3><ul>
+<li><p>属性</p>
+<ul>
+<li><p>defaultView</p>
+</li>
+<li><p>doctype</p>
+</li>
+<li><p>documentElement  指向html节点</p>
+</li>
+<li><p>document.body</p>
+</li>
+<li><p>document.head</p>
+</li>
+<li><p>document.scrollingElement</p>
+</li>
+<li><p>document.activeElement</p>
+</li>
+<li><p>fullscreenElement</p>
+</li>
+<li><p>返回HTMLCollection实例</p>
+<ul>
+<li>document.links</li>
+<li>document.forms</li>
+<li>document.images</li>
+<li>document.embeds</li>
+<li>document.plugins</li>
+<li>scripts</li>
+</ul>
+</li>
+<li><p>document.styleSheets</p>
+</li>
+<li><p>document.documentURI</p>
+</li>
+<li><p>document.documentURL</p>
+</li>
+<li><p>document.domain</p>
+</li>
+<li><p>document.location</p>
+</li>
+<li><p>document.lastModiified</p>
+</li>
+<li><p>document.title</p>
+</li>
+<li><p>document.characterSet</p>
+</li>
+<li><p>document.referrer</p>
+</li>
+<li><p>document.dir</p>
+</li>
+</ul>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>选择器</p>
+<ul>
+<li><p>返回NodeList对象</p>
+<ul>
+<li>document.querySelector()</li>
+<li>document.querySelectorAll()</li>
+<li>document.getElementsByName()</li>
+</ul>
+</li>
+<li><p>返回HTMLCollection 实例</p>
+<ul>
+<li>document.getElementsByTagName()</li>
+<li>document.getElementsByClassName()</li>
+</ul>
+</li>
+<li><p>document.getElementById() 返回的是个节点</p>
+</li>
+</ul>
+</li>
+<li><p>节点生成</p>
+<ul>
+<li>document.createElement()  生成元素节点</li>
+<li>document.createTextNode() 生成文本节点</li>
+<li>document.createComment() 生成注释节点</li>
+<li>document.createDocumentFragment() 生成空的文档对象</li>
+</ul>
+</li>
+<li><p>属性相关</p>
+<ul>
+<li>document.createAttribute() 生成一个新的属性节点。值通过value属性设置</li>
+</ul>
+</li>
+<li><p>事件相关</p>
+<ul>
+<li>document.createEvent()  生成事件对象</li>
+<li>document.addEventListener()  添加监听器</li>
+<li>document.removeEventListener()  移除监听器</li>
+</ul>
+</li>
+<li><p>子节点遍历器</p>
+<ul>
+<li><p>document.createNodeIterator() 子节点遍历器</p>
+<ul>
+<li>nextNode()</li>
+<li>previousNode()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="DocumentType"><a href="#DocumentType" class="headerlink" title="DocumentType"></a>DocumentType</h3><h3 id="Element"><a href="#Element" class="headerlink" title="Element"></a>Element</h3><ul>
+<li><p>属性</p>
+<ul>
+<li><p>Element.id</p>
+</li>
+<li><p>Element.tagName</p>
+</li>
+<li><p>Element.dir</p>
+</li>
+<li><p>Element.accessKey</p>
+</li>
+<li><p>Element.draggable</p>
+</li>
+<li><p>Element.lang</p>
+</li>
+<li><p>Element.tabIndex</p>
+</li>
+<li><p>Element.title</p>
+</li>
+<li><p>元素状态相关</p>
+<ul>
+<li>Element.hidden</li>
+<li>Element.contentEditable 元素是否可编辑</li>
+<li>Element.isContentEditable</li>
+</ul>
+</li>
+<li><p>Element.attributes</p>
+</li>
+<li><p>元素类的操作</p>
+<ul>
+<li><p>className 返回字符串</p>
+</li>
+<li><p>classList 返回类数组对象</p>
+<ul>
+<li>add() 增加一个类</li>
+<li>remove() 删除一个类</li>
+<li>contains() 是否包含某个类</li>
+<li>toggle() 类切换</li>
+<li>item() 返回指定索引的类</li>
+<li>toSting() 转成字符串形式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Element.dataset  自定义属性</p>
+</li>
+<li><p>Element.innerHTML</p>
+</li>
+<li><p>Element.outerHTML  可用于替换整个元素</p>
+</li>
+<li><p>元素大小</p>
+<ul>
+<li><p>返回元素大小，只包括padding</p>
+<ul>
+<li>Element.clientHeight</li>
+<li>Element.clientWidth</li>
+</ul>
+</li>
+<li><p>返回边框大小</p>
+<ul>
+<li>Element.clientLeft</li>
+<li>Element.clientTop</li>
+</ul>
+</li>
+<li><p>返回元素占的总大小(不包括margin,border)</p>
+<ul>
+<li>Element.scrollHeight</li>
+<li>Element.scrollWidth</li>
+</ul>
+</li>
+<li><p>滚动的像素</p>
+<ul>
+<li>Element.scrollLeft 返回元素向右滚动的像素</li>
+<li>Element.scrollTop 返回元素向下滚动的像素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>元素离窗口的距离</p>
+<ul>
+<li><p>返回元素在该元素的总大小</p>
+<ul>
+<li>Element.offsetHeight</li>
+<li>Element.offsetWidth</li>
+</ul>
+</li>
+<li><p>返回距离父元素的偏移量</p>
+<ul>
+<li>Element.offsetLeft</li>
+<li>Element.offsetTop</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Element.offsetParent</p>
+<ul>
+<li>返回最近的父元素且position不等于static</li>
+</ul>
+</li>
+<li><p>Element.style  行内样式</p>
+</li>
+<li><p>Element.children</p>
+<ul>
+<li>返回HTMLCollection 实例</li>
+</ul>
+</li>
+<li><p>Element.childElementCount</p>
+</li>
+<li><p>Element.firstElementChild</p>
+</li>
+<li><p>Element.lastElementChild</p>
+</li>
+<li><p>Element.nextElementSibling</p>
+</li>
+<li><p>Element.previousElementSibling</p>
+</li>
+</ul>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>属性相关</p>
+<ul>
+<li>getAttribute() 获取某个属性的值</li>
+<li>getAttributeNames() 返回当前元素的所有属性名 </li>
+<li>setAttribute() 写入属性值</li>
+<li>hasAttribute() 某个属性是否存在</li>
+<li>hasAttributes() 当前属性是否有属性</li>
+<li>removeAttribute() 删除属性</li>
+</ul>
+</li>
+<li><p>选择器</p>
+<ul>
+<li><p>Element.querySelector() css选择器</p>
+</li>
+<li><p>Element.querySelectorAll()  返回NodeList实例</p>
+</li>
+<li><p>返回HTMLCollection 实例</p>
+<ul>
+<li>Element.getElementsByClassName() </li>
+<li>Element.getElementsByTagName()</li>
+</ul>
+</li>
+<li><p>Element.closest()</p>
+<ul>
+<li>接受css选择器，返回距离选中元素最近的父元素</li>
+</ul>
+</li>
+<li><p>Element.matches() 返回一个布尔值，表示当前元素是否匹配给定的css选择器</p>
+</li>
+</ul>
+</li>
+<li><p>Element.scrollIntoView() 滚动当前元素进入浏览器可视区域</p>
+</li>
+<li><p>Element.getBoundingClientRect() 返回一个对象</p>
+<ul>
+<li>x</li>
+<li>y</li>
+<li>height</li>
+<li>width</li>
+<li>left</li>
+<li>right</li>
+<li>top</li>
+<li>bottom</li>
+</ul>
+</li>
+<li><p>Element.getClientReacts()</p>
+</li>
+<li><p>Element.insertAdjacentElement()</p>
+</li>
+<li><p>Element.insertAdjacentHtml()</p>
+</li>
+<li><p>Element.insertAdjacentText()</p>
+</li>
+<li><p>Element.remove()</p>
+</li>
+<li><p>Element.focus()</p>
+</li>
+<li><p>Element.blur()</p>
+</li>
+<li><p>Element.click()</p>
+</li>
+</ul>
+</li>
+<li><p>Element.attributes</p>
+<ul>
+<li><p>返回类似数组的动态对象，可通过索引或属性名索引</p>
+</li>
+<li><p>属性节点对象</p>
+<ul>
+<li><p>name</p>
+<ul>
+<li>属性名，等同于nodeName</li>
+</ul>
+</li>
+<li><p>value</p>
+<ul>
+<li>属性值。等同于nodeValue</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性保留字</p>
+<ul>
+<li><p>for</p>
+<ul>
+<li>htmlFor</li>
+</ul>
+</li>
+<li><p>ckass</p>
+<ul>
+<li>className</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>属性操作的标准方法</p>
+<ul>
+<li>getAttribute(key) 返回属性值</li>
+<li>Elemnet.getAttributeNames() 返回一个数组，成员是当前索引属性的名字</li>
+<li>Element.setAttribute() 设置属性</li>
+<li>Element.hasAttribute()  返回一个布尔值。表示是否有该属性</li>
+<li>Element.hasAttributes()移除指定属性</li>
+<li>data- 自定义属性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Attr"><a href="#Attr" class="headerlink" title="Attr"></a>Attr</h3><h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><h3 id="DocumentFragment"><a href="#DocumentFragment" class="headerlink" title="DocumentFragment"></a>DocumentFragment</h3><h3 id="子主题-8"><a href="#子主题-8" class="headerlink" title="子主题 8"></a>子主题 8</h3><h3 id="子主题-9"><a href="#子主题-9" class="headerlink" title="子主题 9"></a>子主题 9</h3><h2 id="多个节点的接口"><a href="#多个节点的接口" class="headerlink" title="多个节点的接口"></a>多个节点的接口</h2><h3 id="NodeList"><a href="#NodeList" class="headerlink" title="NodeList"></a>NodeList</h3><ul>
+<li><p>length</p>
+</li>
+<li><p>forEach()</p>
+</li>
+<li><p>item(i) 取第i个节点</p>
+</li>
+<li><p>遍历</p>
+<ul>
+<li>keys() 遍历键名</li>
+<li>values() 遍历值</li>
+<li>entries()  遍历键值</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTMLCollection"><a href="#HTMLCollection" class="headerlink" title="HTMLCollection"></a>HTMLCollection</h3><ul>
+<li>length</li>
+<li>item(i) 取第i个节点</li>
+<li>namedItem() 根据id或name属性取节点</li>
+</ul>
+<h2 id="属性的操作"><a href="#属性的操作" class="headerlink" title="属性的操作"></a>属性的操作</h2><h3 id="元素对象独有的属性，其他类型的返回null"><a href="#元素对象独有的属性，其他类型的返回null" class="headerlink" title="元素对象独有的属性，其他类型的返回null"></a>元素对象独有的属性，其他类型的返回null</h3><h3 id="可以通过序号引用，也可以通过属性名引用"><a href="#可以通过序号引用，也可以通过属性名引用" class="headerlink" title="可以通过序号引用，也可以通过属性名引用"></a>可以通过序号引用，也可以通过属性名引用</h3><h3 id="element-attributes"><a href="#element-attributes" class="headerlink" title="element.attributes"></a>element.attributes</h3><h3 id="每个属性都有name-value属性，对应键值对"><a href="#每个属性都有name-value属性，对应键值对" class="headerlink" title="每个属性都有name,value属性，对应键值对"></a>每个属性都有name,value属性，对应键值对</h3><h3 id="html元素的标准属性，会自动成为节点对象的属性"><a href="#html元素的标准属性，会自动成为节点对象的属性" class="headerlink" title="html元素的标准属性，会自动成为节点对象的属性"></a>html元素的标准属性，会自动成为节点对象的属性</h3><ul>
+<li>id</li>
+<li>href</li>
+<li>src</li>
+<li>action</li>
+<li>method</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>getAttribute</p>
+<ul>
+<li>obj.getAttribute(name) 返回指定属性</li>
+</ul>
+</li>
+<li><p>getAttributeNames</p>
+<ul>
+<li>返回所有属性的名字</li>
+</ul>
+</li>
+<li><p>setAttribute</p>
+<ul>
+<li>设置属性</li>
+</ul>
+</li>
+<li><p>hasAttributes</p>
+<ul>
+<li>是否有某个属性</li>
+</ul>
+</li>
+<li><p>removeAttribute</p>
+<ul>
+<li>移除某个属性，没有返回值</li>
+</ul>
+</li>
+</ul>
+<h3 id="dataset属性"><a href="#dataset属性" class="headerlink" title="dataset属性"></a>dataset属性</h3><h2 id="Node接口"><a href="#Node接口" class="headerlink" title="Node接口"></a>Node接口</h2><h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>nodeType</li>
+<li>nodeName</li>
+<li>nodeValue</li>
+<li>textContent</li>
+<li>baseUrl</li>
+<li>ownerDocument</li>
+<li>nextSibling</li>
+<li>previousSibling</li>
+<li>parentNode</li>
+<li>parentElement</li>
+<li>firstChild</li>
+<li>lastChild</li>
+<li>childNodes</li>
+<li>isConnected</li>
+</ul>
+<h3 id="方法-1"><a href="#方法-1" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>appendChild</li>
+<li>hasChildNodes</li>
+<li>cloneNode</li>
+<li>insertBefore</li>
+<li>removeChildl</li>
+<li>replaceChild</li>
+<li>compareDocumentPosition</li>
+<li>isEqualNode</li>
+<li>isSameNode</li>
+<li>normalize</li>
+<li>getRootNode</li>
+</ul>
+<h2 id="父子节点接口"><a href="#父子节点接口" class="headerlink" title="父子节点接口"></a>父子节点接口</h2><h3 id="ParentNode"><a href="#ParentNode" class="headerlink" title="ParentNode"></a>ParentNode</h3><ul>
+<li>children  返回HTMLCollection实例</li>
+<li>firstElementChild</li>
+<li>lastElementChild</li>
+<li>childElementCount</li>
+<li>append() 可追加多个</li>
+<li>prepend()</li>
+</ul>
+<h3 id="ChildNode"><a href="#ChildNode" class="headerlink" title="ChildNode"></a>ChildNode</h3><ul>
+<li>remove()</li>
+<li>before()</li>
+<li>after()</li>
+<li>replaceWith()</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/11/promise/" rel="next" title="Promise">
+                <i class="fa fa-chevron-left"></i> Promise
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/01/%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%97%B6%E9%97%B4/" rel="prev" title="日期与时间">
+                日期与时间 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">节点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Document"><span class="nav-number">1.1.1.</span> <span class="nav-text">Document</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DocumentType"><span class="nav-number">1.1.2.</span> <span class="nav-text">DocumentType</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Element"><span class="nav-number">1.1.3.</span> <span class="nav-text">Element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attr"><span class="nav-number">1.1.4.</span> <span class="nav-text">Attr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text"><span class="nav-number">1.1.5.</span> <span class="nav-text">Text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comment"><span class="nav-number">1.1.6.</span> <span class="nav-text">Comment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DocumentFragment"><span class="nav-number">1.1.7.</span> <span class="nav-text">DocumentFragment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E4%B8%BB%E9%A2%98-8"><span class="nav-number">1.1.8.</span> <span class="nav-text">子主题 8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E4%B8%BB%E9%A2%98-9"><span class="nav-number">1.1.9.</span> <span class="nav-text">子主题 9</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E4%B8%AA%E8%8A%82%E7%82%B9%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.2.</span> <span class="nav-text">多个节点的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NodeList"><span class="nav-number">1.2.1.</span> <span class="nav-text">NodeList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTMLCollection"><span class="nav-number">1.2.2.</span> <span class="nav-text">HTMLCollection</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.</span> <span class="nav-text">属性的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E5%AF%B9%E8%B1%A1%E7%8B%AC%E6%9C%89%E7%9A%84%E5%B1%9E%E6%80%A7%EF%BC%8C%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BF%94%E5%9B%9Enull"><span class="nav-number">1.3.1.</span> <span class="nav-text">元素对象独有的属性，其他类型的返回null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E5%BA%8F%E5%8F%B7%E5%BC%95%E7%94%A8%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E5%B1%9E%E6%80%A7%E5%90%8D%E5%BC%95%E7%94%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">可以通过序号引用，也可以通过属性名引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-attributes"><span class="nav-number">1.3.3.</span> <span class="nav-text">element.attributes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E4%B8%AA%E5%B1%9E%E6%80%A7%E9%83%BD%E6%9C%89name-value%E5%B1%9E%E6%80%A7%EF%BC%8C%E5%AF%B9%E5%BA%94%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="nav-number">1.3.4.</span> <span class="nav-text">每个属性都有name,value属性，对应键值对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html%E5%85%83%E7%B4%A0%E7%9A%84%E6%A0%87%E5%87%86%E5%B1%9E%E6%80%A7%EF%BC%8C%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%88%90%E4%B8%BA%E8%8A%82%E7%82%B9%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-number">1.3.5.</span> <span class="nav-text">html元素的标准属性，会自动成为节点对象的属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.6.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dataset%E5%B1%9E%E6%80%A7"><span class="nav-number">1.3.7.</span> <span class="nav-text">dataset属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.4.</span> <span class="nav-text">Node接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">1.4.1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%88%B6%E5%AD%90%E8%8A%82%E7%82%B9%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.5.</span> <span class="nav-text">父子节点接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ParentNode"><span class="nav-number">1.5.1.</span> <span class="nav-text">ParentNode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ChildNode"><span class="nav-number">1.5.2.</span> <span class="nav-text">ChildNode</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ASDW51</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
