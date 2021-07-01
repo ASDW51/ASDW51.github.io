@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="reactreact hello准备类库 react.js react-dom.js babel(browser.js)  创建虚拟节点 vnode &#x3D; hello react  渲染节点到页面 ReactDOM.render(vnode,ele)  挂载到ele元素上    组件组件三大属性 state  setState  设置某个state属性，会触发render渲染     props">
+<meta name="description" content="reactreact hello准备类库 react.js react-dom.js babel(browser.js)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="react">
 <meta property="og:url" content="http://example.com/2021/06/22/react/index.html">
 <meta property="og:site_name" content="ASDW51 web learning">
-<meta property="og:description" content="reactreact hello准备类库 react.js react-dom.js babel(browser.js)  创建虚拟节点 vnode &#x3D; hello react  渲染节点到页面 ReactDOM.render(vnode,ele)  挂载到ele元素上    组件组件三大属性 state  setState  设置某个state属性，会触发render渲染     props">
+<meta property="og:description" content="reactreact hello准备类库 react.js react-dom.js babel(browser.js)">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-06-22T14:47:00.000Z">
-<meta property="article:modified_time" content="2021-07-01T07:31:56.540Z">
+<meta property="article:modified_time" content="2021-07-01T12:06:41.430Z">
 <meta property="article:author" content="ASDW51">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="react">
@@ -316,8 +316,12 @@
 <li>react-dom.js</li>
 <li>babel(browser.js)</li>
 </ul>
+<span id="more"></span>   
+
 <h3 id="创建虚拟节点"><a href="#创建虚拟节点" class="headerlink" title="创建虚拟节点"></a>创建虚拟节点</h3><ul>
-<li>vnode = <h2>hello react</h2></li>
+<li><pre><code>vnode = &lt;h2&gt;hello react&lt;/h2&gt;
+</code></pre>
+</li>
 </ul>
 <h3 id="渲染节点到页面"><a href="#渲染节点到页面" class="headerlink" title="渲染节点到页面"></a>渲染节点到页面</h3><ul>
 <li><p>ReactDOM.render(vnode,ele)</p>
@@ -631,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#react"><span class="nav-number">1.</span> <span class="nav-text">react</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#react-hello"><span class="nav-number">1.1.</span> <span class="nav-text">react hello</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%B1%BB%E5%BA%93"><span class="nav-number">1.1.1.</span> <span class="nav-text">准备类库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E8%8A%82%E7%82%B9"><span class="nav-number">1.1.2.</span> <span class="nav-text">创建虚拟节点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.2.</span> <span class="nav-text">hello react</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E8%8A%82%E7%82%B9%E5%88%B0%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.2.1.</span> <span class="nav-text">渲染节点到页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7"><span class="nav-number">1.3.1.</span> <span class="nav-text">组件三大属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">插值表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6"><span class="nav-number">1.3.3.</span> <span class="nav-text">函数式组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%BC%8F%E7%BB%84%E4%BB%B6"><span class="nav-number">1.3.4.</span> <span class="nav-text">类式组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%97%A7"><span class="nav-number">1.3.5.</span> <span class="nav-text">生命周期(旧)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="nav-number">1.4.</span> <span class="nav-text">组件通信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1"><span class="nav-number">1.4.1.</span> <span class="nav-text">父子通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E9%80%9A%E4%BF%A1"><span class="nav-number">1.4.2.</span> <span class="nav-text">兄弟通信</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#react"><span class="nav-number">1.</span> <span class="nav-text">react</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#react-hello"><span class="nav-number">1.1.</span> <span class="nav-text">react hello</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E7%B1%BB%E5%BA%93"><span class="nav-number">1.1.1.</span> <span class="nav-text">准备类库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E8%8A%82%E7%82%B9"><span class="nav-number">1.1.2.</span> <span class="nav-text">创建虚拟节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%B2%E6%9F%93%E8%8A%82%E7%82%B9%E5%88%B0%E9%A1%B5%E9%9D%A2"><span class="nav-number">1.1.3.</span> <span class="nav-text">渲染节点到页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E4%B8%89%E5%A4%A7%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.1.</span> <span class="nav-text">组件三大属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%80%BC%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.2.2.</span> <span class="nav-text">插值表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6"><span class="nav-number">1.2.3.</span> <span class="nav-text">函数式组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%BC%8F%E7%BB%84%E4%BB%B6"><span class="nav-number">1.2.4.</span> <span class="nav-text">类式组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F-%E6%97%A7"><span class="nav-number">1.2.5.</span> <span class="nav-text">生命周期(旧)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1"><span class="nav-number">1.3.</span> <span class="nav-text">组件通信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1"><span class="nav-number">1.3.1.</span> <span class="nav-text">父子通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E9%80%9A%E4%BF%A1"><span class="nav-number">1.3.2.</span> <span class="nav-text">兄弟通信</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
