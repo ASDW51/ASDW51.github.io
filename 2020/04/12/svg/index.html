@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="HTML," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、引入svg 使用img标签，只能导入静态图片 使用embed标签，是要引入一些文件，可以使用脚本 object标签  不可使用脚本 使用ifame   填充颜色默认是黑色 矩形 x,y是相对svg标签位置的坐标 rx.ry是圆角，成正比，意思也就是一段圆弧的长度，越长积极再固定的宽度上他就必须越圆才行 fill是填充颜色 圆形stroke是边框颜色 stroke-width是边框宽度  cx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="svg">
+<meta property="og:url" content="http://example.com/2020/04/12/svg/index.html">
+<meta property="og:site_name" content="ASDW51">
+<meta property="og:description" content="一、引入svg 使用img标签，只能导入静态图片 使用embed标签，是要引入一些文件，可以使用脚本 object标签  不可使用脚本 使用ifame   填充颜色默认是黑色 矩形 x,y是相对svg标签位置的坐标 rx.ry是圆角，成正比，意思也就是一段圆弧的长度，越长积极再固定的宽度上他就必须越圆才行 fill是填充颜色 圆形stroke是边框颜色 stroke-width是边框宽度  cx">
+<meta property="og:locale">
+<meta property="og:image" content="https://files.catbox.moe/2z61ph.png">
+<meta property="og:image" content="https://files.catbox.moe/xlr1sx.png">
+<meta property="og:image" content="https://files.catbox.moe/tshrgh.png">
+<meta property="og:image" content="https://files.catbox.moe/hlvvhd.png">
+<meta property="og:image" content="https://files.catbox.moe/pldu93.png">
+<meta property="og:image" content="https://files.catbox.moe/v0rcez.png">
+<meta property="og:image" content="c:/Users/ZXY/AppData/Roaming/Typora/typora-user-images/image-20200412175915120.png">
+<meta property="og:image" content="https://files.catbox.moe/i7v0bo.png">
+<meta property="og:image" content="https://files.catbox.moe/d8w7k4.png">
+<meta property="article:published_time" content="2020-04-12T10:12:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T06:00:51.304Z">
+<meta property="article:author" content="ASDW51">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://files.catbox.moe/2z61ph.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/04/12/svg/"/>
+
+
+
+
+
+  <title>svg | ASDW51</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ASDW51</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/04/12/svg/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ASDW51">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">svg</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-12T18:12:00+08:00">
+                2020-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、引入svg"><a href="#一、引入svg" class="headerlink" title="一、引入svg"></a>一、引入svg</h2><ol>
+<li>使用img标签，只能导入静态图片</li>
+<li>使用embed标签，是要引入一些文件，可以使用脚本</li>
+<li>object标签  不可使用脚本</li>
+<li>使用ifame</li>
+</ol>
+<p><img src="https://files.catbox.moe/2z61ph.png" alt="image-20200412172238751"></p>
+<p>填充颜色默认是黑色</p>
+<h3 id="矩形"><a href="#矩形" class="headerlink" title="矩形"></a>矩形</h3><p><img src="https://files.catbox.moe/xlr1sx.png" alt="image-20200412172527198"></p>
+<p>x,y是相对svg标签位置的坐标</p>
+<p>rx.ry是圆角，成正比，意思也就是一段圆弧的长度，越长积极再固定的宽度上他就必须越圆才行</p>
+<p>fill是填充颜色</p>
+<h3 id="圆形"><a href="#圆形" class="headerlink" title="圆形"></a>圆形</h3><p>stroke是边框颜色 stroke-width是边框宽度</p>
+<p><img src="https://files.catbox.moe/tshrgh.png" alt="image-20200412173256322"></p>
+<p>cx cy圆心坐标</p>
+<h3 id="椭圆"><a href="#椭圆" class="headerlink" title="椭圆"></a>椭圆</h3><p><img src="https://files.catbox.moe/hlvvhd.png" alt="image-20200412173603659"></p>
+<p>cx cy 中心点坐标</p>
+<p>rx  x方向的半径</p>
+<p>ry y方向的半径</p>
+<p>当rx = ry时，是一个圆</p>
+<h3 id="画直线"><a href="#画直线" class="headerlink" title="画直线"></a>画直线</h3><p><img src="https://files.catbox.moe/pldu93.png" alt="image-20200412173902320"></p>
+<p>stoke 必填参数</p>
+<p>x1 y1 起始点</p>
+<p>x2 y2 结束点</p>
+<p>stroke-dasharray 画虚线的数组，画五个像素空15个像素</p>
+<p>stroke-dashoffset 向左移</p>
+<h3 id="折线-polyline-结束点不会连接起始点"><a href="#折线-polyline-结束点不会连接起始点" class="headerlink" title="折线 polyline 结束点不会连接起始点"></a>折线 polyline 结束点不会连接起始点</h3><p><img src="https://files.catbox.moe/v0rcez.png" alt="image-20200412175340099"></p>
+<p>points里面各个点的坐标</p>
+<p>坐标用逗号分隔，坐标与坐标之间用空格分隔</p>
+<h3 id="polygon结束点会连接起始点"><a href="#polygon结束点会连接起始点" class="headerlink" title="polygon结束点会连接起始点"></a>polygon结束点会连接起始点</h3><p><img src="C:\Users\ZXY\AppData\Roaming\Typora\typora-user-images\image-20200412175915120.png" alt="image-20200412175915120"></p>
+<p>fill–rule填充规则 evenodd 是奇偶性，任意一个点向外做射线，看与边框的交点数，偶数被认为是在外部，不填充，反之是奇数，填充</p>
+<h3 id="path"><a href="#path" class="headerlink" title="path"></a>path</h3><p><img src="https://files.catbox.moe/i7v0bo.png" alt="image-20200412180600445"></p>
+<p>m    起始点</p>
+<p>l    结束点</p>
+<p>q</p>
+<p>c 曲线</p>
+<p>关闭</p>
+<p>用d属性指定路径</p>
+<p>A椭圆半径</p>
+<h3 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h3><p><img src="https://files.catbox.moe/d8w7k4.png" alt="image-20200412181036284"></p>
+<p>xy左上标 tspan</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/12/canvas/" rel="next" title="canvas">
+                <i class="fa fa-chevron-left"></i> canvas
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/27/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" rel="prev" title="文件操作">
+                文件操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E5%85%A5svg"><span class="nav-number">1.</span> <span class="nav-text">一、引入svg</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E5%BD%A2"><span class="nav-number">1.1.</span> <span class="nav-text">矩形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%86%E5%BD%A2"><span class="nav-number">1.2.</span> <span class="nav-text">圆形</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A4%AD%E5%9C%86"><span class="nav-number">1.3.</span> <span class="nav-text">椭圆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E7%9B%B4%E7%BA%BF"><span class="nav-number">1.4.</span> <span class="nav-text">画直线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%98%E7%BA%BF-polyline-%E7%BB%93%E6%9D%9F%E7%82%B9%E4%B8%8D%E4%BC%9A%E8%BF%9E%E6%8E%A5%E8%B5%B7%E5%A7%8B%E7%82%B9"><span class="nav-number">1.5.</span> <span class="nav-text">折线 polyline 结束点不会连接起始点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#polygon%E7%BB%93%E6%9D%9F%E7%82%B9%E4%BC%9A%E8%BF%9E%E6%8E%A5%E8%B5%B7%E5%A7%8B%E7%82%B9"><span class="nav-number">1.6.</span> <span class="nav-text">polygon结束点会连接起始点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#path"><span class="nav-number">1.7.</span> <span class="nav-text">path</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E5%AD%97"><span class="nav-number">1.8.</span> <span class="nav-text">文字</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ASDW51</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
