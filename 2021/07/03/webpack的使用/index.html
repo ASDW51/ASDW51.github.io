@@ -88,7 +88,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://files.catbox.moe/izjfl7.png">
 <meta property="article:published_time" content="2021-07-03T04:56:47.000Z">
-<meta property="article:modified_time" content="2021-07-03T06:48:07.743Z">
+<meta property="article:modified_time" content="2021-07-03T07:57:03.138Z">
 <meta property="article:author" content="ASDW51">
 <meta property="article:tag" content="webpack">
 <meta name="twitter:card" content="summary">
@@ -340,7 +340,11 @@
 <p>添加module属性</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">module:&#123;</span><br><span class="line">        rules:[</span><br><span class="line">            &#123;test:/\.css$/,use:[&quot;style-loader&quot;,&quot;css-loader&quot;]&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="常用loader"><a href="#常用loader" class="headerlink" title="常用loader"></a>常用loader</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">less-loader less</span><br><span class="line">sass-loader node-sass</span><br><span class="line">postcss-loader autoprefixer  添加兼容性前缀</span><br><span class="line">url-loader file-loader 图片，字体</span><br></pre></td></tr></table></figure>
+<h2 id="六、vue单文件组件的加载"><a href="#六、vue单文件组件的加载" class="headerlink" title="六、vue单文件组件的加载"></a>六、vue单文件组件的加载</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const VueLoaderPlugin = require(&quot;vue-loader/lib/plugin&quot;)</span><br><span class="line"> plugins:[htmlP,new VueLoaderPlugin()]</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">  &quot;vue-loader&quot;: &quot;^15.7.0&quot;,</span><br><span class="line">    &quot;vue-template-compiler&quot;: &quot;^2.6.14&quot;,</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="常用loader"><a href="#常用loader" class="headerlink" title="常用loader"></a>常用loader</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">less-loader less</span><br><span class="line">sass-loader node-sass</span><br><span class="line">postcss-loader autoprefixer  添加兼容性前缀</span><br><span class="line">url-loader file-loader 图片，字体</span><br><span class="line">vue-loader vue-template-compiler vue单文件组件</span><br></pre></td></tr></table></figure>
 
 
       
@@ -503,7 +507,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">二、配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="nav-number">3.</span> <span class="nav-text">三、热更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%8F%92%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">四、插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81loader%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">五、loader加载器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8loader"><span class="nav-number">6.</span> <span class="nav-text">常用loader</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">二、配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%83%AD%E6%9B%B4%E6%96%B0"><span class="nav-number">3.</span> <span class="nav-text">三、热更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%8F%92%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">四、插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81loader%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">五、loader加载器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="nav-number">6.</span> <span class="nav-text">六、vue单文件组件的加载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8loader"><span class="nav-number">7.</span> <span class="nav-text">常用loader</span></a></li></ol></div>
             
 
           </div>
