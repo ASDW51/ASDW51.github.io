@@ -1,320 +1,283 @@
+
+
 <!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="ASDW51">
+  <meta name="keywords" content="html,css,js,vue,react,bootstrap,php,node">
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Bootstrap," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="bootstrap    –学会看源码 视口·  &#96;&#96;&#96;窗口自适应 12345678910111213141516171819202122232425- bootstrap3  - 网格系统    - 固定宽度 container  &#x2F;全屏宽度 container-fluid    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列    - 各种尺寸          - &#96;&#96;&#96;">
+    <meta name="description" content="bootstrap    –学会看源码 视口·  &#96;&#96;&#96;窗口自适应 12345678910111213141516171819202122232425- bootstrap3  - 网格系统    - 固定宽度 container  &#x2F;全屏宽度 container-fluid    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列    - 各种尺寸          - &#96;&#96;&#96;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="boostrap 笔记2">
 <meta property="og:url" content="http://example.com/2020/12/01/bootstrap/index.html">
 <meta property="og:site_name" content="web learning">
 <meta property="og:description" content="bootstrap    –学会看源码 视口·  &#96;&#96;&#96;窗口自适应 12345678910111213141516171819202122232425- bootstrap3  - 网格系统    - 固定宽度 container  &#x2F;全屏宽度 container-fluid    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列    - 各种尺寸          - &#96;&#96;&#96;">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-01T06:48:00.000Z">
 <meta property="article:modified_time" content="2021-07-01T09:07:56.434Z">
 <meta property="article:author" content="ASDW51">
 <meta property="article:tag" content="Bootstrap">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>boostrap 笔记2 - web learning</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-  <link rel="canonical" href="http://example.com/2020/12/01/bootstrap/"/>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-  <title>boostrap 笔记2 | web learning</title>
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
-
-
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-  
-    
+<body>
   
 
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <header>
     
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">web learning</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>ASDW51</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="boostrap 笔记2"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-12-01 14:48" pubdate>
+          2020年12月1日 下午
+        </time>
+      </span>
+    
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          5.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          47 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
   </div>
 </div>
 
-<nav class="site-nav">
-  
+</div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+  </header>
 
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+  <main>
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/01/bootstrap/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="web learning">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">boostrap 笔记2</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-01T14:48:00+08:00">
-                2020-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        <h1 id="bootstrap-–学会看源码"><a href="#bootstrap-–学会看源码" class="headerlink" title="bootstrap    –学会看源码"></a>bootstrap    –学会看源码</h1><ul>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">boostrap 笔记2</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="bootstrap-–学会看源码"><a href="#bootstrap-–学会看源码" class="headerlink" title="bootstrap    –学会看源码"></a>bootstrap    –学会看源码</h1><ul>
 <li><p>视口·</p>
 <ul>
 <li>```<br>窗口自适应<meta name="viewport" content="width=device-width,initial-scale=1">
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- bootstrap3</span><br><span class="line"></span><br><span class="line">  - 网格系统</span><br><span class="line"></span><br><span class="line">    - 固定宽度 container  /全屏宽度 container-fluid</span><br><span class="line"></span><br><span class="line">    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成12列</span><br><span class="line"></span><br><span class="line">    - 各种尺寸</span><br><span class="line">    </span><br><span class="line">      - ```</span><br><span class="line">        //bootstrap3</span><br><span class="line">        .col-xs 小于768px		</span><br><span class="line">        .col-sm 大于等于768px</span><br><span class="line">    .col-md  大于等于992px</span><br><span class="line">        .col-lg- 大于1200px</span><br><span class="line">    </span><br><span class="line">        </span><br><span class="line">        //bootstrap4</span><br><span class="line">        .col-  所有</span><br><span class="line">        .col-sm	&gt;=556</span><br><span class="line">        .col-md	&gt;=768</span><br><span class="line">        .col-lg	&gt;=992</span><br><span class="line">        .col-xl	&gt;=1200</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs vim"><br>- bootstrap3<br><br>  - 网格系统<br><br>    - 固定宽度 container  /全屏宽度 container-fluid<br><br>    - 响应式网格系统随着屏幕或者视口尺寸的增加，系统最多分成<span class="hljs-number">12</span>列<br><br>    - 各种尺寸<br>    <br>      - ```<br>        //bootstrap3<br>        .<span class="hljs-keyword">col</span>-xs 小于<span class="hljs-number">768</span>px		<br>        .<span class="hljs-keyword">col</span>-<span class="hljs-keyword">sm</span> 大于等于<span class="hljs-number">768</span>px<br>    .<span class="hljs-keyword">col</span>-md  大于等于<span class="hljs-number">992</span>px<br>        .<span class="hljs-keyword">col</span>-<span class="hljs-keyword">lg</span>- 大于<span class="hljs-number">1200</span>px<br>    <br>        <br>        //bootstrap4<br>        .<span class="hljs-keyword">col</span>-  所有<br>        .<span class="hljs-keyword">col</span>-<span class="hljs-keyword">sm</span>	&gt;=<span class="hljs-number">556</span><br>        .<span class="hljs-keyword">col</span>-md	&gt;=<span class="hljs-number">768</span><br>        .<span class="hljs-keyword">col</span>-<span class="hljs-keyword">lg</span>	&gt;=<span class="hljs-number">992</span><br>        .<span class="hljs-keyword">col</span>-xl	&gt;=<span class="hljs-number">1200</span><br></code></pre></td></tr></table></figure>
     </li>
 </ul>
 </li>
@@ -335,7 +298,7 @@
 </li>
 <li><p>font 相关</p>
 <ul>
-<li>```<br>font-weight-bold 加粗<br>font-weight-normal 普通文本<br>font-weight-light  更细的文本<br>font-italic    斜体文本<br>lead 让段落更突出<br>small 更小的文本<br>text-left 左对齐<br>text-center 居中<br>text-right  右对齐<br>text-justify 设定文本对齐，段落中超出屏幕的部分文字自动换行  对标css中的text-align-justify  –两端文本对齐<br>text-nowrap  超出屏幕不换行    对标css white-space:nowrap<br>text-lowercase 转小写    对标css text-transform:lowercase<br>text-uppercase 转大写    对标css text-transform:uppercase<br>list-unstyled    移除默认的列表样式    css代码为padding-left:0;list-style:none<br>list-inline    :将所有列表项放置同一行   bootstrap3生效<br>list-inline-item    css代码为display:inline-block<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 颜色相关</span><br><span class="line"></span><br><span class="line">  - Bootstrap 4 提供了一些有代表意义的颜色类：**.text-muted**, **.text-primary**, **.text-success**, **.text-info**, **.text-warning**, **.text-danger**, **.text-secondary**, **.text-white**, **.text-dark** and **.text-light**:</span><br><span class="line"></span><br><span class="line">  - 提供背景颜色的类有: **.bg-primary**, **.bg-success**, **.bg-info**, **.bg-warning**, **.bg-danger**, **.bg-secondary**, **.bg-dark** 和 **.bg-light**。</span><br><span class="line"></span><br><span class="line">    注意背景颜色不会设置文本的颜色，在一些实例中你需要与 **.text-\*** 类一起使用。</span><br><span class="line"></span><br><span class="line">- 表格</span><br><span class="line"></span><br><span class="line">  - 基础表格样式	table</span><br><span class="line">  - 条纹表格 table-striped</span><br><span class="line">  - 带边框表格  table-bordered</span><br><span class="line">  - 鼠标悬停  table-hover</span><br><span class="line">  - 黑色背景  table-dark</span><br><span class="line">  - 黑色条纹表格     table-dark/table-striped</span><br><span class="line">  - 鼠标悬停+黑色背景  table-dark  table-hover</span><br><span class="line">  - 表格颜色</span><br><span class="line">    - table-primary</span><br><span class="line">    - table-success</span><br><span class="line">    - table-danger</span><br><span class="line">    - table-info</span><br><span class="line">    - table-warning</span><br><span class="line">    - table-active</span><br><span class="line">    - table-secondary</span><br><span class="line">    - table-light</span><br><span class="line">    - table-dark</span><br><span class="line">  - table-sm 较小的表格</span><br><span class="line">  - 响应式表格  table-responsive  在屏幕宽度小于992px时会创建水平滚动条</span><br><span class="line">    - 设置指定屏幕宽度下显示滚动条</span><br><span class="line">      - table-responsive-sm	小于576</span><br><span class="line">      - table-responsive-md   小于768</span><br><span class="line">      - table-responsive-lg       小于992</span><br><span class="line">      - table-responsive-xl      小于1200</span><br><span class="line"></span><br><span class="line">- 图像形状</span><br><span class="line"></span><br><span class="line">  - rounded  可以让图片显示圆角效果</span><br><span class="line"></span><br><span class="line">  - rounded-circle  设置椭圆形图片</span><br><span class="line"></span><br><span class="line">  - 缩略图   img-thumbnail  设置图片缩略图</span><br><span class="line"></span><br><span class="line">  - float-right  图片右对齐</span><br><span class="line"></span><br><span class="line">  - float-left  设置图片左对齐</span><br><span class="line"></span><br><span class="line">  - 响应式图片   </span><br><span class="line"></span><br><span class="line">    - img-fluid设置响应式图片  </span><br><span class="line"></span><br><span class="line">    - ```</span><br><span class="line">      img-fluid 本质css</span><br><span class="line">      &#123;</span><br><span class="line">      	max-width:100%;</span><br><span class="line">      	height:auto;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></li>
+<li>```<br>font-weight-bold 加粗<br>font-weight-normal 普通文本<br>font-weight-light  更细的文本<br>font-italic    斜体文本<br>lead 让段落更突出<br>small 更小的文本<br>text-left 左对齐<br>text-center 居中<br>text-right  右对齐<br>text-justify 设定文本对齐，段落中超出屏幕的部分文字自动换行  对标css中的text-align-justify  –两端文本对齐<br>text-nowrap  超出屏幕不换行    对标css white-space:nowrap<br>text-lowercase 转小写    对标css text-transform:lowercase<br>text-uppercase 转大写    对标css text-transform:uppercase<br>list-unstyled    移除默认的列表样式    css代码为padding-left:0;list-style:none<br>list-inline    :将所有列表项放置同一行   bootstrap3生效<br>list-inline-item    css代码为display:inline-block<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">-</span> 颜色相关<br><br><span class="hljs-bullet">  -</span> Bootstrap 4 提供了一些有代表意义的颜色类：<span class="hljs-strong">**.text-muted**</span>, <span class="hljs-strong">**.text-primary**</span>, <span class="hljs-strong">**.text-success**</span>, <span class="hljs-strong">**.text-info**</span>, <span class="hljs-strong">**.text-warning**</span>, <span class="hljs-strong">**.text-danger**</span>, <span class="hljs-strong">**.text-secondary**</span>, <span class="hljs-strong">**.text-white**</span>, <span class="hljs-strong">**.text-dark**</span> and <span class="hljs-strong">**.text-light**</span>:<br><br><span class="hljs-bullet">  -</span> 提供背景颜色的类有: <span class="hljs-strong">**.bg-primary**</span>, <span class="hljs-strong">**.bg-success**</span>, <span class="hljs-strong">**.bg-info**</span>, <span class="hljs-strong">**.bg-warning**</span>, <span class="hljs-strong">**.bg-danger**</span>, <span class="hljs-strong">**.bg-secondary**</span>, <span class="hljs-strong">**.bg-dark**</span> 和 <span class="hljs-strong">**.bg-light**</span>。<br><br><span class="hljs-code">    注意背景颜色不会设置文本的颜色，在一些实例中你需要与 **.text-\*** 类一起使用。</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">-</span> 表格<br><br><span class="hljs-bullet">  -</span> 基础表格样式	table<br><span class="hljs-bullet">  -</span> 条纹表格 table-striped<br><span class="hljs-bullet">  -</span> 带边框表格  table-bordered<br><span class="hljs-bullet">  -</span> 鼠标悬停  table-hover<br><span class="hljs-bullet">  -</span> 黑色背景  table-dark<br><span class="hljs-bullet">  -</span> 黑色条纹表格     table-dark/table-striped<br><span class="hljs-bullet">  -</span> 鼠标悬停+黑色背景  table-dark  table-hover<br><span class="hljs-bullet">  -</span> 表格颜色<br><span class="hljs-bullet">    -</span> table-primary<br><span class="hljs-bullet">    -</span> table-success<br><span class="hljs-bullet">    -</span> table-danger<br><span class="hljs-bullet">    -</span> table-info<br><span class="hljs-bullet">    -</span> table-warning<br><span class="hljs-bullet">    -</span> table-active<br><span class="hljs-bullet">    -</span> table-secondary<br><span class="hljs-bullet">    -</span> table-light<br><span class="hljs-bullet">    -</span> table-dark<br><span class="hljs-bullet">  -</span> table-sm 较小的表格<br><span class="hljs-bullet">  -</span> 响应式表格  table-responsive  在屏幕宽度小于992px时会创建水平滚动条<br><span class="hljs-bullet">    -</span> 设置指定屏幕宽度下显示滚动条<br><span class="hljs-bullet">      -</span> table-responsive-sm	小于576<br><span class="hljs-bullet">      -</span> table-responsive-md   小于768<br><span class="hljs-bullet">      -</span> table-responsive-lg       小于992<br><span class="hljs-bullet">      -</span> table-responsive-xl      小于1200<br><br><span class="hljs-bullet">-</span> 图像形状<br><br><span class="hljs-bullet">  -</span> rounded  可以让图片显示圆角效果<br><br><span class="hljs-bullet">  -</span> rounded-circle  设置椭圆形图片<br><br><span class="hljs-bullet">  -</span> 缩略图   img-thumbnail  设置图片缩略图<br><br><span class="hljs-bullet">  -</span> float-right  图片右对齐<br><br><span class="hljs-bullet">  -</span> float-left  设置图片左对齐<br><br><span class="hljs-bullet">  -</span> 响应式图片   <br><br><span class="hljs-bullet">    -</span> img-fluid设置响应式图片  <br><br><span class="hljs-bullet">    -</span> <span class="hljs-code">```</span><br><span class="hljs-code">      img-fluid 本质css</span><br><span class="hljs-code">      &#123;</span><br><span class="hljs-code">      	max-width:100%;</span><br><span class="hljs-code">      	height:auto;</span><br><span class="hljs-code">      &#125;</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>Jumbotron</p>
@@ -353,7 +316,7 @@
 </li>
 <li><p>关闭提示框</p>
 <ul>
-<li>```<br>我们可以再提示框的div中添加.alert-dismissible 然后在关闭按钮链接的链接上加上close类和data-dismiss=’alert’属性来设置提示框的关闭操作<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">- 淡入淡出效果 添加fade show 类</span><br><span class="line">  </span><br><span class="line">- 按钮</span><br><span class="line">  </span><br><span class="line">  - 基本按钮 btn</span><br><span class="line">  </span><br><span class="line">  - btn-primary 主要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-secondary 次要按钮</span><br><span class="line">  </span><br><span class="line">  - btn-success 成功</span><br><span class="line">  </span><br><span class="line">  - btn-info 信息</span><br><span class="line">  </span><br><span class="line">  - btn-warning 警告</span><br><span class="line">  </span><br><span class="line">  - btn-danger 危险</span><br><span class="line">  </span><br><span class="line">  - btn-dark 黑色</span><br><span class="line">  </span><br><span class="line">  - btn-light 浅色</span><br><span class="line">  </span><br><span class="line">  - btn-link 链接</span><br><span class="line">  </span><br><span class="line">  - 按钮类可用于a,button或input元素上</span><br><span class="line">  </span><br><span class="line">  - 按钮设置边框</span><br><span class="line">  </span><br><span class="line">    - ```</span><br><span class="line">        btn-outline-不同颜色</span><br></pre></td></tr></table></figure></li>
+<li>```<br>我们可以再提示框的div中添加.alert-dismissible 然后在关闭按钮链接的链接上加上close类和data-dismiss=’alert’属性来设置提示框的关闭操作<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs haml">  <br>-<span class="ruby"> 淡入淡出效果 添加fade show 类</span><br><span class="ruby"></span>  <br>-<span class="ruby"> 按钮</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> 基本按钮 btn</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-primary 主要按钮</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-secondary 次要按钮</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-success 成功</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-info 信息</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-warning 警告</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-danger 危险</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-dark 黑色</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-light 浅色</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> btn-link 链接</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> 按钮类可用于a,button或input元素上</span><br><span class="ruby"></span>  <br>  -<span class="ruby"> 按钮设置边框</span><br><span class="ruby"></span>  <br>    -<span class="ruby"> <span class="hljs-string">``</span><span class="hljs-string">`</span></span><br><span class="hljs-string"><span class="ruby"></span></span>        btn-outline-不同颜色<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -487,7 +450,7 @@
         被折叠的内容
     </div>
 </div>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  - data-parent属性来确保所有的折叠元素在指定的父元素下，这样就能是现在一个折叠选项显示时其他选项就隐藏</span><br><span class="line"></span><br><span class="line">- 导航nav</span><br><span class="line"></span><br><span class="line">  - 创建一个简单的导航，可以在ul元素上添加.nav类，再每个li选项上添加.nav-item类，在连接上添加.nav-link类</span><br><span class="line">  - 导航的对齐方式</span><br><span class="line">    - 居中显示 justify-content-center</span><br><span class="line">    - 导航右对齐 justify-content-right</span><br><span class="line">    - 垂直导航 flex-column</span><br><span class="line">  - 选项卡    在.nav类的基础上加上nav-tabs</span><br><span class="line">  - 胶囊导航  在nav的基础上加上nav-pills</span><br><span class="line">  - 导航等宽  .nav-justified类可以设置导航项齐行等宽显示</span><br><span class="line">  - 胶囊下拉菜单  添加下拉菜单到导航的某个选项上</span><br><span class="line">  - 选项卡下拉菜单 同上</span><br><span class="line">  - 动态选项卡</span><br><span class="line">    - 给选项加.data-toggle=&#x27;tab&#x27;</span><br><span class="line">    - 给个div,添加tab-content类，里面放的元素id跟上面的对应并添加tab-pane类</span><br><span class="line"></span><br><span class="line">- 导航栏</span><br><span class="line"></span><br><span class="line">  - 我们可以使用.navbar来创建一个标准的导航栏 后面紧跟.navbar-expand-xl|md|sm类来创建响应式导航栏(大屏幕铺开，小屏幕垂直堆叠)</span><br><span class="line">  - 导航栏的上的选项可以使用ul元素并添加class=&quot;navbar-nav“类，然后再li元素上添加nav-item类，a元素上使用.nav-link类</span><br><span class="line">  - .navbar-brand 高亮显示品牌</span><br><span class="line">  - 折叠导航栏 navbar-collapse类，navbar-toggler类</span><br><span class="line">  - 导航栏文本 navbar-text</span><br><span class="line">  - 固定导航栏 fixed-top/fixed-bottom 固定顶部/固定底部</span><br><span class="line">  </span><br><span class="line">- 模态框（modal）</span><br><span class="line"></span><br><span class="line">  - modal定义一个模态框</span><br><span class="line">  - modal-dialog定义弹出的框，内容都放在该容器下</span><br><span class="line">  - modal-header 模态框头部 / modal-title</span><br><span class="line">  - modal-body  模态框内容</span><br><span class="line">  - modal-footer 模态框底部</span><br><span class="line">  - modal-sm 小模态框</span><br><span class="line">  - modal-lg 大模态框</span><br><span class="line">  - </span><br><span class="line"></span><br><span class="line">- 提示框</span><br><span class="line"></span><br><span class="line">  - 通过向元素添加data-toggle=&#x27;tooltip&#x27;来创建提示框，title属性为提示款显示的内容</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    &lt;a href=&quot;#&quot; data-toggle=&#x27;tooltip&#x27; title=&quot;提示的文字&quot;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs haml"><br>  -<span class="ruby"> data-parent属性来确保所有的折叠元素在指定的父元素下，这样就能是现在一个折叠选项显示时其他选项就隐藏</span><br><span class="ruby"></span><br>-<span class="ruby"> 导航nav</span><br><span class="ruby"></span><br>  -<span class="ruby"> 创建一个简单的导航，可以在ul元素上添加.nav类，再每个li选项上添加.nav-item类，在连接上添加.nav-link类</span><br><span class="ruby"></span>  -<span class="ruby"> 导航的对齐方式</span><br><span class="ruby"></span>    -<span class="ruby"> 居中显示 justify-content-center</span><br><span class="ruby"></span>    -<span class="ruby"> 导航右对齐 justify-content-right</span><br><span class="ruby"></span>    -<span class="ruby"> 垂直导航 flex-column</span><br><span class="ruby"></span>  -<span class="ruby"> 选项卡    在.nav类的基础上加上nav-tabs</span><br><span class="ruby"></span>  -<span class="ruby"> 胶囊导航  在nav的基础上加上nav-pills</span><br><span class="ruby"></span>  -<span class="ruby"> 导航等宽  .nav-justified类可以设置导航项齐行等宽显示</span><br><span class="ruby"></span>  -<span class="ruby"> 胶囊下拉菜单  添加下拉菜单到导航的某个选项上</span><br><span class="ruby"></span>  -<span class="ruby"> 选项卡下拉菜单 同上</span><br><span class="ruby"></span>  -<span class="ruby"> 动态选项卡</span><br><span class="ruby"></span>    -<span class="ruby"> 给选项加.data-toggle=<span class="hljs-string">&#x27;tab&#x27;</span></span><br><span class="ruby"></span>    -<span class="ruby"> 给个div,添加tab-content类，里面放的元素id跟上面的对应并添加tab-pane类</span><br><span class="ruby"></span><br>-<span class="ruby"> 导航栏</span><br><span class="ruby"></span><br>  -<span class="ruby"> 我们可以使用.navbar来创建一个标准的导航栏 后面紧跟.navbar-expand-xl<span class="hljs-params">|md|</span>sm类来创建响应式导航栏(大屏幕铺开，小屏幕垂直堆叠)</span><br><span class="ruby"></span>  -<span class="ruby"> 导航栏的上的选项可以使用ul元素并添加<span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">navbar</span>-<span class="hljs-title">nav</span>“类，然后再<span class="hljs-title">li</span>元素上添加<span class="hljs-title">nav</span>-<span class="hljs-title">item</span>类，<span class="hljs-title">a</span>元素上使用.<span class="hljs-title">nav</span>-<span class="hljs-title">link</span>类</span></span><br><span class="ruby"></span>  -<span class="ruby"> .navbar-brand 高亮显示品牌</span><br><span class="ruby"></span>  -<span class="ruby"> 折叠导航栏 navbar-collapse类，navbar-toggler类</span><br><span class="ruby"></span>  -<span class="ruby"> 导航栏文本 navbar-text</span><br><span class="ruby"></span>  -<span class="ruby"> 固定导航栏 fixed-top/fixed-bottom 固定顶部/固定底部</span><br><span class="ruby"></span>  <br>-<span class="ruby"> 模态框（modal）</span><br><span class="ruby"></span><br>  -<span class="ruby"> modal定义一个模态框</span><br><span class="ruby"></span>  -<span class="ruby"> modal-dialog定义弹出的框，内容都放在该容器下</span><br><span class="ruby"></span>  -<span class="ruby"> modal-header 模态框头部 / modal-title</span><br><span class="ruby"></span>  -<span class="ruby"> modal-body  模态框内容</span><br><span class="ruby"></span>  -<span class="ruby"> modal-footer 模态框底部</span><br><span class="ruby"></span>  -<span class="ruby"> modal-sm 小模态框</span><br><span class="ruby"></span>  -<span class="ruby"> modal-lg 大模态框</span><br><span class="ruby"></span>  -<span class="ruby"> </span><br><span class="ruby"></span><br>-<span class="ruby"> 提示框</span><br><span class="ruby"></span><br>  -<span class="ruby"> 通过向元素添加data-toggle=<span class="hljs-string">&#x27;tooltip&#x27;</span>来创建提示框，title属性为提示款显示的内容</span><br><span class="ruby"></span><br>  -<span class="ruby"> <span class="hljs-string">``</span><span class="hljs-string">`</span></span><br><span class="hljs-string"><span class="ruby"></span></span>    &lt;a href=&quot;#&quot; data-toggle=&#x27;tooltip&#x27; title=&quot;提示的文字&quot;<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>注意：提示框生效要调用tootip()方法</p>
@@ -512,381 +475,321 @@
 </li>
 </ul>
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Bootstrap/" rel="tag"># Bootstrap</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" rel="next" title="h5 和 CSS3">
-                <i class="fa fa-chevron-left"></i> h5 和 CSS3
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/03/11/vue/" rel="prev" title="Vue 笔记">
-                Vue 笔记 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name"></p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives">
-              
-                  <span class="site-state-item-count">52</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
+                
               </div>
             
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#bootstrap-%E2%80%93%E5%AD%A6%E4%BC%9A%E7%9C%8B%E6%BA%90%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">bootstrap    –学会看源码</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
+        <a href="/tags/Bootstrap/">#Bootstrap</a>
       
-
-      
-
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">ASDW51</span>
-
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+              
+  
 
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>boostrap 笔记2</div>
+      <div>http://example.com/2020/12/01/bootstrap/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>ASDW51</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年12月1日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
       </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/11/vue/" title="Vue 笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Vue 笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/27/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/" title="h5 和 CSS3">
+                        <span class="hidden-mobile">h5 和 CSS3</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
 
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
 </script>
 
 
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

@@ -1,318 +1,281 @@
+
+
 <!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
 
 
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="ASDW51">
+  <meta name="keywords" content="html,css,js,vue,react,bootstrap,php,node">
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="JavaScript,Node,小程序," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="云开发与Nodejs云函数的运行环境是 Node.js，我们可以在云函数中使用Nodejs内置模块以及使用 npm 安装第三方依赖来帮助我们更快的开发。借助于一些优秀的开源项目，避免了我们重复造轮子，相比于小程序端，能够大大扩展云函数的使用 云函数与Nodejs由于云函数与Nodejs息息相关，需要我们对云函数与Node的模块以及Nodejs的一些基本知识有一些基本的了解。下面只介绍一些基础的概念">
+    <meta name="description" content="云开发与Nodejs云函数的运行环境是 Node.js，我们可以在云函数中使用Nodejs内置模块以及使用 npm 安装第三方依赖来帮助我们更快的开发。借助于一些优秀的开源项目，避免了我们重复造轮子，相比于小程序端，能够大大扩展云函数的使用 云函数与Nodejs由于云函数与Nodejs息息相关，需要我们对云函数与Node的模块以及Nodejs的一些基本知识有一些基本的了解。下面只介绍一些基础的概念">
 <meta property="og:type" content="article">
 <meta property="og:title" content="云函数">
 <meta property="og:url" content="http://example.com/2020/03/23/node.js/index.html">
 <meta property="og:site_name" content="web learning">
 <meta property="og:description" content="云开发与Nodejs云函数的运行环境是 Node.js，我们可以在云函数中使用Nodejs内置模块以及使用 npm 安装第三方依赖来帮助我们更快的开发。借助于一些优秀的开源项目，避免了我们重复造轮子，相比于小程序端，能够大大扩展云函数的使用 云函数与Nodejs由于云函数与Nodejs息息相关，需要我们对云函数与Node的模块以及Nodejs的一些基本知识有一些基本的了解。下面只介绍一些基础的概念">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-23T12:43:00.000Z">
 <meta property="article:modified_time" content="2021-07-01T05:38:22.183Z">
 <meta property="article:author" content="ASDW51">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Node">
 <meta property="article:tag" content="小程序">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>云函数 - web learning</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
-  <link rel="canonical" href="http://example.com/2020/03/23/node.js/"/>
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-  <title>云函数 | web learning</title>
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
 
 
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
-
-
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-  
-    
+<body>
   
 
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <header>
     
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">web learning</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>ASDW51</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="云函数"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-03-23 20:43" pubdate>
+          2020年3月23日 晚上
+        </time>
+      </span>
+    
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          13k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          112 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
   </div>
 </div>
 
-<nav class="site-nav">
-  
+</div>
 
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+  </header>
 
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+  <main>
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/23/node.js/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="web learning">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">云函数</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-23T20:43:00+08:00">
-                2020-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
       
-        <h1 id="云开发与Nodejs"><a href="#云开发与Nodejs" class="headerlink" title="云开发与Nodejs"></a>云开发与<code>Nodejs</code></h1><p>云函数的运行环境是 <code>Node.js</code>，我们可以在云函数中使用<code>Nodejs</code>内置模块以及使用 <code>npm</code> 安装第三方依赖来帮助我们更快的开发。借助于一些优秀的开源项目，避免了我们重复造轮子，相比于小程序端，能够大大扩展云函数的使用</p>
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">云函数</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="云开发与Nodejs"><a href="#云开发与Nodejs" class="headerlink" title="云开发与Nodejs"></a>云开发与<code>Nodejs</code></h1><p>云函数的运行环境是 <code>Node.js</code>，我们可以在云函数中使用<code>Nodejs</code>内置模块以及使用 <code>npm</code> 安装第三方依赖来帮助我们更快的开发。借助于一些优秀的开源项目，避免了我们重复造轮子，相比于小程序端，能够大大扩展云函数的使用</p>
 <h4 id="云函数与Nodejs"><a href="#云函数与Nodejs" class="headerlink" title="云函数与Nodejs"></a>云函数与<code>Nodejs</code></h4><p>由于云函数与<code>Nodejs</code>息息相关，需要我们对云函数与Node的模块以及<code>Nodejs</code>的一些基本知识有一些基本的了解。下面只介绍一些基础的概念，如果你想详细深入了解，建议去翻阅一下<code>Nodejs</code>的官方技术文档：</p>
 <p><strong>技术文档：</strong><a target="_blank" rel="noopener" href="http://nodejs.cn/api/">Nodejs API 中文技术文档</a></p>
 <h4 id="node-js内置模块"><a href="#node-js内置模块" class="headerlink" title="node.js内置模块"></a><code>node.js</code>内置模块</h4><p><code>Nodejs</code>的常用内置模块以及功能如下所示，这些模块都是可以在云函数里直接使用的：</p>
@@ -326,462 +289,402 @@
 <li><strong>net模块：</strong>用于创建基于流的 TCP 或 <code>IPC</code> 的服务器</li>
 <li><code>crypto</code>模块：提供加密功能，包括对 <code>OpenSSL</code> 的哈希、<code>HMAC</code>、加密、解密、签名、以及验证功能的一整套封装</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在云函数中使用HTTP请求访问第三方服务可以不受域名限制，即不需要像小程序端一样，要将域名添加到request合法域名里；也不受http和https的限制，没有域名只有IP都是可以的，所以云函数可以应用的场景非常多，即能方便的调用第三方服务，也能够充当一个功能复杂的完整应用的后端。不过需要注意的是，云函数是部署在云端，有些局域网等终端通信的业务只能在小程序里进行。</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">在云函数中使用HTTP请求访问第三方服务可以不受域名限制，即不需要像小程序端一样，要将域名添加到request合法域名里；也不受<span class="hljs-keyword">http</span>和<span class="hljs-keyword">https</span>的限制，没有域名只有IP都是可以的，所以云函数可以应用的场景非常多，即能方便的调用第三方服务，也能够充当一个功能复杂的完整应用的后端。不过需要注意的是，云函数是部署在云端，有些局域网等终端通信的业务只能在小程序里进行。<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">常用变量</span><br><span class="line"></span><br><span class="line">module、exports、require</span><br><span class="line"></span><br><span class="line">require用于引入模块、  JSON、或本地文件。 可以从  node_modules 引入模块，可以使用相对路径（例如  ./、）引入本地模块或 JSON 文件，路径会根据 </span><br><span class="line">__dirname</span><br><span class="line"> 定义的目录名或当前工作目录进行处理。</span><br><span class="line"></span><br><span class="line">node模块化遵循的是commonjs规范，CommonJs定义的模块分为: 模块标识(module)、模块导出(exports) 、模块引用(require)。</span><br><span class="line"></span><br><span class="line">在node中，一个文件即一个模块，使用exports和require来进行处理。</span><br><span class="line"></span><br><span class="line">exports表示该模块运行时生成的导出对象。如果按确切的文件名没有找到模块，则 Node.js 会尝试带上  .js、  .json 或  .node 拓展名再加载。 .js 文件会被解析为 JavaScript 文本文件，  .json 文件会被解析为 JSON 文本文件。  .node 文件会被解析为通过  process.dlopen() 加载的编译后的插件模块。以  &#x27;/&#x27; 为前缀的模块是文件的绝对路径。 例如，  require(&#x27;/home/marco/foo.js&#x27;) 会加载  /home/marco/foo.js 文件。以  &#x27;./&#x27; 为前缀的模块是相对于调用  require() 的文件的。 也就是说，  circle.js 必须和  foo.js 在同一目录下以便于  require(&#x27;./circle&#x27;) 找到它。</span><br><span class="line"></span><br><span class="line">module.exports 用于指定一个模块所导出的内容，即可以通过  require() 访问的内容。</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript">常用变量<br><br><span class="hljs-built_in">module</span>、<span class="hljs-built_in">exports</span>、<span class="hljs-built_in">require</span><br><br><span class="hljs-built_in">require</span>用于引入模块、  <span class="hljs-built_in">JSON</span>、或本地文件。 可以从  node_modules 引入模块，可以使用相对路径（例如  ./、）引入本地模块或 <span class="hljs-built_in">JSON</span> 文件，路径会根据 <br>__dirname<br> 定义的目录名或当前工作目录进行处理。<br><br>node模块化遵循的是commonjs规范，CommonJs定义的模块分为: 模块标识(<span class="hljs-built_in">module</span>)、模块导出(<span class="hljs-built_in">exports</span>) 、模块引用(<span class="hljs-built_in">require</span>)。<br><br>在node中，一个文件即一个模块，使用<span class="hljs-built_in">exports</span>和<span class="hljs-built_in">require</span>来进行处理。<br><br><span class="hljs-built_in">exports</span>表示该模块运行时生成的导出对象。如果按确切的文件名没有找到模块，则 Node.js 会尝试带上  .js、  .json 或  .node 拓展名再加载。 .js 文件会被解析为 JavaScript 文本文件，  .json 文件会被解析为 <span class="hljs-built_in">JSON</span> 文本文件。  .node 文件会被解析为通过  process.dlopen() 加载的编译后的插件模块。以  <span class="hljs-string">&#x27;/&#x27;</span> 为前缀的模块是文件的绝对路径。 例如，  <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;/home/marco/foo.js&#x27;</span>) 会加载  /home/marco/foo.js 文件。以  <span class="hljs-string">&#x27;./&#x27;</span> 为前缀的模块是相对于调用  <span class="hljs-built_in">require</span>() 的文件的。 也就是说，  circle.js 必须和  foo.js 在同一目录下以便于  <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./circle&#x27;</span>) 找到它。<br><br><span class="hljs-built_in">module</span>.exports 用于指定一个模块所导出的内容，即可以通过  <span class="hljs-built_in">require</span>() 访问的内容。<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 引入本地模块：</span><br><span class="line">const myLocalModule = require(&#x27;./path/myLocalModule&#x27;);</span><br><span class="line"> </span><br><span class="line">// 引入 JSON 文件：</span><br><span class="line">const jsonData = require(&#x27;./path/filename.json&#x27;);</span><br><span class="line"> </span><br><span class="line">// 引入 node_modules 模块或 Node.js 内置模块：</span><br><span class="line">const crypto = require(&#x27;crypto&#x27;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 引入本地模块：</span><br><span class="hljs-keyword">const</span> myLocalModule = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./path/myLocalModule&#x27;</span>);<br> <br><span class="hljs-comment">// 引入 JSON 文件：</span><br><span class="hljs-keyword">const</span> jsonData = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./path/filename.json&#x27;</span>);<br> <br><span class="hljs-comment">// 引入 node_modules 模块或 Node.js 内置模块：</span><br><span class="hljs-keyword">const</span> crypto = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;crypto&#x27;</span>);<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">第三方模块</span><br><span class="line"></span><br><span class="line">Nodejs有 npm官网地址</span><br><span class="line"></span><br><span class="line">Nodejs库推荐：awesome Nodejs</span><br><span class="line"></span><br><span class="line">当没有以  &#x27;/&#x27;、  &#x27;./&#x27; 或  &#x27;../&#x27; 开头来表示文件时，这个模块必须是一个核心模块或加载自  node_modules 目录，比如wx-server-sdk就加载自node_modules文件夹：</span><br><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs livescript">第三方模块<br><br>Nodejs有 <span class="hljs-built_in">npm</span>官网地址<br><br>Nodejs库推荐：awesome Nodejs<br><br>当没有以  <span class="hljs-string">&#x27;/&#x27;</span>、  <span class="hljs-string">&#x27;./&#x27;</span> 或  <span class="hljs-string">&#x27;../&#x27;</span> 开头来表示文件时，这个模块必须是一个核心模块或加载自  node_modules 目录，比如wx-server-sdk就加载自node_modules文件夹：<br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br></code></pre></td></tr></table></figure>
 
 <h4 id="Lodash实用工具库"><a href="#Lodash实用工具库" class="headerlink" title="Lodash实用工具库"></a><code>Lodash</code>实用工具库</h4><p><a target="_blank" rel="noopener" href="https://www.lodashjs.com/">Lodash中文文档</a></p>
 <p><code>Lodash</code>是一个一致性、模块化、高性能的 JavaScript <strong>实用工具库</strong>，通过降低 array、number、objects、string 等数据类型的使用难度从而让 JavaScript 变得更简单。<code>Lodash</code> 的模块化方法非常适用于：遍历 array、object 和 string；对值进行操作和检测；创建符合功能的函数。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用开发者工具新建一个云函数，比如lodash，然后在package.json增加lodash最新版latest的依赖：</span><br><span class="line"></span><br><span class="line">    &quot;dependencies&quot;: &#123;</span><br><span class="line">            &quot;lodash&quot;: &quot;latest&quot;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">使用开发者工具新建一个云函数，比如lodash，然后在<span class="hljs-keyword">package</span>.json增加lodash最新版latest的依赖：<br><br>    <span class="hljs-string">&quot;dependencies&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;lodash&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span><br>        &#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="moment时间处理"><a href="#moment时间处理" class="headerlink" title="moment时间处理"></a>moment时间处理</h4><p>开发小程序时经常需要格式化时间、处理相对时间、日历时间以及时间的多语言问题，这个时候就可以使用比较流行的<code>momentjs</code>了。</p>
 <p><strong>技术文档：</strong><a target="_blank" rel="noopener" href="https://momentjs.com/">moment官方文档</a>、<a target="_blank" rel="noopener" href="http://momentjs.cn/">moment中文文档</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">使用开发者工具新建一个云函数，比如moment，然后在package.json增加moment最新版latest的依赖：</span><br><span class="line"></span><br><span class="line">    &quot;dependencies&quot;: &#123;</span><br><span class="line">            &quot;moment&quot;: &quot;latest&quot;</span><br><span class="line">        &#125;</span><br><span class="line">在index.js里的代码修改为如下，我们将moment区域设置为中国，将时间格式化为 十二月 23日 2019, 4:13:29 下午的样式以及相对时间多少分钟前：</span><br><span class="line"></span><br><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">    const moment = require(&quot;moment&quot;);</span><br><span class="line">    cloud.init(&#123;</span><br><span class="line">        env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">      &#125;)</span><br><span class="line">    exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">        moment.locale(&#x27;zh-cn&#x27;);</span><br><span class="line">        time1 = moment().format(&#x27;MMMM Do YYYY, h:mm:ss a&#x27;);</span><br><span class="line">        time2 = moment().startOf(&#x27;hour&#x27;).fromNow();</span><br><span class="line">        return  &#123; time1,time2&#125;</span><br><span class="line">    &#125;</span><br><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">const moment = require(&quot;moment&quot;);</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">    env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">  &#125;)</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">    moment.locale(&#x27;zh-cn&#x27;);</span><br><span class="line">    time1 = moment().format(&#x27;MMMM Do YYYY, h:mm:ss a&#x27;);</span><br><span class="line">    time2 = moment().startOf(&#x27;hour&#x27;).fromNow();</span><br><span class="line">    return  &#123; time1,time2&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs livescript">使用开发者工具新建一个云函数，比如moment，然后在package.json增加moment最新版latest的依赖：<br><br>    <span class="hljs-string">&quot;dependencies&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;moment&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span><br>        &#125;<br>在index.js里的代码修改为如下，我们将moment区域设置为中国，将时间格式化为 十二月 <span class="hljs-number">23</span>日 <span class="hljs-number">2019</span>, <span class="hljs-number">4</span>:<span class="hljs-number">13</span>:<span class="hljs-number">29</span> 下午的样式以及相对时间多少分钟前：<br><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>    <span class="hljs-keyword">const</span> moment = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;moment&quot;</span>);<br>    cloud.init(&#123;<br>        env: cloud.DYNAMIC_CURRENT_ENV,<br>      &#125;)<br>    <span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>        moment.locale(<span class="hljs-string">&#x27;zh-cn&#x27;</span>);<br>        time1 = moment().format(<span class="hljs-string">&#x27;MMMM Do YYYY, h:mm:ss a&#x27;</span>);<br>        time2 = moment().startOf(<span class="hljs-string">&#x27;hour&#x27;</span>).fromNow();<br>        <span class="hljs-keyword">return</span>  &#123; time1,time2&#125;<br>    &#125;<br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><span class="hljs-keyword">const</span> moment = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;moment&quot;</span>);<br>cloud.init(&#123;<br>    env: cloud.DYNAMIC_CURRENT_ENV,<br>  &#125;)<br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>    moment.locale(<span class="hljs-string">&#x27;zh-cn&#x27;</span>);<br>    time1 = moment().format(<span class="hljs-string">&#x27;MMMM Do YYYY, h:mm:ss a&#x27;</span>);<br>    time2 = moment().startOf(<span class="hljs-string">&#x27;hour&#x27;</span>).fromNow();<br>    <span class="hljs-keyword">return</span>  &#123; time1,time2&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>不过云函数中的时区为 <code>UTC+0</code>，不是 <code>UTC+8</code>，格式化得到的时间和在国内的时间是有8个小时的时间差的，我们可以给小时数+8，也可以修改时区。云函数修改时区我们可以使用timezone依赖（和moment是同一个开源作者）。</p>
 <p><strong>技术文档：</strong><a target="_blank" rel="noopener" href="https://momentjs.com/timezone/">timezone技术文档</a></p>
 <p>在<code>package.json</code><strong>增加</strong>moment-timezone最新版latest的依赖，然后修改上面相应的代码即可，使用起来非常方便：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">&#x27;moment-timezone&#x27;</span>);</span><br><span class="line">time1 = moment().tz(<span class="string">&#x27;Asia/Shanghai&#x27;</span>).format(<span class="string">&#x27;MMMM Do YYYY, h:mm:ss a&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> moment = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;moment-timezone&#x27;</span>);<br>time1 = moment().tz(<span class="hljs-string">&#x27;Asia/Shanghai&#x27;</span>).format(<span class="hljs-string">&#x27;MMMM Do YYYY, h:mm:ss a&#x27;</span>);<br></code></pre></td></tr></table></figure>
 
-<h4 id="获取公网IP"><a href="#获取公网IP" class="headerlink" title="获取公网IP"></a>获取公网IP</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">获取公网IP</span><br><span class="line">有时我们希望能够获取到服务器的公网IP，比如用于IP地址的白名单，或者想根据IP查询到服务器所在的地址，ipify就是一个免费好用的依赖，通过它我们也可以获取到云函数所在服务器的公网IP。</span><br><span class="line"></span><br><span class="line">技术文档：ipify Github地址</span><br><span class="line"></span><br><span class="line">使用开发者工具新建一个getip的云函数，然后输入以下代码，并在package.json的”dependencies”里新增 &quot;ipify&quot;:&quot;latest&quot; ，即最新版的ipify依赖：</span><br><span class="line"></span><br><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">const ipify = require(&#x27;ipify&#x27;);</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">  env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">&#125;)</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">  return await ipify(&#123; useIPv6: false &#125;)</span><br><span class="line">&#125;</span><br><span class="line">然后右键getip云函数根目录，选择在终端中打开，输入npm install安装依赖，之后上传并部署所有文件。我们可以在小程序端调用这个云函数，就可以得到云函数服务器的公网IP，这个IP是随机而有限的几个，反复调用getip，就能够穷举所有云函数所在服务器的ip了。</span><br><span class="line"></span><br><span class="line">可能你会在使用云函数连接数据库或者用云函数来建微信公众号的后台时需要用到IP白名单，我们可以把这些ip都添加到白名单里面，这样云函数就可以做很多事情啦。</span><br></pre></td></tr></table></figure>
+<h4 id="获取公网IP"><a href="#获取公网IP" class="headerlink" title="获取公网IP"></a>获取公网IP</h4><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs livescript">获取公网IP<br>有时我们希望能够获取到服务器的公网IP，比如用于IP地址的白名单，或者想根据IP查询到服务器所在的地址，ipify就是一个免费好用的依赖，通过它我们也可以获取到云函数所在服务器的公网IP。<br><br>技术文档：ipify Github地址<br><br>使用开发者工具新建一个getip的云函数，然后输入以下代码，并在package.json的”dependencies”里新增 <span class="hljs-string">&quot;ipify&quot;</span>:<span class="hljs-string">&quot;latest&quot;</span> ，即最新版的ipify依赖：<br><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><span class="hljs-keyword">const</span> ipify = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;ipify&#x27;</span>);<br>cloud.init(&#123;<br>  env: cloud.DYNAMIC_CURRENT_ENV,<br>&#125;)<br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> ipify(&#123; useIPv6: <span class="hljs-literal">false</span> &#125;)<br>&#125;<br>然后右键getip云函数根目录，选择在终端中打开，输入<span class="hljs-built_in">npm</span> install安装依赖，之后上传并部署所有文件。我们可以在小程序端调用这个云函数，就可以得到云函数服务器的公网IP，这个IP是随机而有限的几个，反复调用getip，就能够穷举所有云函数所在服务器的ip了。<br><br>可能你会在使用云函数连接数据库或者用云函数来建微信公众号的后台时需要用到IP白名单，我们可以把这些ip都添加到白名单里面，这样云函数就可以做很多事情啦。<br></code></pre></td></tr></table></figure>
 
-<h4 id="buffer文件流"><a href="#buffer文件流" class="headerlink" title="buffer文件流"></a>buffer文件流</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">  env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">&#125;)</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">  const fileID = &#x27;cloud://xly-xrlur.786c-xly-xrlur-1300446086/cloudbase/1576500614167-520.png&#x27;</span><br><span class="line">  const res = await cloud.downloadFile(&#123;</span><br><span class="line">    fileID: fileID,</span><br><span class="line">  &#125;)</span><br><span class="line">  const buffer = res.fileContent</span><br><span class="line">  return buffer.toString(&#x27;base64&#x27;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="buffer文件流"><a href="#buffer文件流" class="headerlink" title="buffer文件流"></a>buffer文件流</h4><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>cloud.init(&#123;<br>  env: cloud.DYNAMIC_CURRENT_ENV,<br>&#125;)<br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>  <span class="hljs-keyword">const</span> fileID = <span class="hljs-string">&#x27;cloud://xly-xrlur.786c-xly-xrlur-1300446086/cloudbase/1576500614167-520.png&#x27;</span><br>  <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> cloud.downloadFile(&#123;<br>    fileID: fileID,<br>  &#125;)<br>  <span class="hljs-keyword">const</span> buffer = res.fileContent<br>  <span class="hljs-keyword">return</span> buffer.toString(<span class="hljs-string">&#x27;base64&#x27;</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">getServerImg()&#123;</span><br><span class="line">    wx.cloud.callFunction(&#123;</span><br><span class="line">      name: &#x27;downloadimg&#x27;,</span><br><span class="line">      success: res =&gt; &#123;</span><br><span class="line">        console.log(&quot;云函数返回的数据&quot;,res.result)</span><br><span class="line">        this.setData(&#123;</span><br><span class="line">          img:res.result</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">      fail: err =&gt; &#123;</span><br><span class="line">        console.error(&#x27;云函数调用失败：&#x27;, err)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">getServerImg</span><span class="hljs-params">()</span></span>&#123;<br>    wx<span class="hljs-selector-class">.cloud</span><span class="hljs-selector-class">.callFunction</span>(&#123;<br>      name: <span class="hljs-string">&#x27;downloadimg&#x27;</span>,<br>      success: res =&gt; &#123;<br>        console<span class="hljs-selector-class">.log</span>(<span class="hljs-string">&quot;云函数返回的数据&quot;</span>,res.result)<br>        this<span class="hljs-selector-class">.setData</span>(&#123;<br>          <span class="hljs-selector-tag">img</span>:res<span class="hljs-selector-class">.result</span><br>        &#125;)<br>      &#125;,<br>      fail: err =&gt; &#123;<br>        console<span class="hljs-selector-class">.error</span>(<span class="hljs-string">&#x27;云函数调用失败：&#x27;</span>, err)<br>      &#125;<br>    &#125;)<br>  &#125;<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image width=&quot;400px&quot; height=&quot;200px&quot; src=&quot;data:image/jpeg;base64,&#123;&#123;img&#125;&#125;&quot;&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">image</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;400px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;200px&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;data:image/jpeg;base64,</span></span></span><span class="hljs-template-variable">&#123;&#123;<span class="hljs-name">img</span>&#125;&#125;</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h4 id="图像处理sharp"><a href="#图像处理sharp" class="headerlink" title="图像处理sharp"></a>图像处理sharp</h4><p>sharp是一个高速图像处理库，可以很方便的实现图片编辑操作，如裁剪、格式转换、旋转变换、滤镜添加、图片合成（如添加水印）、图片拼接等，支持<code>JPEG</code>, <code>PNG</code>, <code>WebP</code>, TIFF, <code>GIF</code> 和 <code>SVG</code>格式。在云函数端使用sharp来处理图片，而云存储则可以作为服务端和小程序端来传递图片的桥梁。</p>
 <p><strong>技术文档：</strong><a target="_blank" rel="noopener" href="https://sharp.pixelplumbing.com/en/stable/">sharp官方技术文档</a></p>
 <p>使用开发者工具新建一个</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">const fs = require(&#x27;fs&#x27;)</span><br><span class="line">const path = require(&#x27;path&#x27;)</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">    env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">&#125;)</span><br><span class="line">const sharp = require(&#x27;sharp&#x27;);</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">    //这里换成自己的fileID，也可以在小程序端上传文件之后，把fileID传进来event.fileID</span><br><span class="line">    const fileID = &#x27;cloud://xly-xrlur.786c-xly-xrlur-1300446086/1572315793628-366.png&#x27;</span><br><span class="line"> </span><br><span class="line">    //要用云函数处理图片，需要先下载图片，返回的图片类型为Buffer</span><br><span class="line">    const res = await cloud.downloadFile(&#123;</span><br><span class="line">      fileID: fileID,</span><br><span class="line">    &#125;)</span><br><span class="line">    const buffer = res.fileContent  </span><br><span class="line"> </span><br><span class="line">    //sharp对图片进行处理之后，保存为output.png，也可以直接保存为Buffer</span><br><span class="line">    await sharp(buffer).rotate().resize(200).toFile(&#x27;output.png&#x27;)</span><br><span class="line"> </span><br><span class="line">    // 云函数读取模块目录下的图片，并上传到云存储</span><br><span class="line">    const fileStream = await fs.createReadStream(path.join(__dirname, &#x27;output.png&#x27;))</span><br><span class="line">    return await cloud.uploadFile(&#123;</span><br><span class="line">        cloudPath: &#x27;sharpdemo.jpg&#x27;,</span><br><span class="line">        fileContent: fileStream,</span><br><span class="line">    &#125;)  </span><br><span class="line">&#125;</span><br><span class="line">也可以让sharp不需要先toFile转成图片，而是直接转成Buffer，这样就可以直接作为参数传给fileContent上传到云存储，如：</span><br><span class="line"></span><br><span class="line">    const buffer2 = await sharp(buffer).rotate().resize(200).toBuffer();</span><br><span class="line">        return await cloud.uploadFile(&#123;</span><br><span class="line">            cloudPath: &#x27;sharpdemo2.jpg&#x27;,</span><br><span class="line">            fileContent: buffer2,</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>)<br><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span>)<br>cloud.init(&#123;<br>    <span class="hljs-attr">env</span>: cloud.DYNAMIC_CURRENT_ENV,<br>&#125;)<br><span class="hljs-keyword">const</span> sharp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;sharp&#x27;</span>);<br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>    <span class="hljs-comment">//这里换成自己的fileID，也可以在小程序端上传文件之后，把fileID传进来event.fileID</span><br>    <span class="hljs-keyword">const</span> fileID = <span class="hljs-string">&#x27;cloud://xly-xrlur.786c-xly-xrlur-1300446086/1572315793628-366.png&#x27;</span><br> <br>    <span class="hljs-comment">//要用云函数处理图片，需要先下载图片，返回的图片类型为Buffer</span><br>    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> cloud.downloadFile(&#123;<br>      <span class="hljs-attr">fileID</span>: fileID,<br>    &#125;)<br>    <span class="hljs-keyword">const</span> buffer = res.fileContent  <br> <br>    <span class="hljs-comment">//sharp对图片进行处理之后，保存为output.png，也可以直接保存为Buffer</span><br>    <span class="hljs-keyword">await</span> sharp(buffer).rotate().resize(<span class="hljs-number">200</span>).toFile(<span class="hljs-string">&#x27;output.png&#x27;</span>)<br> <br>    <span class="hljs-comment">// 云函数读取模块目录下的图片，并上传到云存储</span><br>    <span class="hljs-keyword">const</span> fileStream = <span class="hljs-keyword">await</span> fs.createReadStream(path.join(__dirname, <span class="hljs-string">&#x27;output.png&#x27;</span>))<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> cloud.uploadFile(&#123;<br>        <span class="hljs-attr">cloudPath</span>: <span class="hljs-string">&#x27;sharpdemo.jpg&#x27;</span>,<br>        <span class="hljs-attr">fileContent</span>: fileStream,<br>    &#125;)  <br>&#125;<br>也可以让sharp不需要先toFile转成图片，而是直接转成Buffer，这样就可以直接作为参数传给fileContent上传到云存储，如：<br><br>    <span class="hljs-keyword">const</span> buffer2 = <span class="hljs-keyword">await</span> sharp(buffer).rotate().resize(<span class="hljs-number">200</span>).toBuffer();<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> cloud.uploadFile(&#123;<br>            <span class="hljs-attr">cloudPath</span>: <span class="hljs-string">&#x27;sharpdemo2.jpg&#x27;</span>,<br>            <span class="hljs-attr">fileContent</span>: buffer2,<br>        &#125;)<br></code></pre></td></tr></table></figure>
 
 <h4 id="连接数据库MySQL"><a href="#连接数据库MySQL" class="headerlink" title="连接数据库MySQL"></a>连接数据库<code>MySQL</code></h4><p><strong>公网连接数据库MySQL</strong></p>
 <p>技术文档：<a target="_blank" rel="noopener" href="https://sequelize.org/master/">Sequelize</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const sequelize = new Sequelize(&#x27;database&#x27;, &#x27;username&#x27;, &#x27;password&#x27;,  &#123;</span><br><span class="line">  host: &#x27;localhost&#x27;,    //数据库地址,默认本机</span><br><span class="line">  port:&#x27;3306&#x27;,</span><br><span class="line">  dialect: &#x27;mysql&#x27;,</span><br><span class="line">  pool: &#123;   //连接池设置</span><br><span class="line">    max: 5, //最大连接数</span><br><span class="line">    min: 0, //最小连接数</span><br><span class="line">    idle: 10000</span><br><span class="line">  &#125;,</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">const sequelize = new Sequelize(<span class="hljs-string">&#x27;database&#x27;</span>, <span class="hljs-string">&#x27;username&#x27;</span>, <span class="hljs-string">&#x27;password&#x27;</span>,  &#123;<br>  host: <span class="hljs-string">&#x27;localhost&#x27;</span>,    <span class="hljs-regexp">//</span>数据库地址,默认本机<br>  port:<span class="hljs-string">&#x27;3306&#x27;</span>,<br>  dialect: <span class="hljs-string">&#x27;mysql&#x27;</span>,<br>  pool: &#123;   <span class="hljs-regexp">//</span>连接池设置<br>    max: <span class="hljs-number">5</span>, <span class="hljs-regexp">//</span>最大连接数<br>    min: <span class="hljs-number">0</span>, <span class="hljs-regexp">//</span>最小连接数<br>    idle: <span class="hljs-number">10000</span><br>  &#125;,<br> &#125;);<br></code></pre></td></tr></table></figure>
 
 <p>**私有网络连接``MySQL<code>**</code></p>
 <p>默认情况下，云开发的函数部署在<strong>公共网络</strong>中，只可以访问公网。如果开发者需要访问腾讯云的 <code>**Redis</code>、<code>TencentDB</code>、<code>CVM</code>、Kafka** 等资源，需要建立<strong>私有网络</strong>来确保<strong>数据安全及连接安全</strong>。</p>
 <p>**连接数据库``Redis<code>**</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">    env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">  &#125;)</span><br><span class="line">const Redis = require(&#x27;ioredis&#x27;)</span><br><span class="line">const redis = new Redis(&#123;</span><br><span class="line">  port: 6379,</span><br><span class="line">  host: &#x27;10.168.0.15&#x27;, </span><br><span class="line">  family: 4, </span><br><span class="line">  password: &#x27;CloudBase2018&#x27;,</span><br><span class="line">  db: 0,</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">    const wxContext = cloud.getWXContext()</span><br><span class="line">    const cacheKey = wxContext.OPENID</span><br><span class="line">    const cache = await redis.get(cacheKey) </span><br><span class="line">    if (!cache) &#123;</span><br><span class="line">      const result = await new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        setTimeout(() =&gt; resolve(Math.random()), 2000)</span><br><span class="line">      &#125;)</span><br><span class="line">      redis.set(cacheKey, result, &#x27;EX&#x27;, 3600)</span><br><span class="line">      return result</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      return cache</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>cloud.init(&#123;<br>    <span class="hljs-attr">env</span>: cloud.DYNAMIC_CURRENT_ENV,<br>  &#125;)<br><span class="hljs-keyword">const</span> Redis = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;ioredis&#x27;</span>)<br><span class="hljs-keyword">const</span> redis = <span class="hljs-keyword">new</span> Redis(&#123;<br>  <span class="hljs-attr">port</span>: <span class="hljs-number">6379</span>,<br>  <span class="hljs-attr">host</span>: <span class="hljs-string">&#x27;10.168.0.15&#x27;</span>, <br>  <span class="hljs-attr">family</span>: <span class="hljs-number">4</span>, <br>  <span class="hljs-attr">password</span>: <span class="hljs-string">&#x27;CloudBase2018&#x27;</span>,<br>  <span class="hljs-attr">db</span>: <span class="hljs-number">0</span>,<br>&#125;)<br> <br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>    <span class="hljs-keyword">const</span> wxContext = cloud.getWXContext()<br>    <span class="hljs-keyword">const</span> cacheKey = wxContext.OPENID<br>    <span class="hljs-keyword">const</span> cache = <span class="hljs-keyword">await</span> redis.get(cacheKey) <br>    <span class="hljs-keyword">if</span> (!cache) &#123;<br>      <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> resolve(<span class="hljs-built_in">Math</span>.random()), <span class="hljs-number">2000</span>)<br>      &#125;)<br>      redis.set(cacheKey, result, <span class="hljs-string">&#x27;EX&#x27;</span>, <span class="hljs-number">3600</span>)<br>      <span class="hljs-keyword">return</span> result<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-keyword">return</span> cache<br>    &#125;<br>  &#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="生成二维码"><a href="#生成二维码" class="headerlink" title="生成二维码"></a>生成二维码</h4><h4 id="二维码qrcode"><a href="#二维码qrcode" class="headerlink" title="二维码qrcode"></a>二维码qrcode</h4><p><strong>技术文档：</strong><a target="_blank" rel="noopener" href="https://github.com/soldair/node-qrcode">node-qrcode Github地址</a></p>
 <h4 id="邮件处理"><a href="#邮件处理" class="headerlink" title="邮件处理"></a>邮件处理</h4><p>技术文档：<a target="_blank" rel="noopener" href="https://github.com/nodemailer/nodemailer">Nodemailer Github地址</a>、<a target="_blank" rel="noopener" href="https://nodemailer.com/about/">Nodemailer官方文档</a></p>
 <p>使用开发者工具创建一个云函数，比如<code>nodemail</code>，然后在<code>package.json</code>增加<code>nodemailer</code>最新版latest的依赖：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">   &quot;nodemailer&quot;: &quot;latest&quot;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;dependencies&quot;</span>: &#123;<br>   <span class="hljs-string">&quot;nodemailer&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span><br> &#125;<br></code></pre></td></tr></table></figure>
 
 <p>发送邮件服务器：<code>smtp.qq.com</code>，使用<code>SSL</code>，端口号465或587</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">  env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">&#125;)</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">  const nodemailer = require(&quot;nodemailer&quot;);</span><br><span class="line">  let transporter = nodemailer.createTransport(&#123;</span><br><span class="line">    host: &quot;smtp.qq.com&quot;, //SMTP服务器地址</span><br><span class="line">    port: 465, //端口号，通常为465，587，25，不同的邮件客户端端口号可能不一样</span><br><span class="line">    secure: true, //如果端口是465，就为true;如果是587、25，就填false</span><br><span class="line">    auth: &#123;</span><br><span class="line">      user: &quot;344169902@qq.com&quot;,  //你的邮箱账号</span><br><span class="line">      pass: &quot;你的QQ邮箱授权码&quot;   //邮箱密码，QQ的需要是独立授权码</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"> </span><br><span class="line">  let message = &#123;</span><br><span class="line">    from: &#x27;来自李东bbsky &lt;344169902@qq.com&gt;&#x27;,   //你的发件邮箱</span><br><span class="line">    to: &#x27;你要发送给谁&#x27;, //你要发给谁</span><br><span class="line">    // cc:&#x27;&#x27;,  支持cc 抄送</span><br><span class="line">    // bcc: &#x27;&#x27;, 支持bcc 密送</span><br><span class="line">    subject: &#x27;欢迎大家参与云开发技术训练营活动&#x27;,</span><br><span class="line"> </span><br><span class="line">    //支持text纯文字，html代码</span><br><span class="line">    text: &#x27;欢迎大家&#x27;,</span><br><span class="line">    html:</span><br><span class="line">      &#x27;&lt;p&gt;&lt;b&gt;你好：&lt;/b&gt;&lt;img src=&quot;https://hackwork-1251009918.cos.ap-shanghai.myqcloud.com/handbook/html5/weapp.jpg&quot;/&gt;&lt;/p&gt;&#x27; +</span><br><span class="line">      &#x27;&lt;p&gt;欢迎欢迎&lt;br/&gt;&lt;/p&gt;&#x27;,</span><br><span class="line">    attachments: [  //支持多种附件形式，可以是String, Buffer或Stream</span><br><span class="line">      &#123;</span><br><span class="line">        filename: &#x27;image.png&#x27;,</span><br><span class="line">        content: Buffer.from(</span><br><span class="line">          &#x27;iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD/&#x27; +</span><br><span class="line">          &#x27;//+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4U&#x27; +</span><br><span class="line">          &#x27;g9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC&#x27;,</span><br><span class="line">          &#x27;base64&#x27;</span><br><span class="line">        ),</span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">  &#125;;</span><br><span class="line"> </span><br><span class="line">  let res = await transporter.sendMail(message);</span><br><span class="line">  return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs awk">const cloud = require(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>cloud.init(&#123;<br>  env: cloud.DYNAMIC_CURRENT_ENV,<br>&#125;)<br>exports.main = async (event, context) =&gt; &#123;<br>  const nodemailer = require(<span class="hljs-string">&quot;nodemailer&quot;</span>);<br>  let transporter = nodemailer.createTransport(&#123;<br>    host: <span class="hljs-string">&quot;smtp.qq.com&quot;</span>, <span class="hljs-regexp">//</span>SMTP服务器地址<br>    port: <span class="hljs-number">465</span>, <span class="hljs-regexp">//</span>端口号，通常为<span class="hljs-number">465</span>，<span class="hljs-number">587</span>，<span class="hljs-number">25</span>，不同的邮件客户端端口号可能不一样<br>    secure: true, <span class="hljs-regexp">//</span>如果端口是<span class="hljs-number">465</span>，就为true;如果是<span class="hljs-number">587</span>、<span class="hljs-number">25</span>，就填false<br>    auth: &#123;<br>      user: <span class="hljs-string">&quot;344169902@qq.com&quot;</span>,  <span class="hljs-regexp">//</span>你的邮箱账号<br>      pass: <span class="hljs-string">&quot;你的QQ邮箱授权码&quot;</span>   <span class="hljs-regexp">//</span>邮箱密码，QQ的需要是独立授权码<br>    &#125;<br>  &#125;);<br> <br>  let message = &#123;<br>    from: <span class="hljs-string">&#x27;来自李东bbsky &lt;344169902@qq.com&gt;&#x27;</span>,   <span class="hljs-regexp">//</span>你的发件邮箱<br>    to: <span class="hljs-string">&#x27;你要发送给谁&#x27;</span>, <span class="hljs-regexp">//</span>你要发给谁<br>    <span class="hljs-regexp">//</span> cc:<span class="hljs-string">&#x27;&#x27;</span>,  支持cc 抄送<br>    <span class="hljs-regexp">//</span> bcc: <span class="hljs-string">&#x27;&#x27;</span>, 支持bcc 密送<br>    subject: <span class="hljs-string">&#x27;欢迎大家参与云开发技术训练营活动&#x27;</span>,<br> <br>    <span class="hljs-regexp">//</span>支持text纯文字，html代码<br>    text: <span class="hljs-string">&#x27;欢迎大家&#x27;</span>,<br>    html:<br>      <span class="hljs-string">&#x27;&lt;p&gt;&lt;b&gt;你好：&lt;/b&gt;&lt;img src=&quot;https://hackwork-1251009918.cos.ap-shanghai.myqcloud.com/handbook/html5/weapp.jpg&quot;/&gt;&lt;/p&gt;&#x27;</span> +<br>      <span class="hljs-string">&#x27;&lt;p&gt;欢迎欢迎&lt;br/&gt;&lt;/p&gt;&#x27;</span>,<br>    attachments: [  <span class="hljs-regexp">//</span>支持多种附件形式，可以是String, Buffer或Stream<br>      &#123;<br>        filename: <span class="hljs-string">&#x27;image.png&#x27;</span>,<br>        content: Buffer.from(<br>          <span class="hljs-string">&#x27;iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAAD/&#x27;</span> +<br>          <span class="hljs-string">&#x27;//+l2Z/dAAAAM0lEQVR4nGP4/5/h/1+G/58ZDrAz3D/McH8yw83NDDeNGe4U&#x27;</span> +<br>          <span class="hljs-string">&#x27;g9C9zwz3gVLMDA/A6P9/AFGGFyjOXZtQAAAAAElFTkSuQmCC&#x27;</span>,<br>          <span class="hljs-string">&#x27;base64&#x27;</span><br>        ),<br>      &#125;,<br>    ]<br>  &#125;;<br> <br>  let res = await transporter.sendMail(message);<br>  return res;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="Excel文档处理"><a href="#Excel文档处理" class="headerlink" title="Excel文档处理"></a>Excel文档处理</h4><p>Excel是存储数据比较常见的格式，那如何让云函数拥有读写Excel文件的能力呢？我们可以在Github上搜索关键词“Node Excel”，去筛选Star比较多，条件比较契合的。</p>
 <p>Github地址：<a target="_blank" rel="noopener" href="https://github.com/mgcrea/node-xlsx">node-xlsx</a></p>
 <p>使用开发者工具新建一个云函数，在package.json里添加latest最新版的node-xlsx：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">  &quot;wx-server-sdk&quot;: &quot;latest&quot;,</span><br><span class="line">  &quot;node-xlsx&quot;: &quot;latest&quot;</span><br><span class="line">&#125;</span><br><span class="line">读取云存储的Excel文件</span><br><span class="line"></span><br><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">    cloud.init(&#123;</span><br><span class="line">      env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">    const xlsx = require(&#x27;node-xlsx&#x27;);</span><br><span class="line">    const db = cloud.database()</span><br><span class="line">    </span><br><span class="line">    exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">      const fileID = &#x27;cloud://xly-xrlur.786c-xly-xrlur-1300446086/china.csv&#x27;</span><br><span class="line">      const res = await cloud.downloadFile(&#123;</span><br><span class="line">        fileID: fileID,</span><br><span class="line">      &#125;)</span><br><span class="line">      const buffer = res.fileContent</span><br><span class="line">    </span><br><span class="line">      const tasks = [] </span><br><span class="line">      var sheets = xlsx.parse(buffer); </span><br><span class="line">      sheets.forEach(function (sheet) &#123;</span><br><span class="line">        for (var rowId in sheet[&#x27;data&#x27;]) &#123;</span><br><span class="line">          console.log(rowId);</span><br><span class="line">          var row = sheet[&#x27;data&#x27;][rowId]; </span><br><span class="line">          if (rowId &gt; 0 &amp;&amp; row) &#123; </span><br><span class="line">            const promise = db.collection(&#x27;chinaexcel&#x27;)</span><br><span class="line">              .add(&#123;</span><br><span class="line">                data: &#123;</span><br><span class="line">                  city: row[0], </span><br><span class="line">                  province: row[1], </span><br><span class="line">                  city_area: row[2], </span><br><span class="line">                  builtup_area: row[3],</span><br><span class="line">                  reg_pop: row[4],</span><br><span class="line">                  resident_pop: row[5],</span><br><span class="line">                  gdp: row[6]</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;)</span><br><span class="line">            tasks.push(promise)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">    </span><br><span class="line">      let result = await Promise.all(tasks).then(res =&gt; &#123;</span><br><span class="line">        return res</span><br><span class="line">      &#125;).catch(function (err) &#123;</span><br><span class="line">        return err</span><br><span class="line">      &#125;)</span><br><span class="line">      return result</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-string">&quot;dependencies&quot;</span>: &#123;<br>  <span class="hljs-string">&quot;wx-server-sdk&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span>,<br>  <span class="hljs-string">&quot;node-xlsx&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span><br>&#125;<br>读取云存储的Excel文件<br><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>    cloud.init(&#123;<br>      <span class="hljs-attr">env</span>: cloud.DYNAMIC_CURRENT_ENV,<br>    &#125;)<br>    <br>    <span class="hljs-keyword">const</span> xlsx = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;node-xlsx&#x27;</span>);<br>    <span class="hljs-keyword">const</span> db = cloud.database()<br>    <br>    <span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>      <span class="hljs-keyword">const</span> fileID = <span class="hljs-string">&#x27;cloud://xly-xrlur.786c-xly-xrlur-1300446086/china.csv&#x27;</span><br>      <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> cloud.downloadFile(&#123;<br>        <span class="hljs-attr">fileID</span>: fileID,<br>      &#125;)<br>      <span class="hljs-keyword">const</span> buffer = res.fileContent<br>    <br>      <span class="hljs-keyword">const</span> tasks = [] <br>      <span class="hljs-keyword">var</span> sheets = xlsx.parse(buffer); <br>      sheets.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">sheet</span>) </span>&#123;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> rowId <span class="hljs-keyword">in</span> sheet[<span class="hljs-string">&#x27;data&#x27;</span>]) &#123;<br>          <span class="hljs-built_in">console</span>.log(rowId);<br>          <span class="hljs-keyword">var</span> row = sheet[<span class="hljs-string">&#x27;data&#x27;</span>][rowId]; <br>          <span class="hljs-keyword">if</span> (rowId &gt; <span class="hljs-number">0</span> &amp;&amp; row) &#123; <br>            <span class="hljs-keyword">const</span> promise = db.collection(<span class="hljs-string">&#x27;chinaexcel&#x27;</span>)<br>              .add(&#123;<br>                <span class="hljs-attr">data</span>: &#123;<br>                  <span class="hljs-attr">city</span>: row[<span class="hljs-number">0</span>], <br>                  <span class="hljs-attr">province</span>: row[<span class="hljs-number">1</span>], <br>                  <span class="hljs-attr">city_area</span>: row[<span class="hljs-number">2</span>], <br>                  <span class="hljs-attr">builtup_area</span>: row[<span class="hljs-number">3</span>],<br>                  <span class="hljs-attr">reg_pop</span>: row[<span class="hljs-number">4</span>],<br>                  <span class="hljs-attr">resident_pop</span>: row[<span class="hljs-number">5</span>],<br>                  <span class="hljs-attr">gdp</span>: row[<span class="hljs-number">6</span>]<br>                &#125;<br>              &#125;)<br>            tasks.push(promise)<br>          &#125;<br>        &#125;<br>      &#125;);<br>    <br>      <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(tasks).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> &#123;<br>        <span class="hljs-keyword">return</span> res<br>      &#125;).catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>&#123;<br>        <span class="hljs-keyword">return</span> err<br>      &#125;)<br>      <span class="hljs-keyword">return</span> result<br>    &#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="将数据库里的数据保存为CSV"><a href="#将数据库里的数据保存为CSV" class="headerlink" title="将数据库里的数据保存为CSV"></a>将数据库里的数据保存为CSV</h4><p><strong>技术文档：</strong><a target="_blank" rel="noopener" href="https://github.com/zemirco/json2csv">json2CSV</a></p>
 <h4 id="HTTP处理"><a href="#HTTP处理" class="headerlink" title="HTTP处理"></a><code>HTTP</code>处理</h4><p>got、<code>superagent</code>、request、<code>axios</code>、request-promise</p>
 <blockquote>
 <p>尽管云函数的<code>Nodejs</code>版本比较低（目前为8.9），但绝大多数模块我们都可以使用<code>Nodejs</code> 12或13的环境来测试，不过有时候也要留意有些模块不支持8.9，比如got 10.0.1以上的版本。</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">node中，http模块也可作为客户端使用（发送请求），第三方模块request对其使用方法进行了封装，操作更方便！所以来介绍一下request模块</span><br><span class="line"></span><br><span class="line">get请求</span><br><span class="line"></span><br><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">    cloud.init(&#123;</span><br><span class="line">      env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">    &#125;)</span><br><span class="line">    const rp = require(&#x27;request-promise&#x27;)</span><br><span class="line">    exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">      const options = &#123;</span><br><span class="line">        url: &#x27;https://news-at.zhihu.com/api/4/news/latest&#x27;,</span><br><span class="line">        json: true,</span><br><span class="line">        method: &#x27;GET&#x27;,</span><br><span class="line">      &#125;;</span><br><span class="line">      return await rp(options)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs livescript">node中，http模块也可作为客户端使用（发送请求），第三方模块request对其使用方法进行了封装，操作更方便！所以来介绍一下request模块<br><br>get请求<br><br><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>    cloud.init(&#123;<br>      env: cloud.DYNAMIC_CURRENT_ENV,<br>    &#125;)<br>    <span class="hljs-keyword">const</span> rp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;request-promise&#x27;</span>)<br>    <span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>      <span class="hljs-keyword">const</span> options = &#123;<br>        url: <span class="hljs-string">&#x27;https://news-at.zhihu.com/api/4/news/latest&#x27;</span>,<br>        json: <span class="hljs-literal">true</span>,<br>        method: <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      &#125;;<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">await</span> rp(options)<br>    &#125;<br></code></pre></td></tr></table></figure>
 
 <p><strong>结合文件流</strong></p>
 <p>request(‘<a target="_blank" rel="noopener" href="https://www.jmjc.tech/public/home/img/flower.png&#39;).pipe(fs.createWriteStream(&#39;./flower.png&#39;)">https://www.jmjc.tech/public/home/img/flower.png&#39;).pipe(fs.createWriteStream(&#39;./flower.png&#39;)</a>) <em>// 下载文件到本地</em></p>
 <h4 id="加解密Crypto"><a href="#加解密Crypto" class="headerlink" title="加解密Crypto"></a>加解密<code>Crypto</code></h4><p><code>crypto</code>模块是<code>nodejs</code>的核心模块之一，它提供了安全相关的功能，包含对 <code>OpenSSL</code> 的哈希、<code>HMAC、</code>加密、解密、签名、以及验证功能的一整套封装。由于<code>crypto</code>模块是内置模块，我们引入它是无需下载，就可以直接引入。</p>
 <p>使用开发者工具新建一个云函数，比如<code>crypto</code>，在<code>index.js</code>里输入以下代码，我们来了解一下<code>crypto</code>支持哪些加密算法，并以<code>MD5</code>加密为例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">cloud.init(&#123;</span><br><span class="line">    env: cloud.DYNAMIC_CURRENT_ENV,</span><br><span class="line">&#125;)</span><br><span class="line">const crypto = require(&#x27;crypto&#x27;);</span><br><span class="line">exports.main = async (event, context) =&gt; &#123;</span><br><span class="line">    const hashes = crypto.getHashes(); //获取crypto支持的加密算法种类列表</span><br><span class="line"> </span><br><span class="line">    //md5 加密 CloudBase2020 返回十六进制</span><br><span class="line">    var md5 = crypto.createHash(&#x27;md5&#x27;);</span><br><span class="line">    var message = &#x27;CloudBase2020&#x27;;</span><br><span class="line">    var digest = md5.update(message, &#x27;utf8&#x27;).digest(&#x27;hex&#x27;);   </span><br><span class="line"> </span><br><span class="line">    return &#123;</span><br><span class="line">        &quot;crypto支持的加密算法种类&quot;:hashes,</span><br><span class="line">        &quot;md5加密返回的十六进制&quot;:digest</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br>cloud.init(&#123;<br>    <span class="hljs-attr">env</span>: cloud.DYNAMIC_CURRENT_ENV,<br>&#125;)<br><span class="hljs-keyword">const</span> crypto = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;crypto&#x27;</span>);<br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; &#123;<br>    <span class="hljs-keyword">const</span> hashes = crypto.getHashes(); <span class="hljs-comment">//获取crypto支持的加密算法种类列表</span><br> <br>    <span class="hljs-comment">//md5 加密 CloudBase2020 返回十六进制</span><br>    <span class="hljs-keyword">var</span> md5 = crypto.createHash(<span class="hljs-string">&#x27;md5&#x27;</span>);<br>    <span class="hljs-keyword">var</span> message = <span class="hljs-string">&#x27;CloudBase2020&#x27;</span>;<br>    <span class="hljs-keyword">var</span> digest = md5.update(message, <span class="hljs-string">&#x27;utf8&#x27;</span>).digest(<span class="hljs-string">&#x27;hex&#x27;</span>);   <br> <br>    <span class="hljs-keyword">return</span> &#123;<br>        <span class="hljs-string">&quot;crypto支持的加密算法种类&quot;</span>:hashes,<br>        <span class="hljs-string">&quot;md5加密返回的十六进制&quot;</span>:digest<br>    &#125;;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <p>将云函数部署之后调用从返回的结果我们可以了解到，云函数<code>crypto</code>模块支持46种加密算法。</p>
 <h4 id="发短信"><a href="#发短信" class="headerlink" title="发短信"></a>发短信</h4><p>“qcloudsms_js”: “^0.1.1”</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">const cloud = require(&#x27;wx-server-sdk&#x27;)</span><br><span class="line">const QcloudSms = require(&quot;qcloudsms_js&quot;)</span><br><span class="line">const appid = 1400284950 // 替换成您申请的云短信 AppID 以及 AppKey</span><br><span class="line">const appkey = &quot;a33b602345f3bb866f040303ac6f98ca&quot;</span><br><span class="line">const templateId = 472078 // 替换成您所申请模板 ID</span><br><span class="line">const smsSign = &quot;统计小助理&quot; // 替换成您所申请的签名</span><br><span class="line"> </span><br><span class="line">cloud.init()</span><br><span class="line"> </span><br><span class="line">// 云函数入口函数</span><br><span class="line">exports.main = async (event, context) =&gt; new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">  /*单发短信示例为完整示例，更多功能请直接替换以下代码*/</span><br><span class="line">  var qcloudsms = QcloudSms(appid, appkey);</span><br><span class="line">  var ssender = qcloudsms.SmsSingleSender();</span><br><span class="line">  var params = [&quot;1234&quot;, &quot;15&quot;];</span><br><span class="line">  // 获取发送短信的手机号码</span><br><span class="line">  var mobile = event.mobile</span><br><span class="line">  // 获取手机号国家/地区码</span><br><span class="line">  var nationcode = event.nationcode</span><br><span class="line">  ssender.sendWithParam(nationcode, mobile, templateId, params, smsSign, &quot;&quot;, &quot;&quot;, (err, res, resData) =&gt; &#123;</span><br><span class="line">    /*设置请求回调处理, 这里只是演示，您需要自定义相应处理逻辑*/</span><br><span class="line">    if (err) &#123;</span><br><span class="line">      console.log(&quot;err: &quot;, err);</span><br><span class="line">      reject(&#123; err &#125;)</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      resolve(&#123; res: res.req, resData &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  );</span><br><span class="line"> </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> cloud = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;wx-server-sdk&#x27;</span>)<br><span class="hljs-keyword">const</span> QcloudSms = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;qcloudsms_js&quot;</span>)<br><span class="hljs-keyword">const</span> appid = <span class="hljs-number">1400284950</span> <span class="hljs-comment">// 替换成您申请的云短信 AppID 以及 AppKey</span><br><span class="hljs-keyword">const</span> appkey = <span class="hljs-string">&quot;a33b602345f3bb866f040303ac6f98ca&quot;</span><br><span class="hljs-keyword">const</span> templateId = <span class="hljs-number">472078</span> <span class="hljs-comment">// 替换成您所申请模板 ID</span><br><span class="hljs-keyword">const</span> smsSign = <span class="hljs-string">&quot;统计小助理&quot;</span> <span class="hljs-comment">// 替换成您所申请的签名</span><br> <br>cloud.init()<br> <br><span class="hljs-comment">// 云函数入口函数</span><br><span class="hljs-built_in">exports</span>.main = <span class="hljs-keyword">async</span> (event, context) =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;<br>  <span class="hljs-comment">/*单发短信示例为完整示例，更多功能请直接替换以下代码*/</span><br>  <span class="hljs-keyword">var</span> qcloudsms = QcloudSms(appid, appkey);<br>  <span class="hljs-keyword">var</span> ssender = qcloudsms.SmsSingleSender();<br>  <span class="hljs-keyword">var</span> params = [<span class="hljs-string">&quot;1234&quot;</span>, <span class="hljs-string">&quot;15&quot;</span>];<br>  <span class="hljs-comment">// 获取发送短信的手机号码</span><br>  <span class="hljs-keyword">var</span> mobile = event.mobile<br>  <span class="hljs-comment">// 获取手机号国家/地区码</span><br>  <span class="hljs-keyword">var</span> nationcode = event.nationcode<br>  ssender.sendWithParam(nationcode, mobile, templateId, params, smsSign, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-function">(<span class="hljs-params">err, res, resData</span>) =&gt;</span> &#123;<br>    <span class="hljs-comment">/*设置请求回调处理, 这里只是演示，您需要自定义相应处理逻辑*/</span><br>    <span class="hljs-keyword">if</span> (err) &#123;<br>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;err: &quot;</span>, err);<br>      reject(&#123; err &#125;)<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      resolve(&#123; <span class="hljs-attr">res</span>: res.req, resData &#125;)<br>    &#125;<br>  &#125;<br>  );<br> <br>&#125;)<br></code></pre></td></tr></table></figure>
 
 <p>使用开发者工具</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wx.cloud.callFunction(&#123;</span><br><span class="line">  name: &#x27;sendphone&#x27;,</span><br><span class="line">  data: &#123;</span><br><span class="line">    // mobile: &#x27;13217922526&#x27;,</span><br><span class="line">    mobile: &#x27;18565678773&#x27;,</span><br><span class="line">    nationcode: &#x27;86&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  success: res =&gt; &#123;</span><br><span class="line">    console.log(&#x27;[云函数] [sendsms] 调用成功&#x27;)</span><br><span class="line">    console.log(res)</span><br><span class="line">  &#125;,</span><br><span class="line">  fail: err =&gt; &#123;</span><br><span class="line">    console.error(&#x27;[云函数] [sendsms] 调用失败&#x27;, err)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs vim">wx.cloud.callFunction(&#123;<br>  name: <span class="hljs-string">&#x27;sendphone&#x27;</span>,<br>  dat<span class="hljs-variable">a:</span> &#123;<br>    // mobile: <span class="hljs-string">&#x27;13217922526&#x27;</span>,<br>    mobile: <span class="hljs-string">&#x27;18565678773&#x27;</span>,<br>    nationcode: <span class="hljs-string">&#x27;86&#x27;</span><br>  &#125;,<br>  succes<span class="hljs-variable">s:</span> <span class="hljs-keyword">res</span> =&gt; &#123;<br>    console.<span class="hljs-built_in">log</span>(<span class="hljs-string">&#x27;[云函数] [sendsms] 调用成功&#x27;</span>)<br>    console.<span class="hljs-built_in">log</span>(<span class="hljs-keyword">res</span>)<br>  &#125;,<br>  fai<span class="hljs-variable">l:</span> err =&gt; &#123;<br>    console.error(<span class="hljs-string">&#x27;[云函数] [sendsms] 调用失败&#x27;</span>, err)<br>  &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
 
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
-          
-            <a href="/tags/Node/" rel="tag"># Node</a>
-          
-            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag"># 小程序</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/03/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91/" rel="next" title="小程序云开发">
-                <i class="fa fa-chevron-left"></i> 小程序云开发
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/03/25/h5%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" rel="prev" title="h5新增表单元素">
-                h5新增表单元素 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name"></p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives">
-              
-                  <span class="site-state-item-count">52</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
+                
               </div>
             
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%91%E5%BC%80%E5%8F%91%E4%B8%8ENodejs"><span class="nav-number">1.</span> <span class="nav-text">云开发与Nodejs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%91%E5%87%BD%E6%95%B0%E4%B8%8ENodejs"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">云函数与Nodejs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#node-js%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">node.js内置模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Lodash%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7%E5%BA%93"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">Lodash实用工具库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#moment%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">moment时间处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%85%AC%E7%BD%91IP"><span class="nav-number">1.0.0.5.</span> <span class="nav-text">获取公网IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#buffer%E6%96%87%E4%BB%B6%E6%B5%81"><span class="nav-number">1.0.0.6.</span> <span class="nav-text">buffer文件流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86sharp"><span class="nav-number">1.0.0.7.</span> <span class="nav-text">图像处理sharp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93MySQL"><span class="nav-number">1.0.0.8.</span> <span class="nav-text">连接数据库MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="nav-number">1.0.0.9.</span> <span class="nav-text">生成二维码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E7%A0%81qrcode"><span class="nav-number">1.0.0.10.</span> <span class="nav-text">二维码qrcode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%82%AE%E4%BB%B6%E5%A4%84%E7%90%86"><span class="nav-number">1.0.0.11.</span> <span class="nav-text">邮件处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Excel%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86"><span class="nav-number">1.0.0.12.</span> <span class="nav-text">Excel文档处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E6%95%B0%E6%8D%AE%E5%BA%93%E9%87%8C%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E4%B8%BACSV"><span class="nav-number">1.0.0.13.</span> <span class="nav-text">将数据库里的数据保存为CSV</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP%E5%A4%84%E7%90%86"><span class="nav-number">1.0.0.14.</span> <span class="nav-text">HTTP处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E8%A7%A3%E5%AF%86Crypto"><span class="nav-number">1.0.0.15.</span> <span class="nav-text">加解密Crypto</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E7%9F%AD%E4%BF%A1"><span class="nav-number">1.0.0.16.</span> <span class="nav-text">发短信</span></a></li></ol></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
+        <a href="/tags/JavaScript/">#JavaScript</a>
       
-
+        <a href="/tags/Node/">#Node</a>
       
-
+        <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">#小程序</a>
+      
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">ASDW51</span>
-
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+              
+  
 
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>云函数</div>
+      <div>http://example.com/2020/03/23/node.js/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>ASDW51</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年3月23日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
       </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+    </div>
+    <div class="license-icon iconfont"></div>
   </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/25/h5%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0/" title="h5新增表单元素">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">h5新增表单元素</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/03/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%91%E5%BC%80%E5%8F%91/" title="小程序云开发">
+                        <span class="hidden-mobile">小程序云开发</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
 
   
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
 </script>
 
 
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
 
 
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
   
 
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
