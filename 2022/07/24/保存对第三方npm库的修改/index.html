@@ -16,30 +16,24 @@
   <meta name="author" content="ASDW51">
   <meta name="keywords" content="html,css,js,vue,react,bootstrap,php,node">
   
-    <meta name="description" content="box-sizing 设置box-sizing:border-box.width,height 为整个盒子的padding border之和 content-box 反之transform 移动 scale 缩放 skew 倾斜  运用· 设置3D效果">
+    <meta name="description" content="1.安装patch-package1npm install patch-package --save-dev  2.生成文件补丁123npx patch-package packagenameor在package.json script中添加命令去运行pacth-package  运行后patch-package 会把本地第三方库文件与npm上对应的版本文件进行对比，生成patch-package">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css3 边框、变形">
-<meta property="og:url" content="http://asdw51.github.io/2020/04/26/css%E6%A1%86/index.html">
+<meta property="og:title" content="优雅的修改第三方npm库">
+<meta property="og:url" content="http://asdw51.github.io/2022/07/24/%E4%BF%9D%E5%AD%98%E5%AF%B9%E7%AC%AC%E4%B8%89%E6%96%B9npm%E5%BA%93%E7%9A%84%E4%BF%AE%E6%94%B9/index.html">
 <meta property="og:site_name" content="ASDW51">
-<meta property="og:description" content="box-sizing 设置box-sizing:border-box.width,height 为整个盒子的padding border之和 content-box 反之transform 移动 scale 缩放 skew 倾斜  运用· 设置3D效果">
+<meta property="og:description" content="1.安装patch-package1npm install patch-package --save-dev  2.生成文件补丁123npx patch-package packagenameor在package.json script中添加命令去运行pacth-package  运行后patch-package 会把本地第三方库文件与npm上对应的版本文件进行对比，生成patch-package">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="c:/Users/ZXY/AppData/Roaming/Typora/typora-user-images/image-20200426083936629.png">
-<meta property="og:image" content="https://files.catbox.moe/hub7k4.png">
-<meta property="og:image" content="https://files.catbox.moe/wopjyz.png">
-<meta property="og:image" content="https://files.catbox.moe/9osgij.png">
-<meta property="og:image" content="https://files.catbox.moe/og4chh.png">
-<meta property="article:published_time" content="2020-04-26T01:30:00.000Z">
-<meta property="article:modified_time" content="2021-07-01T06:50:01.174Z">
+<meta property="article:published_time" content="2022-07-24T06:17:12.000Z">
+<meta property="article:modified_time" content="2022-07-24T06:42:51.557Z">
 <meta property="article:author" content="ASDW51">
-<meta property="article:tag" content="CSS3">
+<meta property="article:tag" content="npm">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="c:/Users/ZXY/AppData/Roaming/Typora/typora-user-images/image-20200426083936629.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>css3 边框、变形 - ASDW51</title>
+  <title>优雅的修改第三方npm库 - ASDW51</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -192,7 +186,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="css3 边框、变形"></span>
+            <span id="subtitle" data-typed-text="优雅的修改第三方npm库"></span>
           
         </div>
 
@@ -203,8 +197,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-04-26 09:30" pubdate>
-          2020年4月26日 上午
+        <time datetime="2022-07-24 14:17" pubdate>
+          2022年7月24日 下午
         </time>
       </span>
     
@@ -216,7 +210,7 @@
         <i class="iconfont icon-chart"></i>
         
           <!-- compatible with older versions-->
-          113 字
+          333 字
         
       </span>
     
@@ -228,7 +222,7 @@
         
         
           <!-- compatible with older versions-->
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -274,18 +268,19 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">css3 边框、变形</h1>
+            <h1 style="display: none">优雅的修改第三方npm库</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p><img src="C:\Users\ZXY\AppData\Roaming\Typora\typora-user-images\image-20200426083936629.png" srcset="/img/loading.gif" lazyload alt="image-20200426083936629"></p>
-<p>设置box-sizing:border-box.width,height 为整个盒子的padding border之和</p>
-<h2 id="content-box-反之"><a href="#content-box-反之" class="headerlink" title="content-box 反之"></a>content-box 反之</h2><h2 id="transform-移动"><a href="#transform-移动" class="headerlink" title="transform 移动"></a>transform 移动</h2><p><img src="https://files.catbox.moe/hub7k4.png" srcset="/img/loading.gif" lazyload alt="image-20200426085027705"></p>
-<h2 id="scale-缩放-skew-倾斜"><a href="#scale-缩放-skew-倾斜" class="headerlink" title="scale 缩放 skew 倾斜"></a>scale 缩放 skew 倾斜</h2><p><img src="https://files.catbox.moe/wopjyz.png" srcset="/img/loading.gif" lazyload alt="image-20200426085115962"></p>
-<p><img src="https://files.catbox.moe/9osgij.png" srcset="/img/loading.gif" lazyload alt="image-20200426085332973"></p>
-<h2 id="运用·"><a href="#运用·" class="headerlink" title="运用·"></a>运用·</h2><p><img src="https://files.catbox.moe/og4chh.png" srcset="/img/loading.gif" lazyload alt="image-20200426090447333"></p>
-<h3 id="设置3D效果"><a href="#设置3D效果" class="headerlink" title="设置3D效果"></a>设置3D效果</h3>
+                <h2 id="1-安装patch-package"><a href="#1-安装patch-package" class="headerlink" title="1.安装patch-package"></a>1.安装patch-package</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npm install patch-package --save-dev<br></code></pre></td></tr></table></figure>
+
+<h2 id="2-生成文件补丁"><a href="#2-生成文件补丁" class="headerlink" title="2.生成文件补丁"></a>2.生成文件补丁</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npx patch-package packagename<br>or<br>在package.json script中添加命令去运行pacth-package<br></code></pre></td></tr></table></figure>
+
+<p>运行后patch-package 会把本地第三方库文件与npm上对应的版本文件进行对比，生成patch-package目录及对应的包.patch文件</p>
+<h2 id="3-使用文件补丁"><a href="#3-使用文件补丁" class="headerlink" title="3.使用文件补丁"></a>3.使用文件补丁</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs pseudocode">npx patch-package<br>or<br>package.json script 添加prepare钩子，prepare钩子会在npm install 后执行<br>&quot;prepare&quot;:&quot;patch-package&quot;<br></code></pre></td></tr></table></figure>
+
+
                 
               </div>
             
@@ -297,7 +292,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CSS3/">#CSS3</a>
+        <a href="/tags/npm/">#npm</a>
       
     </div>
   
@@ -309,8 +304,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>css3 边框、变形</div>
-      <div>http://asdw51.github.io/2020/04/26/css框/</div>
+      <div>优雅的修改第三方npm库</div>
+      <div>http://asdw51.github.io/2022/07/24/保存对第三方npm库的修改/</div>
     </div>
     <div class="license-meta">
       
@@ -322,7 +317,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年4月26日</div>
+          <div>2022年7月24日</div>
         </div>
       
       
@@ -352,18 +347,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/04/27/css%E8%BF%87%E6%B8%A1/" title="css3 过渡、动画">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">css3 过渡、动画</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/04/24/%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%96%B0%E5%A2%9E/" title="盒模型">
-                        <span class="hidden-mobile">盒模型</span>
+                      <a href="/2022/06/29/docker%E7%9A%84%E4%BD%BF%E7%94%A8/" title="docker的使用">
+                        <span class="hidden-mobile">docker的使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
