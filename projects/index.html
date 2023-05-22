@@ -264,7 +264,7 @@
         padding: 2rem 0;
     } */
 </style>
-<div id="local" class="row">
+<div id="local" class="row d-none">
     
         
         <div class="col-lg-4 col-md-6 col-12 p-lg-2 p-md-1 p-sm-2 card-cust mt-3 mt-sm-0 mt-md-0">
@@ -320,12 +320,12 @@
     
     
 </div>
-<div  id="remote" class="row d-none">
+<div  id="remote" class="row">
 
 </div>
 
 <script>
-    let remote = JSON.parse("false")
+    let remote = JSON.parse("true")
     console.log(remote)
     window.onload = function(){
         if(remote){
@@ -334,8 +334,8 @@
             // $("#local").addClass("d-none")
             // $("#remote").removeClass("d-none")
             // $("#remote").addClass("d-block")
-            var remoteApiUrl = "" 
-            var remoteFileUrl = "" 
+            var remoteApiUrl = "http://localhost:8088/client/api/project" 
+            var remoteFileUrl = "http://localhost:8088/client/" 
             function getFilePath(path){
                 return path.replace("default://",remoteFileUrl).replace("blog://","/")
             }

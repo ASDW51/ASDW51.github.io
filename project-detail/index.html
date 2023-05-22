@@ -278,7 +278,7 @@
     var key = getQueryVariable("key")
     console.log(key)
     let article = {}
-    let remote = JSON.parse("false")
+    let remote = JSON.parse("true")
     console.log(remote)
     if(!remote){
         var list = JSON.parse('{"manager":{"title":"后台管理系统模板","desc":" 基于 vue+elementui+axios+vuex+java+springboot+mysql+redis  构建的后台管理系统<br> ● 后端服务基于 RBAC  权限设计，不同的用户的角色不同，不同角色拥有不同的权限。 前端通过返回的权限菜单动态添加路由并渲染菜单列表。页面访问权限通过路由守卫进行判断，按钮级元素的权限通过自定义指令的形式控制元素显隐。<br> ● 以 JSON Schema  方式封装页面组件，可通过配置 json  数据渲染组件，并可通过配置插槽保证可以最大化自定义渲染内容。<br> ● 封装上传文件组件，通过适配器模式可以选择上传到不同的存储位置。例如：对接腾讯云 COS  存储桶。<br> ● 通过 webpack的 require.context  接口自动装配 vuex的 modules<br> ● 封装 axios  请求实例，配置请求/响应拦截器，添加请求 token ，请求错误时返回 promise reject  状态，成功则根据状态码的不同使用不同类型的消息提示。<br> ● 演示地址：<a href=http:\\/\\/139.9.92.203:8080 class=btn-link target=_blank>139.9.92.203:8080<\\/a> <span class=text-lowercase> 用户名：demo  密码：demo</span><br>","banner":"/file/image/manager/banner.png","detailUrl":"/project-detail","demoUrl":"http://139.9.92.203:8080","imgs":[{"img":"/file/image/manager/01.png","title":"用户管理"},{"img":"/file/image/manager/02.png","title":"角色管理"},{"img":"/file/image/manager/03.png","title":"角色-权限设置"},{"img":"/file/image/manager/04.png","title":"菜单管理"},{"img":"/file/image/manager/05.png","title":"菜单-添加/编辑"}]},"manager2":{"title":"ERP 企业管理系统","desc":"主要开发 ERP 企业管理系统的系统功能设置模块、系统用户管理模块、录单报表模块、物料出入库模块、物料溯源模块、单据管理模块、数据大屏等模块。前端主要技术为 vue2+axios+vuex+iview 框架。<br> ● 系统功能设计模块：可以配置系统的一些显示信息和设置，并在设置变更后使用事件总线和 vuex 以提高用户体验。<br> ● 系统用户管理模块：主要完成系统管理人员的设置和管理权限的设置，系统登录日志的记录等。<br> ● 录单报表模块：使用可编辑表格的方式提高录单效率，并封装成组件，提高代码复用率。<br> ● 物料溯源模块：溯源字段使用 json 格式存储，可自由增删某一物料的溯源字段，包括图片、文本、时间日期等类型。<br> ● 单据管理模块：主要是一些单据模板管理，通过使用 hiprintjs 完成对单据模板的可视化设计。<br> ● 数据大屏模块：通过 echarts、datav 使用柱状图、折线图、滚动表格等模块展示系统数据。","banner":"/img/default.png","detailUrl":"/project-detail"}}')
@@ -288,8 +288,8 @@
             $("#project-detail").html("参数错误")
         }
     }else{
-        var remoteApiUrl = "" 
-        var remoteFileUrl = "" 
+        var remoteApiUrl = "http://localhost:8088/client/api/project" 
+        var remoteFileUrl = "http://localhost:8088/client/" 
         function getFilePath(path){
             console.log(path)
             return path.replace("default://",remoteFileUrl).replace("blog://","/")
