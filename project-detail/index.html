@@ -288,8 +288,8 @@
             $("#project-detail").html("参数错误")
         }
     }else{
-        var remoteApiUrl = "http://localhost:8088/client/api/project" 
-        var remoteFileUrl = "http://localhost:8088/client/" 
+        var remoteApiUrl = "http://139.9.92.203:8088/client/api/project" 
+        var remoteFileUrl = "http://139.9.92.203:8088/client" 
         function getFilePath(path){
             console.log(path)
             return path.replace("default://",remoteFileUrl).replace("blog://","/")

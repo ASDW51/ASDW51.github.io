@@ -278,10 +278,10 @@
                     
                         <div class="d-flex justify-content-around flex-center flex-grow-1 align-items-md-end" style="height: auto;">
                             
-                                <a href="/project-detail/?key=manager" target="_self" class="btn btn-outline-success btn-sm">查看详情</a>
+                                <a href="/project-detail/?key=manager" target="_blank" class="btn btn-outline-success btn-sm">查看详情</a>
                             
                             
-                                <a href="http://139.9.92.203:8080" target="_self" class="btn btn-outline-info btn-sm">在线体验</a>    
+                                <a href="http://139.9.92.203:8080" target="_blank" class="btn btn-outline-info btn-sm">在线体验</a>    
                             
                         </div>
                     
@@ -304,7 +304,7 @@
                     
                         <div class="d-flex justify-content-around flex-center flex-grow-1 align-items-md-end" style="height: auto;">
                             
-                                <a href="/project-detail/?key=manager2" target="_self" class="btn btn-outline-success btn-sm">查看详情</a>
+                                <a href="/project-detail/?key=manager2" target="_blank" class="btn btn-outline-success btn-sm">查看详情</a>
                             
                             
                         </div>
@@ -326,6 +326,8 @@
 
 <script>
     let remote = JSON.parse("true")
+    // let env = "{"args":{"_":[]},"debug":false,"safe":false,"silent":false,"env":"production","version":"5.4.0","cmd":"generate","init":true}"
+
     console.log(remote)
     window.onload = function(){
         if(remote){
@@ -334,8 +336,8 @@
             // $("#local").addClass("d-none")
             // $("#remote").removeClass("d-none")
             // $("#remote").addClass("d-block")
-            var remoteApiUrl = "http://localhost:8088/client/api/project" 
-            var remoteFileUrl = "http://localhost:8088/client/" 
+            var remoteApiUrl = "http://139.9.92.203:8088/client/api/project" 
+            var remoteFileUrl = "http://139.9.92.203:8088/client" 
             function getFilePath(path){
                 return path.replace("default://",remoteFileUrl).replace("blog://","/")
             }
@@ -379,7 +381,7 @@
                         if(project.detailUrl){
                             let detailBtn = document.createElement("a")
                             detailBtn.className = "btn btn-outline-success btn-sm"
-                            detailBtn.target = "_self"
+                            detailBtn.target = "_blank"
                             detailBtn.innerText = "查看详情"
                             detailBtn.href = `${project.detailUrl}/?key=${project.id}`
                             btnContainer.appendChild(detailBtn)
@@ -387,7 +389,7 @@
                         if(project.demoUrl){
                             let demoBtn = document.createElement("a")
                             demoBtn.className = "btn btn-outline-info btn-sm"
-                            demoBtn.target = "_self"
+                            demoBtn.target = "_blank"
                             demoBtn.innerText = "在线体验"
                             demoBtn.href = project.demoUrl
                             btnContainer.appendChild(demoBtn)
