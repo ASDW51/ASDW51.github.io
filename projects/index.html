@@ -152,18 +152,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/resume/">
                 <i class="iconfont icon-book"></i>
                 简历
@@ -342,6 +330,7 @@
                 return path.replace("default://",remoteFileUrl).replace("blog://","/")
             }
             console.log(remoteApiUrl,remoteFileUrl)
+            $("#remote").html("加载中....")
             fetch(remoteApiUrl).then(res=>res.json()).then(res=>{
                 console.log(res)
                 let projects = document.createDocumentFragment()
@@ -408,7 +397,7 @@
                 
             }).catch(err=>{
                 console.log(err)
-                $("#remote").html("remote 配置错误")
+                $("#remote").html("未知错误，请<a href='http://139.9.92.203/projects/' class='btn-link'>点击</a>尝试访问")
             })
 
         }else{
