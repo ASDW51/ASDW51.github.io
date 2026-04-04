@@ -88,11 +88,11 @@
   
   
   <entry>
-    <title>jenkin自动构建测试</title>
+    <title>Jenkins自动构建测试</title>
     <link href="/2023/05/24/Jenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%B5%8B%E8%AF%95/"/>
     <url>/2023/05/24/Jenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%B5%8B%E8%AF%95/</url>
     
-    <content type="html"><![CDATA[<h3 id="自动构建的内容"><a href="#自动构建的内容" class="headerlink" title="自动构建的内容"></a>自动构建的内容</h3><p><strong>上传图片测试</strong><br><img src="http://121.37.3.215:8089//upload/images/markdown/202604/8dadccd2-6cca-493f-896e-7a46f8c250bc.jpg" alt="avatar1678893521302.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="自动构建的内容"><a href="#自动构建的内容" class="headerlink" title="自动构建的内容"></a>自动构建的内容</h3><p><strong>上传图片测试</strong><br><img src="/images/article-images/6aad958d.jpg" alt="avatar1678893521302.jpg"></p>]]></content>
     
     
     <categories>

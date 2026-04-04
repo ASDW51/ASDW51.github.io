@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://121.37.3.215/2023/05/24/Jenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2026-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://121.37.3.215/2023/06/20/npm%20install%20%E6%97%B6%20node-gyp%E6%8A%A5%E9%94%99/</loc>
     
     <lastmod>2026-04-04</lastmod>
@@ -399,15 +408,6 @@
   
   <url>
     <loc>http://121.37.3.215/2021/06/11/JavaScript%E7%AC%94%E8%AE%B0-%E5%90%8E%E7%9B%BE%E4%BA%BA/</loc>
-    
-    <lastmod>2026-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.37.3.215/2023/05/24/Jenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2026-04-04</lastmod>
     
@@ -965,21 +965,14 @@
   </url>
   
   <url>
-    <loc>http://121.37.3.215/categories/%E5%90%8E%E7%AB%AF/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://121.37.3.215/categories/%E5%90%8E%E7%AB%AF/Java/SpringBoot/</loc>
-    <lastmod>2026-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://121.37.3.215/categories/%E5%89%8D%E7%AB%AF/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.37.3.215/categories/%E5%90%8E%E7%AB%AF/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1036,6 +1029,13 @@
   
   <url>
     <loc>http://121.37.3.215/categories/%E5%89%8D%E7%AB%AF/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://121.37.3.215/categories/%E5%90%8E%E7%AB%AF/Java/SpringBoot/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
