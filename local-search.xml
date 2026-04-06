@@ -83,27 +83,6 @@
   
   
   <entry>
-    <title>npm install 时 node-gyp报错</title>
-    <link href="/2023/06/20/npm-install-node-gyp%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/"/>
-    <url>/2023/06/20/npm-install-node-gyp%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/</url>
-    
-    <content type="html"><![CDATA[<p>报错示例：<br><img src="http://139.9.92.203:8088/client/file/upload/images/markdown/202305/da4ed543-8b3c-4f4b-86f7-1abd204b386f.png" alt="微信截图_20230620173217.png"><br>报错原因：一般是没有python环境or没有安装Visual Studio<br>报错场景：使用一些第三方库(例如：antdesign),electorn下 rebuild 第三方库时<br>解决办法：</p><ol><li>安装Visual Studio/python</li><li>设置Visual Studio 版本</li></ol><ul><li>方法一<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npm config set msvs_version 你安装的版本<br></code></pre></td></tr></table></figure></li><li>方法二：<br>修改.npmrc文件<br><img src="http://139.9.92.203:8088/client/file/upload/images/markdown/202305/e28e3e31-77dd-462c-9e9e-631f8593a677.png" alt="微信截图_20230620182723.png"></li></ul><ol start="3"><li>查看是否修改成功<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">npm config list -g<br></code></pre></td></tr></table></figure>查看msvs_version字段的值是否跟预期的一样<br><img src="http://139.9.92.203:8088/client/file/upload/images/markdown/202305/d4c7054e-7da2-4dda-8e35-122df43ee0e5.png" alt="微信图片_20230620183035.png"></li></ol>]]></content>
-    
-    
-    <categories>
-      
-      <category>前端</category>
-      
-      <category>JavaScript</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Jenkins自动构建测试</title>
     <link href="/2023/05/24/Jenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%B5%8B%E8%AF%95/"/>
     <url>/2023/05/24/Jenkins%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E6%B5%8B%E8%AF%95/</url>
